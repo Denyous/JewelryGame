@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17ca42c3d4ec3914dbb5773cac9132e1, type: 3}
+  m_Name: Jewelry-3
+  m_EditorClassIdentifier: Assembly-CSharp::JewelrySO
+  itemName: "Z\xFCmr\xFCt Kolye"
+  itemWorth: 1500
+  itemSprite: {fileID: -3000810747933597586, guid: c71acb6291de0e542b377909d74f4e33, type: 3}
