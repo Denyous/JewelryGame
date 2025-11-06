@@ -13,6 +13,9 @@ public class CustomerPresenter : MonoBehaviour
     private CustomerModel model;
     private JewelrySO currentJewel;
 
+    [Header("Variebles")]
+    private int moneySpend;
+
     private void Start()
     {
         model = new CustomerModel(customerList, jewelList);
@@ -31,8 +34,7 @@ public class CustomerPresenter : MonoBehaviour
     {
         var currentCustomer = model.GetCurrentCustomer();
         currentJewel = model.GetRandomJewel();
-
-        view.UpdateView(currentCustomer, currentJewel, model.playerMoney);
+        view.UpdateView(currentCustomer, currentJewel, model.playerMoney,moneySpend);
         view.SetButtonsEnabled(true);
     }
 
@@ -42,6 +44,7 @@ public class CustomerPresenter : MonoBehaviour
         {
             model.playerMoney -= currentJewel.GetItemWorth();
             jewelList.Remove(currentJewel);
+            moneySpend += currentJewel.GetItemWorth();
             ProceedToNextCustomer();
         }
         else
@@ -68,8 +71,8 @@ public class CustomerPresenter : MonoBehaviour
         {
             Debug.Log("Tüm müşteriler geldi!");
             view.customerNameText.text = "Tüm müşteriler geldi!";
-            view.customerImage.sprite = null;
-            view.jewelImage.sprite = null;
+            view.dailyReport.SetActive(true);
+            
         }
     }
 }

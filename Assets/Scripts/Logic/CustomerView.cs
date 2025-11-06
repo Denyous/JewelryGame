@@ -10,10 +10,12 @@ using Image = UnityEngine.UI.Image;
 public class CustomerView : MonoBehaviour
 {
     [Header("UI References")]
+    public GameObject dailyReport;
     public TMP_Text customerNameText;
     public TMP_Text jewelNameText;
     public TMP_Text jewelPriceText;
     public TMP_Text moneyText;
+    public TMP_Text moneyspend;
 
     public Image customerImage;
     public Image jewelImage;
@@ -23,7 +25,7 @@ public class CustomerView : MonoBehaviour
 
 
 
-    public void UpdateView(CustomerSO customer, JewelrySO jewel, int playerMoney)
+    public void UpdateView(CustomerSO customer, JewelrySO jewel, int playerMoney,int spendMoney)
     {
         customerImage.sprite = customer.GetCustomerSprite();
         customerNameText.text = customer.GetCustomerName();
@@ -31,6 +33,7 @@ public class CustomerView : MonoBehaviour
         jewelImage.sprite = jewel.GetItemSprite();
         jewelNameText.text = jewel.GetItemName();
         jewelPriceText.text = jewel.GetItemWorth() + " $";
+        moneyspend.text = spendMoney.ToString() + "$";
 
         moneyText.text = "💰 " + playerMoney + " $";
     }
@@ -39,5 +42,10 @@ public class CustomerView : MonoBehaviour
     {
         acceptButton.enabled = state;
         rejectButton.enabled = state;
+    }
+
+    public void OpenDailyReport()
+    {
+
     }
 }
