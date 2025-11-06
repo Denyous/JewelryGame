@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CustomerPresenter : MonoBehaviour
 {
@@ -9,7 +12,6 @@ public class CustomerPresenter : MonoBehaviour
 
     [Header("View")]
     public CustomerView view;
-
     private CustomerModel model;
     private JewelrySO currentJewel;
 
@@ -34,23 +36,43 @@ public class CustomerPresenter : MonoBehaviour
     {
         var currentCustomer = model.GetCurrentCustomer();
         currentJewel = model.GetRandomJewel();
-        view.UpdateView(currentCustomer, currentJewel, model.playerMoney,moneySpend);
+        view.UpdateView(currentCustomer, currentJewel, model.playerMoney, moneySpend);
         view.SetButtonsEnabled(true);
     }
 
     private void OnAccept()
     {
-        if (model.playerMoney >= currentJewel.GetItemWorth())
+
+        string offerText = view.GetInput();
+
+        if (int.TryParse(offerText, out int offerPrice))
         {
-            model.playerMoney -= currentJewel.GetItemWorth();
-            jewelList.Remove(currentJewel);
-            moneySpend += currentJewel.GetItemWorth();
-            ProceedToNextCustomer();
+            if (offerPrice >= currentJewel.GetMinItemWorth())
+            {
+                if (model.playerMoney >= offerPrice)
+                {
+                    model.playerMoney -= offerPrice;
+                    Debug.Log($"Satın alındı! {currentJewel.GetItemName()} için {offerPrice} ₺ ödendi.");
+                    ProceedToNextCustomer();
+                }
+                else
+                {
+                    Debug.Log("Yeterli paran yok!");
+                }
+            }
+            else
+            {
+                Debug.Log($"Teklif çok düşük!");
+                //Buraya Moral Bar Mekaniği entegre Edilecek.
+            }
         }
+
         else
         {
-            Debug.Log("Yeterli paran yok!");
+
+            ProceedToNextCustomer();
         }
+
     }
 
     private void OnReject()
@@ -72,7 +94,7 @@ public class CustomerPresenter : MonoBehaviour
             Debug.Log("Tüm müşteriler geldi!");
             view.customerNameText.text = "Tüm müşteriler geldi!";
             view.dailyReport.SetActive(true);
-            
+
         }
     }
 }

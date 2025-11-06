@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17ca42c3d4ec3914dbb5773cac9132e1, type: 3}
-  m_Name: Jewelry-5
+  m_Name: Jewel-4
   m_EditorClassIdentifier: Assembly-CSharp::JewelrySO
-  itemName: Yakut Kolye
-  itemWorth: 2200
-  itemSprite: {fileID: 6809798077090513483, guid: f32c5a4615921814ba444578c9b5da83, type: 3}
+  itemName: Pure Emerald Necklace
+  maxItemWorth: 1100
+  shownItemWorth: 1000
+  minItemHorth: 870
+  itemSprite: {fileID: -5687576794128176139, guid: 55b3e4ddd5250d94e9d67d615d622542, type: 3}

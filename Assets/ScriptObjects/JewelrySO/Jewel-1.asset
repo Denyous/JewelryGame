@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17ca42c3d4ec3914dbb5773cac9132e1, type: 3}
-  m_Name: Jewelry-1
+  m_Name: Jewel-1
   m_EditorClassIdentifier: Assembly-CSharp::JewelrySO
-  itemName: Cam Kolye
-  itemWorth: 300
+  itemName: Cristal Necklace
+  maxItemWorth: 350
+  shownItemWorth: 300
+  minItemHorth: 270
   itemSprite: {fileID: -1986157594172015396, guid: 24070ca8e7a2bb44ab33856ee563de50, type: 3}

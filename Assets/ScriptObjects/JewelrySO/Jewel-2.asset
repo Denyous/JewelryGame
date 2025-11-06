@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17ca42c3d4ec3914dbb5773cac9132e1, type: 3}
-  m_Name: Jewelry-4
+  m_Name: Jewel-2
   m_EditorClassIdentifier: Assembly-CSharp::JewelrySO
-  itemName: "Ye\u015Fim Kolye"
-  itemWorth: 1800
-  itemSprite: {fileID: -5687576794128176139, guid: 55b3e4ddd5250d94e9d67d615d622542, type: 3}
+  itemName: Bronz Necklace
+  maxItemWorth: 600
+  shownItemWorth: 500
+  minItemHorth: 450
+  itemSprite: {fileID: -8910966293082168699, guid: 4fd0f445f8d259b468db057b54ecab76, type: 3}

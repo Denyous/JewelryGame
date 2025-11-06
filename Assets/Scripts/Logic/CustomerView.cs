@@ -16,12 +16,18 @@ public class CustomerView : MonoBehaviour
     public TMP_Text jewelPriceText;
     public TMP_Text moneyText;
     public TMP_Text moneyspend;
-
+    
     public Image customerImage;
     public Image jewelImage;
 
+    [Header("Buttons")]
     public Button acceptButton;
     public Button rejectButton;
+
+    [Header("Input")]
+    public TMP_InputField offerInput;
+
+
 
 
 
@@ -35,13 +41,19 @@ public class CustomerView : MonoBehaviour
         jewelPriceText.text = jewel.GetItemWorth() + " $";
         moneyspend.text = spendMoney.ToString() + "$";
 
-        moneyText.text = "💰 " + playerMoney + " $";
+        moneyText.text = ""+ playerMoney + " $";
+        offerInput.text = "";
     }
 
     public void SetButtonsEnabled(bool state)
     {
         acceptButton.enabled = state;
         rejectButton.enabled = state;
+    }
+
+    public string GetInput()
+    {
+        return offerInput.text;
     }
 
     public void OpenDailyReport()
