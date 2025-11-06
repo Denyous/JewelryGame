@@ -17,6 +17,8 @@ public class CustomerPresenter : MonoBehaviour
 
     [Header("Variebles")]
     private int moneySpend;
+    private int currentMoral;
+    private int maxMoral;
 
     private void Start()
     {
@@ -35,8 +37,12 @@ public class CustomerPresenter : MonoBehaviour
     private void ShowCurrentCustomer()
     {
         var currentCustomer = model.GetCurrentCustomer();
-        currentJewel = model.GetRandomJewel();
-        view.UpdateView(currentCustomer, currentJewel, model.playerMoney, moneySpend);
+        maxMoral = currentCustomer.GetMoralBarAmount();
+        currentMoral = maxMoral;
+        
+        currentJewel = model.GetRandomJewel();  
+        view.UpdateView(currentCustomer, currentJewel, model.playerMoney, moneySpend,maxMoral,currentMoral);
+        
         view.SetButtonsEnabled(true);
     }
 
@@ -63,7 +69,18 @@ public class CustomerPresenter : MonoBehaviour
             else
             {
                 Debug.Log($"Teklif çok düşük!");
-                //Buraya Moral Bar Mekaniği entegre Edilecek.
+
+
+                currentMoral -= 10;
+                view.UpdateMoralBar(currentMoral);
+
+                if(currentMoral == 0)
+                {
+                    Debug.Log("Müşteri sinirden anlaşmayı bozdu.");
+                }
+
+                
+               
             }
         }
 

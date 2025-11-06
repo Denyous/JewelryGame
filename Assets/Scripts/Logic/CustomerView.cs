@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
 using Image = UnityEngine.UI.Image;
+using Slider = UnityEngine.UI.Slider;
 
 
 
@@ -27,15 +28,21 @@ public class CustomerView : MonoBehaviour
     [Header("Input")]
     public TMP_InputField offerInput;
 
+    [Header("Slider")]
+    public Slider moralBar;
 
 
 
 
-    public void UpdateView(CustomerSO customer, JewelrySO jewel, int playerMoney,int spendMoney)
+
+    public void UpdateView(CustomerSO customer, JewelrySO jewel, int playerMoney,int spendMoney,int maxValue,int value)
     {
         customerImage.sprite = customer.GetCustomerSprite();
         customerNameText.text = customer.GetCustomerName();
-
+        
+        moralBar.maxValue = maxValue;
+        moralBar.value = value;
+        
         jewelImage.sprite = jewel.GetItemSprite();
         jewelNameText.text = jewel.GetItemName();
         jewelPriceText.text = jewel.GetItemWorth() + " $";
@@ -43,6 +50,11 @@ public class CustomerView : MonoBehaviour
 
         moneyText.text = ""+ playerMoney + " $";
         offerInput.text = "";
+    }
+    public void UpdateMoralBar(int currentValue)
+    {
+        
+        moralBar.value = currentValue;
     }
 
     public void SetButtonsEnabled(bool state)
@@ -56,8 +68,5 @@ public class CustomerView : MonoBehaviour
         return offerInput.text;
     }
 
-    public void OpenDailyReport()
-    {
-
-    }
+    
 }

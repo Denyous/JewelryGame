@@ -5,6 +5,7 @@ public class CustomerSO : ScriptableObject
 {
     [SerializeField] private string customerName;
     [SerializeField] private Sprite customerSprite;
+    [SerializeField] private int customerMoralBarAmount;
 
     public string GetCustomerName()
     {
@@ -13,6 +14,11 @@ public class CustomerSO : ScriptableObject
     public Sprite GetCustomerSprite()
     {
         return customerSprite;
+    }
+
+    public int GetMoralBarAmount()
+    {
+        return customerMoralBarAmount;
     }
 
 }

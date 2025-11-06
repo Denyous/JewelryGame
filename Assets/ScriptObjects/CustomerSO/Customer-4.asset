@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CustomerSO
   customerName: Richard Stones
   customerSprite: {fileID: -7425787196042146947, guid: 93c5b7e4b0f360149ac923195aee1b4a, type: 3}
+  customerMoralBarAmount: 90
