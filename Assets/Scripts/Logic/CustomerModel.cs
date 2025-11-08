@@ -8,8 +8,6 @@ public class CustomerModel : MonoBehaviour
     public List<JewelrySO> jewels;
 
     public int currentCustomerIndex = 0;
-    public int playerMoney = 1000;
-    
 
     public CustomerModel(List<CustomerSO> customers, List<JewelrySO> jewels)
     {

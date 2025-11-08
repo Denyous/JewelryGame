@@ -32,10 +32,7 @@ public class CustomerView : MonoBehaviour
     public Slider moralBar;
 
 
-
-
-
-    public void UpdateView(CustomerSO customer, JewelrySO jewel, int playerMoney,int spendMoney,int maxValue,int value)
+    public void UpdateView(CustomerSO customer, JewelrySO jewel, float playerMoney,int spendMoney,int maxValue,int value)
     {
         customerImage.sprite = customer.GetCustomerSprite();
         customerNameText.text = customer.GetCustomerName();
@@ -67,6 +64,4 @@ public class CustomerView : MonoBehaviour
     {
         return offerInput.text;
     }
-
-    
 }

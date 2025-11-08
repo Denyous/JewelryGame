@@ -41,23 +41,22 @@ public class CustomerPresenter : MonoBehaviour
         currentMoral = maxMoral;
         
         currentJewel = model.GetRandomJewel();  
-        view.UpdateView(currentCustomer, currentJewel, model.playerMoney, moneySpend,maxMoral,currentMoral);
+        view.UpdateView(currentCustomer, currentJewel, MoneyManager.Instance.PlayerMoney, moneySpend, maxMoral, currentMoral);
         
         view.SetButtonsEnabled(true);
     }
 
     private void OnAccept()
     {
-
         string offerText = view.GetInput();
 
         if (int.TryParse(offerText, out int offerPrice))
         {
             if (offerPrice >= currentJewel.GetMinItemWorth())
             {
-                if (model.playerMoney >= offerPrice)
+                if (MoneyManager.Instance.PlayerMoney >= offerPrice)
                 {
-                    model.playerMoney -= offerPrice;
+                    MoneyManager.Instance.RemoveMoney(offerPrice);
                     Debug.Log($"Satın alındı! {currentJewel.GetItemName()} için {offerPrice} ₺ ödendi.");
                     ProceedToNextCustomer();
                 }
@@ -78,18 +77,13 @@ public class CustomerPresenter : MonoBehaviour
                 {
                     Debug.Log("Müşteri sinirden anlaşmayı bozdu.");
                 }
-
-                
-               
             }
         }
-
         else
         {
 
             ProceedToNextCustomer();
         }
-
     }
 
     private void OnReject()
