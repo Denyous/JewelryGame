@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8931202634163035985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 172794305832014429}
+  - component: {fileID: -9200825204799777127}
+  - component: {fileID: 1819995930256195657}
+  m_Layer: 0
+  m_Name: CurrentCustomer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &172794305832014429
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8931202634163035985}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 758.7743, y: 734.02716, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-9200825204799777127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8931202634163035985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a71477f78f6d0cd49ac4d9664b827a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerModel
+  customers: []
+  jewels: []
+  currentCustomerIndex: 0
+--- !u!114 &1819995930256195657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8931202634163035985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6260786c2de82bb4ab143958ee1b2ff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerView
+  dailyReport: {fileID: 2397020862377088898, guid: 3854f02c4d64d6e48a273b76094514a4, type: 3}
+  customerNameText: {fileID: 9052777061675518602, guid: d844a10db6f6f8c459dec89e990ee0e0, type: 3}
+  jewelNameText: {fileID: 729200615731813614, guid: 409020a6cfa0c904091f32de31f37217, type: 3}
+  jewelPriceText: {fileID: 5241548577660818547, guid: 6f33f3cbd5b96164b8f7a9d6871891c5, type: 3}
+  moneyText: {fileID: 2706196899858543265, guid: 8729b1d23e8c498408aca37d4975c732, type: 3}
+  moneyspend: {fileID: 8099365326204001826, guid: 2e55168bdc459824f8493897a374d82a, type: 3}
+  customerImage: {fileID: 6058368029921769411, guid: 1bd264085ccbaa54f8660a9bfe4374f7, type: 3}
+  jewelImage: {fileID: 154226758390020612, guid: 82f4e220ccd6dbd48ace865802aa7822, type: 3}
+  acceptButton: {fileID: 9117468698623694435, guid: b6e7174bd1281a2449680539cf06b486, type: 3}
+  rejectButton: {fileID: 1610776683218288159, guid: 56cd03b8aac438347b7a29b43ef76307, type: 3}
+  offerInput: {fileID: 8230387679261651827, guid: ad8d0043fa86a06448ba3ee3ac4f42e5, type: 3}
+  moralBar: {fileID: 5691724300244463266, guid: bccee905126ec3c4bacd4eb58ea3efd7, type: 3}
