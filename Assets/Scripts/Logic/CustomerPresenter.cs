@@ -1,111 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CustomerPresenter : MonoBehaviour
 {
-    [Header("Data")]
-    public List<CustomerSO> customerList;
-    public List<JewelrySO> jewelList;
+    [Header("Prefab ve Veri Referansları")]
+    public GameObject customerTemplatePrefab;
+    public Transform parentContainer;
 
-    [Header("View")]
-    public CustomerView view;
-    private CustomerModel model;
-    private JewelrySO currentJewel;
+    [Header("Veri Listeleri")]
+    public List<CustomerSO> allCustomers;
+    public List<JewelrySO> allJewels;
 
-    [Header("Variebles")]
-    private int moneySpend;
-    private int currentMoral;
-    private int maxMoral;
+    private GameObject currentCustomerInstance;
+    private int currentCustomerIndex = -1;
 
-    private void Start()
+
+    public bool SpawnNextCustomer()
     {
-        model = new CustomerModel(customerList, jewelList);
+        // Önce mevcut müşteriyi sil
+        if (currentCustomerInstance != null)
+        {
+            Destroy(currentCustomerInstance);
+        }
 
-        ShowCurrentCustomer();
-        BindButtons();
-    }
+        currentCustomerIndex++;
 
-    private void BindButtons()
-    {
-        view.acceptButton.onClick.AddListener(OnAccept);
-        view.rejectButton.onClick.AddListener(OnReject);
-    }
+        if (currentCustomerIndex >= allCustomers.Count)
+        {
+            return false; // müşteri listesi bitti
+        }
 
-    private void ShowCurrentCustomer()
-    {
-        var currentCustomer = model.GetCurrentCustomer();
-        maxMoral = currentCustomer.GetMoralBarAmount();
-        currentMoral = maxMoral;
+        currentCustomerInstance = Instantiate(customerTemplatePrefab, parentContainer);
+
+        var model = currentCustomerInstance.GetComponent<CustomerModel>();
         
-        currentJewel = model.GetRandomJewel();  
-        view.UpdateView(currentCustomer, currentJewel, MoneyManager.Instance.PlayerMoney, moneySpend, maxMoral, currentMoral);
+        model.Initialize(this);
         
-        view.SetButtonsEnabled(true);
+        if (model != null)
+        {
+            // Random jewel seç
+            JewelrySO randomJewel = allJewels[Random.Range(0, allJewels.Count)];
+            model.SetData(allCustomers[currentCustomerIndex], randomJewel);
+        }
+
+        return true;
     }
 
-    private void OnAccept()
-    {
-        string offerText = view.GetInput();
 
-        if (int.TryParse(offerText, out int offerPrice))
-        {
-            if (offerPrice >= currentJewel.GetMinItemWorth())
-            {
-                if (MoneyManager.Instance.PlayerMoney >= offerPrice)
-                {
-                    MoneyManager.Instance.RemoveMoney(offerPrice);
-                    Debug.Log($"Satın alındı! {currentJewel.GetItemName()} için {offerPrice} ₺ ödendi.");
-                    ProceedToNextCustomer();
-                }
-                else
-                {
-                    Debug.Log("Yeterli paran yok!");
-                }
-            }
-            else
-            {
-                Debug.Log($"Teklif çok düşük!");
-
-
-                currentMoral -= 10;
-                view.UpdateMoralBar(currentMoral);
-
-                if(currentMoral == 0)
-                {
-                    Debug.Log("Müşteri sinirden anlaşmayı bozdu.");
-                }
-            }
-        }
-        else
-        {
-
-            ProceedToNextCustomer();
-        }
-    }
-
-    private void OnReject()
-    {
-        ProceedToNextCustomer();
-    }
-
-    private void ProceedToNextCustomer()
-    {
-        view.SetButtonsEnabled(false);
-
-        if (model.HasNextCustomer())
-        {
-            model.NextCustomer();
-            ShowCurrentCustomer();
-        }
-        else
-        {
-            Debug.Log("Tüm müşteriler geldi!");
-            view.customerNameText.text = "Tüm müşteriler geldi!";
-            view.dailyReport.SetActive(true);
-
-        }
-    }
 }

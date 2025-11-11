@@ -1,33 +1,51 @@
-﻿using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 
+[RequireComponent(typeof(View))]
 public class CustomerModel : MonoBehaviour
 {
-    public List<CustomerSO> customers;
-    public List<JewelrySO> jewels;
+    public CustomerSO customerData;
+    public JewelrySO jewelData;
+    public View view;
+    public CustomerPresenter presenter;
 
-    public int currentCustomerIndex = 0;
-
-    public CustomerModel(List<CustomerSO> customers, List<JewelrySO> jewels)
+    private void Awake()
     {
-        this.customers = customers;
-        this.jewels = jewels;
+        view = GetComponent<View>();
     }
 
-    public bool HasNextCustomer() => currentCustomerIndex < customers.Count - 1;
-
-    public CustomerSO GetCurrentCustomer() => customers[currentCustomerIndex];
-
-    public JewelrySO GetRandomJewel()
+    public void Initialize(CustomerPresenter _presenter)
     {
-        int r = Random.Range(0, jewels.Count);
-        return jewels[r];
+        presenter = _presenter;
     }
 
-    public void NextCustomer()
+    public void SetData(CustomerSO customer, JewelrySO jewel)
     {
-        if (HasNextCustomer())
-            currentCustomerIndex++;
+        customerData = customer;
+        jewelData = jewel;
+        UpdateView();
     }
+
+    private void UpdateView()
+    {
+        Debug.Log("View has been updated");
+       
+        view.UpdateUI(customerData.GetCustomerName(), customerData.GetCustomerSprite(), jewelData.GetItemName(), jewelData.GetItemSprite(), jewelData.GetItemWorth());
+        
+        if (view == null|| jewelData == null || customerData == null )
+        {
+            Debug.Log("data ulaşmıyor.");
+        }
+              
+    }
+
+
+    public void SetMorale(int newMorale)
+    {
+        //if (customerData == null) return;
+        //customerData.g = newMorale;
+        //view.UpdateMorale(newMorale);
+    }
+
+
+
 }
