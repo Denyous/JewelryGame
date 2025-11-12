@@ -111,7 +111,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4289011553
   m_fontColor: {r: 0.38072506, g: 0.12053394, b: 0.645283, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4285203438
   m_fontColor: {r: 0.93207544, g: 0.012310382, b: 0.41953677, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4288365097
   m_fontColor: {r: 0.15933777, g: 0.2607701, b: 0.6075471, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -702,3 +702,7 @@ MonoBehaviour:
   jewelNameText: {fileID: 5190131472968633303}
   jewelImage: {fileID: 8745374544865999565}
   jewelPriceText: {fileID: 6358285122217930375}
+  moneyText: {fileID: 0}
+  buyButton: {fileID: 0}
+  refuseButton: {fileID: 0}
+  offer: {fileID: 0}

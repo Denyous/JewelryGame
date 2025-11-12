@@ -7,7 +7,7 @@ using Button = UnityEngine.UI.Button;
 using Image = UnityEngine.UI.Image;
 using Slider = UnityEngine.UI.Slider;
 
-public class View : MonoBehaviour
+public class CustomerView : MonoBehaviour
 {
 
     [Header("Customer UI")]
@@ -19,6 +19,8 @@ public class View : MonoBehaviour
     public TMP_Text jewelNameText;
     public Image jewelImage;
     public TMP_Text jewelPriceText;
+
+
 
     
     public void UpdateUI(string name, Sprite portrait, string jewelName, Sprite jewelSprite, int jewelPrice)

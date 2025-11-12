@@ -1,8 +1,17 @@
 ﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class CustomerPresenter : MonoBehaviour
 {
+    [Header("GeneralUI")]
+    [SerializeField] public Button buyButton;
+    [SerializeField] public Button refuseButton;
+    [SerializeField] public TextMeshProUGUI moneyText;
+    [SerializeField] public TMP_InputField offerArea;
+
     [Header("Prefab ve Veri Referansları")]
     public GameObject customerTemplatePrefab;
     public Transform parentContainer;
@@ -15,8 +24,14 @@ public class CustomerPresenter : MonoBehaviour
     private int currentCustomerIndex = -1;
 
 
+    private void Awake()
+    {
+        moneyText.text = MoneyManager.Instance.PlayerMoney.ToString() + "$";
+    }
+
     public bool SpawnNextCustomer()
     {
+        ButtonListenerAdd();
         // Önce mevcut müşteriyi sil
         if (currentCustomerInstance != null)
         {
@@ -47,4 +62,27 @@ public class CustomerPresenter : MonoBehaviour
     }
 
 
+    public void ButtonListenerAdd()
+    {
+        // Buton listenerlarını CustomerManager içinde bağla
+        buyButton.onClick.RemoveAllListeners();
+        buyButton.onClick.AddListener(OnBuyPressed);
+
+        refuseButton.onClick.RemoveAllListeners();
+        refuseButton.onClick.AddListener(OnRefusePressed);
+
+    }
+    private void OnBuyPressed()
+    {
+        // Şu an sadece diğer müşteriyi getir
+        Debug.Log("Buy pressed - yeni müşteri geliyor.");
+        SpawnNextCustomer();
+    }
+
+    private void OnRefusePressed()
+    {
+        // Şu an sadece diğer müşteriyi getir
+        Debug.Log("Refuse pressed - yeni müşteri geliyor.");
+        SpawnNextCustomer();
+    }
 }

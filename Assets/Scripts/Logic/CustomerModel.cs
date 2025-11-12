@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(View))]
+[RequireComponent(typeof(CustomerView))]
 public class CustomerModel : MonoBehaviour
 {
     public CustomerSO customerData;
     public JewelrySO jewelData;
-    public View view;
+    public CustomerView view;
     public CustomerPresenter presenter;
 
     private void Awake()
     {
-        view = GetComponent<View>();
+        view = GetComponent<CustomerView>();
     }
 
     public void Initialize(CustomerPresenter _presenter)
