@@ -28,13 +28,13 @@ public class CustomerView : MonoBehaviour
     public TMP_Text jewelPriceText;
 
 
-    public void UpdateUI(string name, Sprite portrait, string jewelName, Sprite jewelSprite, int jewelPrice, string moneyText)
+    public void UpdateUI(string name, Sprite portrait, int moralBar ,string jewelName, Sprite jewelSprite, int jewelPrice, string moneyText)
     {
         
         nameText.text = name;
         customerImage.sprite = portrait;
-        //moraleBar.maxValue = 100;
-        //moraleBar.value = morale;
+        moraleBar.maxValue = 100;
+        moraleBar.value = moralBar;
 
         jewelNameText.text = jewelName;
         jewelImage.sprite = jewelSprite;
@@ -43,8 +43,13 @@ public class CustomerView : MonoBehaviour
 
     }
 
-    //public void UpdateMorale(int morale)
-    //{
-    //    moraleBar.value = morale;
-    //}
+    public void UpdateMoney(float money)
+    {
+        _moneyText.text = money.ToString();
+    }
+
+    public void UpdateMorale(int morale)
+    {
+        moraleBar.value = morale;
+    }
 }

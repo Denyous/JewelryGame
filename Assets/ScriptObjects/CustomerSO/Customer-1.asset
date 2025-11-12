@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CustomerSO
   customerName: Johan Vulpar
   customerSprite: {fileID: -7301792488309358133, guid: 4e12511a42c972c4dac5e5a30b4f6401, type: 3}
+  customerBalance: 800
   customerMoralBarAmount: 40

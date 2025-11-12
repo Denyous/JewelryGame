@@ -8,12 +8,12 @@ public class CustomerModel : MonoBehaviour
     public JewelrySO jewelData;
     public CustomerView view;
     public CustomerPresenter presenter;
-    private string moneyText;
+    
 
     private void Awake()
     {
         view = GetComponent<CustomerView>();
-        moneyText = MoneyManager.Instance.PlayerMoney.ToString() + "$";
+        
         ButtonListenerAdd();
     }
 
@@ -33,22 +33,19 @@ public class CustomerModel : MonoBehaviour
     {
         Debug.Log("View has been updated");
 
-        view.UpdateUI(customerData.GetCustomerName(), customerData.GetCustomerSprite(), jewelData.GetItemName(), jewelData.GetItemSprite(), jewelData.GetItemWorth(), moneyText);
+        view.UpdateUI(customerData.GetCustomerName(), customerData.GetCustomerSprite(), customerData.GetMoralBarAmount(),jewelData.GetItemName(), jewelData.GetItemSprite(), jewelData.GetItemWorth(),MoneyManager.Instance.PlayerMoney.ToString());
 
         if (view == null || jewelData == null || customerData == null)
         {
             Debug.Log("data ulaşmıyor.");
         }
 
+        SetMorale(50);
+
     }
 
 
-    public void SetMorale(int newMorale)
-    {
-        //if (customerData == null) return;
-        //customerData.g = newMorale;
-        //view.UpdateMorale(newMorale);
-    }
+   
 
     public void ButtonListenerAdd()
     {
@@ -61,10 +58,21 @@ public class CustomerModel : MonoBehaviour
 
     }
     private void OnBuyPressed()
-    {
-        // Money Manager, Reputation Manager ve Inventory Manager Buraya gelicek.
+    {  
         Debug.Log("Buy pressed - yeni müşteri geliyor.");
-        presenter.SpawnNextCustomer();
+       
+        if (MoneyManager.Instance.PlayerMoney >= jewelData.GetItemWorth())
+        {
+            MoneyManager.Instance.RemoveMoney(jewelData.GetItemWorth());
+            UpdateMoneyView(MoneyManager.Instance.PlayerMoney);
+            presenter.SpawnNextCustomer();
+
+        }
+        else
+        {
+            Debug.Log("PARAN YOK!");
+        }
+
     }
 
     private void OnRefusePressed()
@@ -74,4 +82,13 @@ public class CustomerModel : MonoBehaviour
         presenter.SpawnNextCustomer();
     }
 
+    public void UpdateMoneyView(float money)
+    {
+        view.UpdateMoney(money);
+    }
+    public void SetMorale(int newMorale)
+    {
+        // İndirmek istediğimiz morali burdan indirip sonrasında viewda güncelleyeceğiz.
+        view.UpdateMorale(newMorale);
+    }
 }
