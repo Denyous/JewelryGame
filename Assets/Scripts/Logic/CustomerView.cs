@@ -50,6 +50,6 @@ public class CustomerView : MonoBehaviour
 
     public void UpdateMorale(int morale)
     {
-        moraleBar.value = morale;
+        moraleBar.value -= morale;
     }
 }

@@ -40,7 +40,7 @@ public class CustomerModel : MonoBehaviour
             Debug.Log("data ulaşmıyor.");
         }
 
-        SetMorale(50);
+        
 
     }
 
@@ -60,12 +60,16 @@ public class CustomerModel : MonoBehaviour
     private void OnBuyPressed()
     {  
         Debug.Log("Buy pressed - yeni müşteri geliyor.");
-       
+
         if (MoneyManager.Instance.PlayerMoney >= jewelData.GetItemWorth())
         {
             MoneyManager.Instance.RemoveMoney(jewelData.GetItemWorth());
             UpdateMoneyView(MoneyManager.Instance.PlayerMoney);
             presenter.SpawnNextCustomer();
+
+            //Öncesinde Offer Mekaniği ve Moral mekaniğini yapacağım. Bu mekanizmadan sonra
+
+            // Burası tam event sistemini oluşturmalık yer. Inventory Manager, MoneyManager,Reputation Managerların Merkezi.
 
         }
         else
@@ -86,9 +90,9 @@ public class CustomerModel : MonoBehaviour
     {
         view.UpdateMoney(money);
     }
-    public void SetMorale(int newMorale)
+    public void RemoveMoral(int newMorale)
     {
-        // İndirmek istediğimiz morali burdan indirip sonrasında viewda güncelleyeceğiz.
+        // Ne kadar moral indirmek istiyorsak burası aracılığıyla indireceğiz.
         view.UpdateMorale(newMorale);
     }
 }
