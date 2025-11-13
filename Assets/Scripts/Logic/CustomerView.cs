@@ -28,18 +28,23 @@ public class CustomerView : MonoBehaviour
     public TMP_Text jewelPriceText;
 
 
-    public void UpdateUI(string name, Sprite portrait, int moralBar ,string jewelName, Sprite jewelSprite, int jewelPrice, string moneyText)
+    public void UpdateUI(CustomerSO currentCustomer,JewelrySO currentJewel,string name, Sprite portrait, int moralBar ,string jewelName, Sprite jewelSprite, int jewelPrice, string moneyText)
     {
         
         nameText.text = name;
         customerImage.sprite = portrait;
-        moraleBar.maxValue = 100;
-        moraleBar.value = moralBar;
+       
+        //Moral barına verilan max value müşterinin kendi moral valuesi.
+        moraleBar.maxValue = currentCustomer.GetMoralBarAmount();
+        moraleBar.value = currentCustomer.GetMoralBarAmount();
 
         jewelNameText.text = jewelName;
         jewelImage.sprite = jewelSprite;
         jewelPriceText.text = "$" + jewelPrice;
-        _moneyText.text = moneyText;
+        _moneyText.text = moneyText + "$";
+        
+        _offerArea.text = "";
+        _buyButton.interactable = false;
 
     }
 
@@ -51,5 +56,11 @@ public class CustomerView : MonoBehaviour
     public void UpdateMorale(int morale)
     {
         moraleBar.value -= morale;
+    }
+
+    public void SetButtonsEnabled(bool state)
+    {
+        _buyButton.interactable = state;
+        _refuseButton.interactable = state;
     }
 }

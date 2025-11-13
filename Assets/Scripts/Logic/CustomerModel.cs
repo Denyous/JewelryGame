@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [RequireComponent(typeof(CustomerView))]
 public class CustomerModel : MonoBehaviour
@@ -8,14 +9,15 @@ public class CustomerModel : MonoBehaviour
     public JewelrySO currentJewelData;
     public CustomerView view;
     public CustomerPresenter presenter;
-    
+    private double offerValue;
+
 
     private void Awake()
     {
         view = GetComponent<CustomerView>();
-        
-        ButtonListenerAdd();
+        ViewListeners();
     }
+
 
     public void Initialize(CustomerPresenter _presenter)
     {
@@ -31,53 +33,71 @@ public class CustomerModel : MonoBehaviour
 
     private void UpdateView()
     {
-        Debug.Log("View has been updated");
+        //Debug.Log("View has been updated");
 
-        view.UpdateUI(currentCustomerData.GetCustomerName(), currentCustomerData.GetCustomerSprite(), currentCustomerData.GetMoralBarAmount(),currentJewelData.GetItemName(), currentJewelData.GetItemSprite(), currentJewelData.GetItemWorth(),MoneyManager.Instance.PlayerMoney.ToString());
+        view.UpdateUI(currentCustomerData, currentJewelData, currentCustomerData.GetCustomerName(), currentCustomerData.GetCustomerSprite(), currentCustomerData.GetMoralBarAmount(), currentJewelData.GetItemName(), currentJewelData.GetItemSprite(), currentJewelData.GetItemWorth(), MoneyManager.Instance.PlayerMoney.ToString());
 
         if (view == null || currentJewelData == null || currentCustomerData == null)
         {
             Debug.Log("data ulaşmıyor.");
         }
 
-        
+
 
     }
 
-
-   
-
-    public void ButtonListenerAdd()
+    public void ViewListeners()
     {
-        // Buton listenerlarını CustomerManager içinde bağla
+        // Viewi dinleyen button ve offer listenerlar. //Eventler.
+        view._buyButton.interactable = false;
+        view._offerArea.onValueChanged.AddListener(OnOfferChanged);
+
         view._buyButton.onClick.RemoveAllListeners();
         view._buyButton.onClick.AddListener(OnBuyPressed);
 
         view._refuseButton.onClick.RemoveAllListeners();
         view._refuseButton.onClick.AddListener(OnRefusePressed);
-
     }
-    private void OnBuyPressed()
-    {  
-        Debug.Log("Buy pressed - yeni müşteri geliyor.");
 
-        if (MoneyManager.Instance.PlayerMoney >= currentJewelData.GetItemWorth())
+    private void OnOfferChanged(string input)
+    {
+        // Eğer input boşsa ya da geçerli bir sayı değilse buton kilitli
+        if (int.TryParse(input, out int value) && value > 0)
         {
-            
-            MoneyManager.Instance.RemoveMoney(currentJewelData.GetItemWorth());
-            UpdateMoneyView(MoneyManager.Instance.PlayerMoney);
-            InventoryManager.Instance.AddItemToInventory(currentJewelData);
-            presenter.SpawnNextCustomer();
+            view._buyButton.interactable = true;
+            //Debug.Log("Buton aktifleşti");
+        }
+        else
+        {
+            view._buyButton.interactable = false;
+        }
+    }
 
-            //Öncesinde Offer Mekaniği ve Moral mekaniğini yapacağım. Bu mekanizmadan sonra
+    private void OnBuyPressed()
+    {
+        float offerValue = GetOfferInput();
 
-            // Burası tam event sistemini oluşturmalık yer. Inventory Manager, MoneyManager,Reputation Managerların Merkezi.
+        if (offerValue <= MoneyManager.Instance.PlayerMoney)
+        {
+
+            if (offerValue >= currentJewelData.GetMinItemWorth())
+            {
+                MoneyManager.Instance.RemoveMoney(offerValue);                
+                Debug.Log("Tebrikler ürünü satın aldınız.");
+                view.UpdateMoney(MoneyManager.Instance.PlayerMoney);
+                presenter.SpawnNextCustomer();
+            }
+            else
+            {
+                Debug.Log("Girdiğiniz değer takının değer aralığından düşük!");
+            }
 
         }
         else
         {
-            Debug.Log("PARAN YOK!");
+            Debug.Log("Bakiyenden yüksek teklif giremezsin!");
         }
+
 
     }
 
@@ -88,6 +108,8 @@ public class CustomerModel : MonoBehaviour
         presenter.SpawnNextCustomer();
     }
 
+   
+
     public void UpdateMoneyView(float money)
     {
         view.UpdateMoney(money);
@@ -97,4 +119,11 @@ public class CustomerModel : MonoBehaviour
         // Ne kadar moral indirmek istiyorsak burası aracılığıyla indireceğiz.
         view.UpdateMorale(newMorale);
     }
+
+    public float GetOfferInput()
+    {
+        float offerValue = (float)Convert.ToDecimal(view._offerArea.text);
+        return offerValue;
+    }
+
 }
