@@ -22,7 +22,7 @@ public class CustomerPresenter : MonoBehaviour
 
     public bool SpawnNextCustomer()
     {
-        //ButtonListenerAdd();
+        
         // Önce mevcut müşteriyi sil
         if (currentCustomerInstance != null)
         {
@@ -53,27 +53,5 @@ public class CustomerPresenter : MonoBehaviour
     }
 
 
-    //public void ButtonListenerAdd()
-    //{
-    //    // Buton listenerlarını CustomerManager içinde bağla
-    //    buyButton.onClick.RemoveAllListeners();
-    //    buyButton.onClick.AddListener(OnBuyPressed);
-
-    //    refuseButton.onClick.RemoveAllListeners();
-    //    refuseButton.onClick.AddListener(OnRefusePressed);
-
-    //}
-    //private void OnBuyPressed()
-    //{
-    //    // Şu an sadece diğer müşteriyi getir
-    //    Debug.Log("Buy pressed - yeni müşteri geliyor.");
-    //    SpawnNextCustomer();
-    //}
-
-    //private void OnRefusePressed()
-    //{
-    //    // Şu an sadece diğer müşteriyi getir
-    //    Debug.Log("Refuse pressed - yeni müşteri geliyor.");
-    //    SpawnNextCustomer();
-    //}
+    
 }

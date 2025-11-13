@@ -4,8 +4,8 @@
 public class CustomerModel : MonoBehaviour
 {
 
-    public CustomerSO customerData;
-    public JewelrySO jewelData;
+    public CustomerSO currentCustomerData;
+    public JewelrySO currentJewelData;
     public CustomerView view;
     public CustomerPresenter presenter;
     
@@ -24,8 +24,8 @@ public class CustomerModel : MonoBehaviour
 
     public void SetData(CustomerSO customer, JewelrySO jewel)
     {
-        customerData = customer;
-        jewelData = jewel;
+        currentCustomerData = customer;
+        currentJewelData = jewel;
         UpdateView();
     }
 
@@ -33,9 +33,9 @@ public class CustomerModel : MonoBehaviour
     {
         Debug.Log("View has been updated");
 
-        view.UpdateUI(customerData.GetCustomerName(), customerData.GetCustomerSprite(), customerData.GetMoralBarAmount(),jewelData.GetItemName(), jewelData.GetItemSprite(), jewelData.GetItemWorth(),MoneyManager.Instance.PlayerMoney.ToString());
+        view.UpdateUI(currentCustomerData.GetCustomerName(), currentCustomerData.GetCustomerSprite(), currentCustomerData.GetMoralBarAmount(),currentJewelData.GetItemName(), currentJewelData.GetItemSprite(), currentJewelData.GetItemWorth(),MoneyManager.Instance.PlayerMoney.ToString());
 
-        if (view == null || jewelData == null || customerData == null)
+        if (view == null || currentJewelData == null || currentCustomerData == null)
         {
             Debug.Log("data ulaşmıyor.");
         }
@@ -61,10 +61,12 @@ public class CustomerModel : MonoBehaviour
     {  
         Debug.Log("Buy pressed - yeni müşteri geliyor.");
 
-        if (MoneyManager.Instance.PlayerMoney >= jewelData.GetItemWorth())
+        if (MoneyManager.Instance.PlayerMoney >= currentJewelData.GetItemWorth())
         {
-            MoneyManager.Instance.RemoveMoney(jewelData.GetItemWorth());
+            
+            MoneyManager.Instance.RemoveMoney(currentJewelData.GetItemWorth());
             UpdateMoneyView(MoneyManager.Instance.PlayerMoney);
+            InventoryManager.Instance.AddItemToInventory(currentJewelData);
             presenter.SpawnNextCustomer();
 
             //Öncesinde Offer Mekaniği ve Moral mekaniğini yapacağım. Bu mekanizmadan sonra
