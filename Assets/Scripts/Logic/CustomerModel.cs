@@ -83,14 +83,15 @@ public class CustomerModel : MonoBehaviour
 
             if (offerValue >= currentJewelData.GetMinItemWorth())
             {
-                MoneyManager.Instance.RemoveMoney(offerValue);                
-                Debug.Log("Tebrikler ürünü satın aldınız.");
+                MoneyManager.Instance.RemoveMoney(offerValue); 
+                InventoryManager.Instance.AddItemToInventory(currentJewelData);
                 view.UpdateMoney(MoneyManager.Instance.PlayerMoney);
+                Debug.Log("Tebrikler ürünü satın aldınız.");
                 presenter.SpawnNextCustomer();
             }
             else
             {
-                RemoveMoral(20);
+                RemoveMoral(25);
 
                 if (view.moraleBar.value <= 0)
                 {
