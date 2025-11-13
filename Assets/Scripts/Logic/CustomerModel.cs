@@ -1,4 +1,5 @@
 ﻿using System;
+using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 
 [RequireComponent(typeof(CustomerView))]
@@ -89,13 +90,24 @@ public class CustomerModel : MonoBehaviour
             }
             else
             {
-                Debug.Log("Girdiğiniz değer takının değer aralığından düşük!");
+                RemoveMoral(20);
+
+                if (view.moraleBar.value <= 0)
+                {
+                    Debug.Log("Müşteri Sinirden Anlaşmayı Bozdu");
+
+                    //Eksi Reputation//
+
+                    presenter.SpawnNextCustomer();
+                }
             }
 
         }
         else
         {
             Debug.Log("Bakiyenden yüksek teklif giremezsin!");
+
+           
         }
 
 
