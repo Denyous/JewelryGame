@@ -325,8 +325,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2150773298
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.5}
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -343,8 +343,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 20.02
+  m_fontSizeBase: 20.02
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -443,8 +443,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61, y: -532}
-  m_SizeDelta: {x: 160, y: 41.3455}
+  m_AnchoredPosition: {x: 61, y: -526.28094}
+  m_SizeDelta: {x: 160, y: 46.5664}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2407634960637948416
 CanvasRenderer:
@@ -2509,8 +2509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71477f78f6d0cd49ac4d9664b827a11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomerModel
-  customerData: {fileID: 0}
-  jewelData: {fileID: 0}
+  currentCustomerData: {fileID: 0}
+  currentJewelData: {fileID: 0}
   view: {fileID: 0}
   presenter: {fileID: 0}
 --- !u!114 &2959339571478912978

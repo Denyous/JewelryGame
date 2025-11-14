@@ -85,6 +85,7 @@ public class CustomerModel : MonoBehaviour
             {
                 MoneyManager.Instance.RemoveMoney(offerValue); 
                 InventoryManager.Instance.AddItemToInventory(currentJewelData);
+                ReputationManager.Instance.AddReputation(30);
                 view.UpdateMoney(MoneyManager.Instance.PlayerMoney);
                 Debug.Log("Tebrikler ürünü satın aldınız.");
                 presenter.SpawnNextCustomer();
@@ -97,7 +98,7 @@ public class CustomerModel : MonoBehaviour
                 {
                     Debug.Log("Müşteri Sinirden Anlaşmayı Bozdu");
 
-                    //Eksi Reputation//
+                    ReputationManager.Instance.AddReputation(-10);
 
                     presenter.SpawnNextCustomer();
                 }

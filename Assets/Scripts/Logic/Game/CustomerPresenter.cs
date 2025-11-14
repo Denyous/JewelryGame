@@ -10,6 +10,7 @@ public class CustomerPresenter : MonoBehaviour
     [Header("Prefab ve Veri Referansları")]
     public GameObject customerTemplatePrefab;
     public Transform parentContainer;
+    
 
     [Header("Veri Listeleri")]
     public List<CustomerSO> allCustomers;
@@ -18,7 +19,7 @@ public class CustomerPresenter : MonoBehaviour
     private GameObject currentCustomerInstance;
     private int currentCustomerIndex = -1;
 
-
+    
 
     public bool SpawnNextCustomer()
     {
@@ -33,7 +34,7 @@ public class CustomerPresenter : MonoBehaviour
 
         if (currentCustomerIndex >= allCustomers.Count)
         {
-            return false; // müşteri listesi bitti
+            UIManager.Instance.ShowPanel("DailyReportPanel");
         }
 
         currentCustomerInstance = Instantiate(customerTemplatePrefab, parentContainer);

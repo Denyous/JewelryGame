@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class CustomerManager : MonoBehaviour
 {
     public static CustomerManager Instance {  get; private set; }
-    public CustomerPresenter presenter;
+    private CustomerPresenter presenter;
 
 
     private void Awake()
@@ -12,8 +12,9 @@ public class CustomerManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            presenter = GameObject.FindAnyObjectByType<CustomerPresenter>().GetComponent<CustomerPresenter>();
             DontDestroyOnLoad(gameObject);
-            GetNextCustomer();
+            
         }
         else
         {
@@ -26,6 +27,8 @@ public class CustomerManager : MonoBehaviour
     {
         presenter.SpawnNextCustomer();
     }
+
+  
 
    
 }

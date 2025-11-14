@@ -13,7 +13,7 @@ public class ReputationManager : MonoBehaviour
 {
     public static ReputationManager Instance;
     private Reputation _currentReputation;
-    private int _reputationPoints;
+    public int _reputationPoints { get; private set; }
 
 
     private void Awake()
