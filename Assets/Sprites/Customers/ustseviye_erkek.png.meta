@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 24070ca8e7a2bb44ab33856ee563de50
+guid: f03b1f017ce93b9428b4279d014ed09f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1986157594172015396
-    second: "d\xFC\u015F\xFCk Seviye tak\u0131 \xF6rn_0"
+      213: 6044879560069638596
+    second: ustseviye_erkek_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 350
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "d\xFC\u015F\xFCk Seviye tak\u0131 \xF6rn_0"
+      name: ustseviye_erkek_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        x: 200
+        y: 6
+        width: 228
+        height: 306
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cdcbe63f030cf64e0800000000000000
-      internalID: -1986157594172015396
+      spriteID: 4c968f7cee9b3e350800000000000000
+      internalID: 6044879560069638596
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "d\xFC\u015F\xFCk Seviye tak\u0131 \xF6rn_0": -1986157594172015396
+      ustseviye_erkek_0: 6044879560069638596
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

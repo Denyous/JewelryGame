@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 90edff858a8cfb04ba06e64e73b9cfb6
+guid: d1c9b7805a7a54b47b11d1e87fab6d79
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1081864664250197600
-    second: ust_seviye_kadn_ornek_0
+      213: -8222796178985752850
+    second: "\xFCstseviye_2_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ust_seviye_kadn_ornek_0
+      name: "\xFCstseviye_2_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        x: 158
+        y: 1
+        width: 324
+        height: 357
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a9d150e1d17cf0f0800000000000000
-      internalID: -1081864664250197600
+      spriteID: ee66d130172c2ed80800000000000000
+      internalID: -8222796178985752850
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ust_seviye_kadn_ornek_0: -1081864664250197600
+      "\xFCstseviye_2_0": -8222796178985752850
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

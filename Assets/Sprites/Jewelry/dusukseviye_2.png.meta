@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f32c5a4615921814ba444578c9b5da83
+guid: 6e148ceafa084dc41837f54d4180632e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6809798077090513483
-    second: "\xDCst seviye tak\u0131_0"
+      213: -9214464572269388483
+    second: dusukseviye_2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 350
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\xDCst seviye tak\u0131_0"
+      name: dusukseviye_2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        x: 169
+        y: 17
+        width: 298
+        height: 326
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b424e117543418e50800000000000000
-      internalID: 6809798077090513483
+      spriteID: d3d1676ba45af1080800000000000000
+      internalID: -9214464572269388483
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\xDCst seviye tak\u0131_0": 6809798077090513483
+      dusukseviye_2_0: -9214464572269388483
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

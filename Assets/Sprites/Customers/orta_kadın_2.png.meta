@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e45e75e872bf49c469897674193e04e0
+guid: 7c4bea07e6cfdf9468d694e54ed3008e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5630292606882895552
-    second: ust_seviye_musteri_erkek_ornek_0
+      213: -2692347576857271723
+    second: "orta_kad\u0131n_2_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ust_seviye_musteri_erkek_ornek_0
+      name: "orta_kad\u0131n_2_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        x: 249
+        y: 1
+        width: 157
+        height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 049ac3164be2dd1b0800000000000000
-      internalID: -5630292606882895552
+      spriteID: 552e98db42cd2aad0800000000000000
+      internalID: -2692347576857271723
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ust_seviye_musteri_erkek_ornek_0: -5630292606882895552
+      "orta_kad\u0131n_2_0": -2692347576857271723
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

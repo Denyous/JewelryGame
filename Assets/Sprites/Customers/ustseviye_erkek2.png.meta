@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 55b3e4ddd5250d94e9d67d615d622542
+guid: 2608ce8f333ccea42bd1ddfba8145bcd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5687576794128176139
-    second: "Orta Seviye tak\u0131 \xF6rn_0"
+      213: 3865467852564661442
+    second: ustseviye_erkek2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 350
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Orta Seviye tak\u0131 \xF6rn_0"
+      name: ustseviye_erkek2_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 217
         y: 0
-        width: 1024
-        height: 1024
+        width: 206
+        height: 321
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5fb2c313a0ba111b0800000000000000
-      internalID: -5687576794128176139
+      spriteID: 2c40fc22886e4a530800000000000000
+      internalID: 3865467852564661442
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Orta Seviye tak\u0131 \xF6rn_0": -5687576794128176139
+      ustseviye_erkek2_0: 3865467852564661442
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
