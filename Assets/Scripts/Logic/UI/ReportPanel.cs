@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class ReportPanel : UIPanel
 {
-    [Header("UI Refferences")]
+    [Header("UI References")]
 
-    [SerializeField] private Button _nexdayButton;
+    [SerializeField] private Button _nextDayButton;
     [SerializeField] private TextMeshPro _moneySpend;
+
     public void NextButtonOnClicked()
     {
-
-        SceneManager.LoadScene(0);
+        UIManager.Instance.ShowPanel("StoreUI");
+        UIManager.Instance.HidePanel("DailyReportPanel");
     }
 }

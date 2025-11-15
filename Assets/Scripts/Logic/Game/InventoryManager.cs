@@ -30,6 +30,4 @@ public class InventoryManager : MonoBehaviour
         _items.Remove(item);
         Debug.Log(item.GetItemName() + " envanterinizden çıkarıldı.");
     }
-
-
 }

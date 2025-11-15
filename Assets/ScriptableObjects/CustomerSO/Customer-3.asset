@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11e7bdae09d995c46a72ae1e74e88a55, type: 3}
-  m_Name: Customer-2
+  m_Name: Customer-3
   m_EditorClassIdentifier: Assembly-CSharp::CustomerSO
-  customerName: Marry Jones
-  customerSprite: {fileID: 6630551452775097335, guid: 2cae4e7e42b0cb943bc8e0f00c462e38, type: 3}
-  customerBalance: 1200
-  customerMoralBarAmount: 70
+  <CustomerName>k__BackingField: Defne
+  <CustomerSprite>k__BackingField: {fileID: -1081864664250197600, guid: 90edff858a8cfb04ba06e64e73b9cfb6, type: 3}
+  _moraleMultiplier: 0.952
+  _bargainMultiplier: 1
+  <CustomerCharacter>k__BackingField: 0

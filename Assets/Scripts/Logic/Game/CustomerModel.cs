@@ -1,143 +1,196 @@
 ﻿using System;
-using Unity.Android.Gradle.Manifest;
+using Unity.Collections.LowLevel.Unsafe;
+using Unity.Mathematics;
+using Unity.Mathematics.Geometry;
+using UnityEditor.Timeline;
 using UnityEngine;
 
-[RequireComponent(typeof(CustomerView))]
-public class CustomerModel : MonoBehaviour
+public enum CustomerMood
 {
+    Mad = 20,
+    Angry = 30,
+    Upset = 40,
+    Normal = 50,
+    Cheerful = 80,
+    Happy = 100,
+}
 
-    public CustomerSO currentCustomerData;
-    public JewelrySO currentJewelData;
-    public CustomerView view;
-    public CustomerPresenter presenter;
-    private double offerValue;
+[System.Serializable]
+public class CustomerModel
+{
+    public CustomerMood Mood;
+    public CustomerSO Data;
+    public JewelrySO CurrentJewelData;
+    [field: SerializeField] public float Money { get; private set; }
 
+    public int Morale { get; private set; }
 
-    private void Awake()
+    public const int MAX_MORALE = 100; 
+
+    public event Action<float> OnCounterOffer;
+    public event Action<int> OnCustomerMoraleChanged;
+    public event Action<CustomerMood, float> OnCustomerLeave;
+
+    public float ExpectedItemPrice { get; private set; }
+
+    public void Initialize(JewelrySO jewelData)
     {
-        view = GetComponent<CustomerView>();
-        ViewListeners();
+        CurrentJewelData = jewelData;
+        ExpectedItemPrice = CurrentJewelData.GetItemWorth();
+        Morale = 100;
     }
 
-
-    public void Initialize(CustomerPresenter _presenter)
+    public float GetCustomerBalance()
     {
-        presenter = _presenter;
+        return Money;
     }
 
-    public void SetData(CustomerSO customer, JewelrySO jewel)
+    public void AddCustomerBalance(float amount)
     {
-        currentCustomerData = customer;
-        currentJewelData = jewel;
-        UpdateView();
+        Money += amount;
     }
 
-    private void UpdateView()
+    public void RemoveCustomerBalance(float amount)
     {
-        //Debug.Log("View has been updated");
-
-        view.UpdateUI(currentCustomerData, currentJewelData, currentCustomerData.GetCustomerName(), currentCustomerData.GetCustomerSprite(), currentCustomerData.GetMoralBarAmount(), currentJewelData.GetItemName(), currentJewelData.GetItemSprite(), currentJewelData.GetItemWorth(), MoneyManager.Instance.PlayerMoney.ToString());
-
-        if (view == null || currentJewelData == null || currentCustomerData == null)
+        if (Money > 0)
         {
-            Debug.Log("data ulaşmıyor.");
-        }
-
-
-
-    }
-
-    public void ViewListeners()
-    {
-        // Viewi dinleyen button ve offer listenerlar. //Eventler.
-        view._buyButton.interactable = false;
-        view._offerArea.onValueChanged.AddListener(OnOfferChanged);
-
-        view._buyButton.onClick.RemoveAllListeners();
-        view._buyButton.onClick.AddListener(OnBuyPressed);
-
-        view._refuseButton.onClick.RemoveAllListeners();
-        view._refuseButton.onClick.AddListener(OnRefusePressed);
-    }
-
-    private void OnOfferChanged(string input)
-    {
-        // Eğer input boşsa ya da geçerli bir sayı değilse buton kilitli
-        if (int.TryParse(input, out int value) && value > 0)
-        {
-            view._buyButton.interactable = true;
-            //Debug.Log("Buton aktifleşti");
+            Money -= amount;
         }
         else
         {
-            view._buyButton.interactable = false;
+            Money = 0;
         }
     }
 
-    private void OnBuyPressed()
+    public void HandleOffer(float offerValue, float expectedValue, float itemWorth, float minItemWorth, float maxItemWorth)
     {
-        float offerValue = GetOfferInput();
+        int percent = GetPercentage(offerValue, expectedValue);
 
-        if (offerValue <= MoneyManager.Instance.PlayerMoney)
+        if (percent <= 0)
         {
-
-            if (offerValue >= currentJewelData.GetMinItemWorth())
-            {
-                MoneyManager.Instance.RemoveMoney(offerValue); 
-                InventoryManager.Instance.AddItemToInventory(currentJewelData);
-                ReputationManager.Instance.AddReputation(30);
-                view.UpdateMoney(MoneyManager.Instance.PlayerMoney);
-                Debug.Log("Tebrikler ürünü satın aldınız.");
-                presenter.SpawnNextCustomer();
-            }
-            else
-            {
-                RemoveMoral(25);
-
-                if (view.moraleBar.value <= 0)
-                {
-                    Debug.Log("Müşteri Sinirden Anlaşmayı Bozdu");
-
-                    ReputationManager.Instance.AddReputation(-10);
-
-                    presenter.SpawnNextCustomer();
-                }
-            }
-
+            SetMorale(0);
+            OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
+            return;
         }
-        else
+
+        if (percent >= 100)
         {
-            Debug.Log("Bakiyenden yüksek teklif giremezsin!");
-
-           
+            SetMorale(100);
+            OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
+            return;
         }
 
+        if (percent <= 25)
+        {
+            SetMorale(0);
+            OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
+            return;
+        }
 
+        if (percent > 25 && percent < 50)
+        {
+            if (Data.CustomerCharacter == CustomerCharacter.Greedy || Data.CustomerCharacter == CustomerCharacter.Normal)
+            {
+                SetMorale(0);
+                OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
+                return;
+            }
+
+            UpdateMorale(percent);
+            HandleCounterOffer(percent, offerValue, expectedValue);
+            return;
+        }
+
+        if (percent > 50 && percent < 95)
+        {
+            if (Data.CustomerCharacter == CustomerCharacter.Greedy)
+            {
+                SetMorale(0);
+                OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
+                return;
+            }
+            UpdateMorale(percent);
+            HandleCounterOffer(percent, offerValue, expectedValue);
+            return;
+        }
+
+        SetMorale(100);
+        UpdateMorale(percent);
+        OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
     }
 
-    private void OnRefusePressed()
+    private void UpdateMorale(float offerPercent)
     {
-        // Şu an sadece diğer müşteriyi getir
-        Debug.Log("Refuse pressed - yeni müşteri geliyor.");
-        presenter.SpawnNextCustomer();
+        float remainingPercentage = 100 - offerPercent;
+        float updateMoralePercentage = remainingPercentage * Data.GetMoraleMultiplier();
+
+        Morale = Morale - (int)updateMoralePercentage;
+        OnCustomerMoraleChanged?.Invoke(Morale);
     }
 
-   
-
-    public void UpdateMoneyView(float money)
+    private void SetMorale(int value)
     {
-        view.UpdateMoney(money);
-    }
-    public void RemoveMoral(int newMorale)
-    {
-        // Ne kadar moral indirmek istiyorsak burası aracılığıyla indireceğiz.
-        view.UpdateMorale(newMorale);
+        Morale = value;
+        OnCustomerMoraleChanged?.Invoke(Morale);
     }
 
-    public float GetOfferInput()
+    private CustomerMood GetMoodFromMorale(int morale)
     {
-        float offerValue = (float)Convert.ToDecimal(view._offerArea.text);
-        return offerValue;
+        if (morale > 80)
+        {
+            return CustomerMood.Happy;
+        }
+
+        if (morale < 80 && morale > 50)
+        {
+            return CustomerMood.Cheerful;
+        }
+
+        if (morale < 50 && morale > 40)
+        {
+            return CustomerMood.Normal;
+        }
+
+        if (morale < 40 && morale > 30)
+        {
+            return CustomerMood.Upset;
+        }
+
+        if (morale < 30 && morale > 20)
+        {
+            return CustomerMood.Angry;
+        }
+
+        if (morale < 20)
+        {
+            return CustomerMood.Mad;
+        }
+
+        throw new Exception();
     }
 
+    private void HandleCounterOffer(float percent, float offerValue, float itemWorth)
+    {
+        ExpectedItemPrice = GetBargainOffer(percent, offerValue, itemWorth);
+        
+        OnCounterOffer?.Invoke(ExpectedItemPrice);
+    }
+
+    private int GetPercentage(float percentage, float ofThis)
+    {
+        int percent = (int)((percentage / ofThis) * 100);
+
+        return percent;
+    }
+
+    private float GetBargainOffer(float percent, float offerValue, float totalValue)
+    {
+        float value = (totalValue * percent) / 100;
+
+        float remainingValue = totalValue - value;
+
+        float newOffer = offerValue + (remainingValue * Data.GetBargainMultiplier());
+
+        return (int)newOffer;
+    }
 }

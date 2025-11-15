@@ -3,50 +3,52 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "CustomerSO", menuName = "Scriptable Objects/CustomerSO")]
 public class CustomerSO : ScriptableObject
 {
-    [SerializeField] private string customerName;
-    [SerializeField] private Sprite customerSprite;
-    [SerializeField] private float customerBalance;
-    [SerializeField] private int customerMoralBarAmount;
+    [field: SerializeField] public string CustomerName { get; private set; }
+    [field: SerializeField] public Sprite CustomerSprite { get; private set; }
 
+    [SerializeField] [Range(0, 1f)] private float _moraleMultiplier;
+    [SerializeField] [Range(0, 1f)] private float _bargainMultiplier;
 
-    public string GetCustomerName()
-    {
-        return customerName;
-    }
-    public Sprite GetCustomerSprite()
-    {
-        return customerSprite;
-    }
+    [field: SerializeField] public CustomerCharacter CustomerCharacter { get; private set; }
 
-
-    public float GetCustomerBalance()
+    //Change Sprites of the customer according to Mood
+    public void ChangeSprite(CustomerMood mood)
     {
-        return customerBalance;
-    }
-    public void AddCustomerBalance(float amount )
-    {
-        customerBalance += amount;
-    }
-
-    public void RemoveCustomerBalance(float amount )
-    {
-       
-        if (customerBalance > 0)
+        switch (mood)
         {
-            customerBalance -= amount;
-        }
-        else
-        {
-
-            customerBalance = 0;
+            case CustomerMood.Mad:
+                break;
+            case CustomerMood.Angry:
+                break;
+            case CustomerMood.Upset:
+                break;
+            case CustomerMood.Normal:
+                break;
+            case CustomerMood.Cheerful:
+                break;
+            case CustomerMood.Happy:
+                break;
+            default:
+                break;
         }
     }
 
-    public int GetMoralBarAmount()
+    public float GetMoraleMultiplier()
     {
-        return customerMoralBarAmount;
+        return _moraleMultiplier;
     }
 
+    public float GetBargainMultiplier()
+    {
+        return _bargainMultiplier;
+    }
+}
+
+public enum CustomerCharacter
+{
+    Greedy,
+    Normal,
+    Generous
 }
 
 

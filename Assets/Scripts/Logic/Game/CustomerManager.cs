@@ -6,7 +6,6 @@ public class CustomerManager : MonoBehaviour
     public static CustomerManager Instance {  get; private set; }
     private CustomerPresenter presenter;
 
-
     private void Awake()
     {
         if (Instance == null)
@@ -14,21 +13,15 @@ public class CustomerManager : MonoBehaviour
             Instance = this;
             presenter = GameObject.FindAnyObjectByType<CustomerPresenter>().GetComponent<CustomerPresenter>();
             DontDestroyOnLoad(gameObject);
-            
         }
         else
         {
             Destroy(gameObject);
         }
-
     }
     
     public void GetNextCustomer()
     {
         presenter.SpawnNextCustomer();
     }
-
-  
-
-   
 }
