@@ -16,4 +16,4 @@ MonoBehaviour:
   maxItemWorth: 1500
   shownItemWorth: 1400
   minItemHorth: 1290
-  itemSprite: {fileID: -6838065288100554383, guid: 5f3b04faa6da79042ac2348d45b49c8f, type: 3}
+  itemSprite: {fileID: 3993557014488086260, guid: 7818fb4b362c05c48a6efe755e265ab9, type: 3}

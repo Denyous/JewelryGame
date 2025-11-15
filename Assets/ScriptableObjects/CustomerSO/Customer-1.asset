@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Customer-1
   m_EditorClassIdentifier: Assembly-CSharp::CustomerSO
   <CustomerName>k__BackingField: Gamze
-  <CustomerSprite>k__BackingField: {fileID: 6630551452775097335, guid: 2cae4e7e42b0cb943bc8e0f00c462e38, type: 3}
+  <CustomerSprite>k__BackingField: {fileID: 5215318280936136165, guid: 45d2db3a2bf44a546b55ff9d1161b02e, type: 3}
   _moraleMultiplier: 0.1
   _bargainMultiplier: 0.501
   <CustomerCharacter>k__BackingField: 2
