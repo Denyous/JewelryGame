@@ -40,17 +40,12 @@ public class CustomerModel
         Morale = 100;
     }
 
-    public float GetCustomerBalance()
-    {
-        return Money;
-    }
-
-    public void AddCustomerBalance(float amount)
+    public void AddMoney(float amount)
     {
         Money += amount;
     }
 
-    public void RemoveCustomerBalance(float amount)
+    public void RemoveMoney(float amount)
     {
         if (Money > 0)
         {
@@ -62,9 +57,9 @@ public class CustomerModel
         }
     }
 
-    public void HandleOffer(float offerValue, float expectedValue, float itemWorth, float minItemWorth, float maxItemWorth)
+    public void HandleOffer(float offerValue, float expectedValue, float itemWorth)
     {
-        int percent = GetPercentage(offerValue, expectedValue);
+        float percent = Helpers.GetPercentage(offerValue, expectedValue);
 
         if (percent <= 0)
         {
@@ -73,13 +68,33 @@ public class CustomerModel
             return;
         }
 
-        if (percent >= 100)
+        if (percent >= 80 && Data.CustomerCharacter == CustomerCharacter.Generous)
         {
             SetMorale(100);
             OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
             return;
         }
 
+        if (percent >= 85 && Data.CustomerCharacter == CustomerCharacter.Normal)
+        {
+            SetMorale(100);
+            OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
+            return;
+        }
+
+        if (percent >= 95 && Data.CustomerCharacter == CustomerCharacter.Greedy)
+        {
+            SetMorale(100);
+            OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
+            return;
+        }
+
+        UpdateMorale(percent);
+        HandleCounterOffer(percent, offerValue, expectedValue);
+    }
+
+    private void PlaceHolder(float percent, float offerValue, float expectedValue)
+    {
         if (percent <= 25)
         {
             SetMorale(0);
@@ -113,10 +128,6 @@ public class CustomerModel
             HandleCounterOffer(percent, offerValue, expectedValue);
             return;
         }
-
-        SetMorale(100);
-        UpdateMorale(percent);
-        OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
     }
 
     private void UpdateMorale(float offerPercent)
@@ -174,13 +185,6 @@ public class CustomerModel
         ExpectedItemPrice = GetBargainOffer(percent, offerValue, itemWorth);
         
         OnCounterOffer?.Invoke(ExpectedItemPrice);
-    }
-
-    private int GetPercentage(float percentage, float ofThis)
-    {
-        int percent = (int)((percentage / ofThis) * 100);
-
-        return percent;
     }
 
     private float GetBargainOffer(float percent, float offerValue, float totalValue)

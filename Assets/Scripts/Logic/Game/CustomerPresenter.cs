@@ -86,7 +86,7 @@ public class CustomerPresenter : MonoBehaviour
             ReputationManager.Instance.AddReputation(30);
             _customerView.UpdateMoney(MoneyManager.Instance.PlayerMoney);
             Debug.Log("Tebrikler ürünü satın aldınız.");
-            _customerModel.AddCustomerBalance(offerValue);
+            _customerModel.AddMoney(offerValue);
             SpawnNextCustomer();
         }
         else if (mood == CustomerMood.Mad)
@@ -109,7 +109,7 @@ public class CustomerPresenter : MonoBehaviour
 
     private void BuyButtonClickHandler(float offerValue)
     {
-        _customerModel.HandleOffer(offerValue, _customerModel.ExpectedItemPrice, _customerModel.CurrentJewelData.GetItemWorth(), _customerModel.CurrentJewelData.GetMinItemWorth(), _customerModel.CurrentJewelData.GetMaxItemWorth());
+        _customerModel.HandleOffer(offerValue, _customerModel.ExpectedItemPrice, _customerModel.CurrentJewelData.GetItemWorth());
     }
 
     public void UpdateMoneyView(float money)

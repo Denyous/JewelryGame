@@ -31,7 +31,7 @@ public class CustomerView : MonoBehaviour
 
     public void Initialize()
     {
-        ViewListeners();
+        RegisterCallbacks();
     }
 
     public void UpdateUI(CustomerModel currentCustomer,JewelrySO currentJewel,string name, Sprite portrait, int moralBar ,string jewelName, Sprite jewelSprite, int jewelPrice, string moneyText)
@@ -39,7 +39,6 @@ public class CustomerView : MonoBehaviour
         nameText.text = name;
         customerImage.sprite = portrait;
        
-        //Moral barına verilan max value müşterinin kendi moral valuesi.
         moraleBar.maxValue = 100;
         moraleBar.value = currentCustomer.Morale;
 
@@ -51,6 +50,12 @@ public class CustomerView : MonoBehaviour
         _offerArea.text = "";
         _buyButton.interactable = false;
     }
+
+    public void DebugCustomerCharacter()
+    {
+        throw new NotImplementedException();
+    }
+
 
     public void UpdateMoney(float money)
     {
@@ -73,9 +78,8 @@ public class CustomerView : MonoBehaviour
         _conversationArea.text = text;
     }
 
-    public void ViewListeners()
+    public void RegisterCallbacks()
     {
-        // Viewi dinleyen button ve offer listenerlar. //Eventler.
         _buyButton.interactable = false;
         _offerArea.onValueChanged.AddListener(OnOfferChanged);
 
