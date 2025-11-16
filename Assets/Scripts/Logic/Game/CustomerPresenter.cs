@@ -72,7 +72,7 @@ public class CustomerPresenter : MonoBehaviour
         _currentCustomerIndex++;
     }
 
-    private void CustomerMoraleChangedHandler(int morale)
+    private void CustomerMoraleChangedHandler(double morale)
     {
         _customerView.UpdateMorale(morale);
     }

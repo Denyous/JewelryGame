@@ -22,4 +22,14 @@ public static class Helpers
 
         return percent;
     }
+
+    public static float ClampValue(float value)
+    {
+        return value / 100;
+    }
+
+    public static float ClampValue(int value)
+    {
+        return Mathf.Clamp01(value / 100f);
+    }
 }

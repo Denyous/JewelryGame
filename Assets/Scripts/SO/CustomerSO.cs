@@ -12,6 +12,7 @@ public class CustomerSO : ScriptableObject
     [field: SerializeField] public CustomerCharacter CustomerCharacter { get; private set; }
 
     //Change Sprites of the customer according to Mood
+    //But this will probably will go to Customer View
     public void ChangeSprite(CustomerMood mood)
     {
         switch (mood)

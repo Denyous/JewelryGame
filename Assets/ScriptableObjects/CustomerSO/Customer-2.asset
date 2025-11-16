@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CustomerSO
   <CustomerName>k__BackingField: Oguz
   <CustomerSprite>k__BackingField: {fileID: 6044879560069638596, guid: f03b1f017ce93b9428b4279d014ed09f, type: 3}
-  _moraleMultiplier: 0.506
-  _bargainMultiplier: 0.77
+  _moraleMultiplier: 0.386
+  _bargainMultiplier: 0.715
   <CustomerCharacter>k__BackingField: 1

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CustomerSO
   <CustomerName>k__BackingField: Deniz
   <CustomerSprite>k__BackingField: {fileID: 8672353778613291029, guid: d27e23c7abfb1ca4cb7285d59dc9e0f2, type: 3}
-  _moraleMultiplier: 0.907
-  _bargainMultiplier: 1
+  _moraleMultiplier: 0.841
+  _bargainMultiplier: 0.888
   <CustomerCharacter>k__BackingField: 0

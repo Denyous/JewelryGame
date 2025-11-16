@@ -28,7 +28,7 @@ public class CustomerModel
     public const int MAX_MORALE = 100; 
 
     public event Action<float> OnCounterOffer;
-    public event Action<int> OnCustomerMoraleChanged;
+    public event Action<double> OnCustomerMoraleChanged;
     public event Action<CustomerMood, float> OnCustomerLeave;
 
     public float ExpectedItemPrice { get; private set; }
@@ -89,6 +89,13 @@ public class CustomerModel
             return;
         }
 
+        if (Mood == CustomerMood.Mad)
+        {
+            SetMorale(0);
+            OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
+            return;
+        }
+
         UpdateMorale(percent);
         HandleCounterOffer(percent, offerValue, expectedValue);
     }
@@ -136,38 +143,40 @@ public class CustomerModel
         float updateMoralePercentage = remainingPercentage * Data.GetMoraleMultiplier();
 
         Morale = Morale - (int)updateMoralePercentage;
-        OnCustomerMoraleChanged?.Invoke(Morale);
+        Mood = GetMoodFromMorale(Morale);
+        OnCustomerMoraleChanged?.Invoke(Helpers.ClampValue(Morale));
     }
 
     private void SetMorale(int value)
     {
         Morale = value;
-        OnCustomerMoraleChanged?.Invoke(Morale);
+        Mood = GetMoodFromMorale(Morale);
+        OnCustomerMoraleChanged?.Invoke(Helpers.ClampValue(Morale));
     }
 
     private CustomerMood GetMoodFromMorale(int morale)
     {
-        if (morale > 80)
+        if (morale >= 80)
         {
             return CustomerMood.Happy;
         }
 
-        if (morale < 80 && morale > 50)
+        if (morale < 80 && morale >= 50)
         {
             return CustomerMood.Cheerful;
         }
 
-        if (morale < 50 && morale > 40)
+        if (morale < 50 && morale >= 40)
         {
             return CustomerMood.Normal;
         }
 
-        if (morale < 40 && morale > 30)
+        if (morale < 40 && morale >= 30)
         {
             return CustomerMood.Upset;
         }
 
-        if (morale < 30 && morale > 20)
+        if (morale < 30 && morale >= 20)
         {
             return CustomerMood.Angry;
         }

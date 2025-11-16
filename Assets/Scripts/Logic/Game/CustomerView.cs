@@ -10,21 +10,21 @@ using Slider = UnityEngine.UI.Slider;
 public class CustomerView : MonoBehaviour
 {
     [Header("GeneralUI")]
-    [SerializeField] public Button _buyButton;
-    [SerializeField] public Button _refuseButton;
-    [SerializeField] public TextMeshProUGUI _moneyText;
-    [SerializeField] public TMP_InputField _offerArea;
-    [SerializeField] public TextMeshProUGUI _conversationArea;
+    [SerializeField] private Button _buyButton;
+    [SerializeField] private Button _refuseButton;
+    [SerializeField] private TextMeshProUGUI _moneyText;
+    [SerializeField] private TMP_InputField _offerArea;
+    [SerializeField] private TextMeshProUGUI _conversationArea;
 
     [Header("Customer UI")]
-    public TMP_Text nameText;
-    public Image customerImage;
-    public Slider moraleBar;
+    [SerializeField] private TMP_Text _nameText;
+    [SerializeField] private Image _customerImage;
+    [SerializeField] private ProgressBar _moraleBar;
 
     [Header("Jewel UI")]
-    public TMP_Text jewelNameText;
-    public Image jewelImage;
-    public TMP_Text jewelPriceText;
+    [SerializeField] private TMP_Text _jewelNameText;
+    [SerializeField] private Image _jewelImage;
+    [SerializeField] private TMP_Text _jewelPriceText;
 
     public event Action OnSpawnNextCustomer;
     public event Action<float> OnBuyButtonClicked;
@@ -36,22 +36,21 @@ public class CustomerView : MonoBehaviour
 
     public void UpdateUI(CustomerModel currentCustomer,JewelrySO currentJewel,string name, Sprite portrait, int moralBar ,string jewelName, Sprite jewelSprite, int jewelPrice, string moneyText)
     {
-        nameText.text = name;
-        customerImage.sprite = portrait;
-       
-        moraleBar.maxValue = 100;
-        moraleBar.value = currentCustomer.Morale;
+        _nameText.text = name;
+        _customerImage.sprite = portrait;
 
-        jewelNameText.text = jewelName;
-        jewelImage.sprite = jewelSprite;
-        jewelPriceText.text = "$" + jewelPrice;
+        _moraleBar.progressValue = (float)Helpers.ClampValue(currentCustomer.Morale);
+
+        _jewelNameText.text = jewelName;
+        _jewelImage.sprite = jewelSprite;
+        _jewelPriceText.text = "$" + jewelPrice;
         _moneyText.text = moneyText + "$";
         
         _offerArea.text = "";
         _buyButton.interactable = false;
     }
 
-    public void DebugCustomerCharacter()
+    public void DebugCustomerCharacter(string character)
     {
         throw new NotImplementedException();
     }
@@ -62,9 +61,9 @@ public class CustomerView : MonoBehaviour
         _moneyText.text = money.ToString();
     }
 
-    public void UpdateMorale(int morale)
+    public void UpdateMorale(double morale)
     {
-        moraleBar.value = morale;
+        _moraleBar.progressValue = (float)morale;
     }
 
     public void SetButtonsEnabled(bool state)
