@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Jewel-3
   m_EditorClassIdentifier: Assembly-CSharp::JewelrySO
   itemName: Silver Necklace
-  maxItemWorth: 750
+  maxItemWorth: 1000
   shownItemWorth: 850
   minItemHorth: 780
   itemSprite: {fileID: -3463328240975669844, guid: c963032745f296342bf029164c7fd56c, type: 3}

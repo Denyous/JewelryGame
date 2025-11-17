@@ -61,7 +61,7 @@ public class CustomerPresenter : MonoBehaviour
             _customerModel,
             _customerModel.CurrentJewelData,
             _customerModel.Data.CustomerName,
-            _customerModel.Data.CustomerSprite,
+            _customerModel.Data.Sprite,
             _customerModel.Morale,
             _customerModel.CurrentJewelData.GetItemName(),
             _customerModel.CurrentJewelData.GetItemSprite(),
@@ -87,14 +87,30 @@ public class CustomerPresenter : MonoBehaviour
             _customerView.UpdateMoney(MoneyManager.Instance.PlayerMoney);
             Debug.Log("Tebrikler ürünü satın aldınız.");
             _customerModel.AddMoney(offerValue);
+            ResetCustomer();
             SpawnNextCustomer();
         }
         else if (mood == CustomerMood.Mad)
         {
-            //EditorUtility.DisplayDialog("Customer Sinirli", "", "OK");
             Debug.Log("Customer Sinirli Bir Sekilde Dukkani Terk Etti.");
+            ResetCustomer();
             SpawnNextCustomer();
         }
+    }
+
+    private void ResetCustomer()
+    {
+        _customerModel.Reset();
+        _customerModel.OnCounterOffer -= CounterOfferHandler;
+        _customerModel.OnCustomerLeave -= CustomerLeaveHandler;
+        _customerModel.OnCustomerMoraleChanged -= CustomerMoraleChangedHandler;
+
+        _customerView.OnBuyButtonClicked -= BuyButtonClickHandler;
+        _customerView.OnSpawnNextCustomer -= SpawnNextCustomerHandler;
+
+        Destroy(_currentCustomerViewObject);
+        _customerView = null;
+        _customerModel = null;
     }
 
     private void CounterOfferHandler(float counterOffer)
@@ -109,7 +125,7 @@ public class CustomerPresenter : MonoBehaviour
 
     private void BuyButtonClickHandler(float offerValue)
     {
-        _customerModel.HandleOffer(offerValue, _customerModel.ExpectedItemPrice, _customerModel.CurrentJewelData.GetItemWorth());
+        _customerModel.HandleOffer(offerValue, _customerModel.ExpectedItemPrice, _customerModel.CurrentJewelData.GetItemWorth(), _customerModel.CurrentJewelData.GetMinItemWorth());
     }
 
     public void UpdateMoneyView(float money)

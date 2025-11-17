@@ -4,12 +4,11 @@ using UnityEngine;
 public class CustomerSO : ScriptableObject
 {
     [field: SerializeField] public string CustomerName { get; private set; }
-    [field: SerializeField] public Sprite CustomerSprite { get; private set; }
-
-    [SerializeField] [Range(0, 1f)] private float _moraleMultiplier;
-    [SerializeField] [Range(0, 1f)] private float _bargainMultiplier;
-
-    [field: SerializeField] public CustomerCharacter CustomerCharacter { get; private set; }
+    [field: SerializeField] public Sprite Sprite { get; private set; }
+    [field: SerializeField] public CustomerSettingsSO Settings { get; private set; }
+    public CustomerCharacter CustomerCharacter => GetCustomerCharacter();
+    public float MoraleMultiplier => Settings.GetMoraleMultiplier();
+    public float BargainMultiplier => Settings.GetBargainMultiplier();
 
     //Change Sprites of the customer according to Mood
     //But this will probably will go to Customer View
@@ -34,14 +33,9 @@ public class CustomerSO : ScriptableObject
         }
     }
 
-    public float GetMoraleMultiplier()
+    public CustomerCharacter GetCustomerCharacter()
     {
-        return _moraleMultiplier;
-    }
-
-    public float GetBargainMultiplier()
-    {
-        return _bargainMultiplier;
+        return Settings.CustomerCharacter;
     }
 }
 

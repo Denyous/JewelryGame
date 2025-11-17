@@ -19,6 +19,9 @@ public class CustomerView : MonoBehaviour
     [Header("Customer UI")]
     [SerializeField] private TMP_Text _nameText;
     [SerializeField] private Image _customerImage;
+    [SerializeField] private TMP_Text _debugCustomerCharacterText;
+    [SerializeField] private TMP_Text _debugJewelMinWorthText;
+    [SerializeField] private TMP_Text _debugJewelMaxWorthText;
     [SerializeField] private ProgressBar _moraleBar;
 
     [Header("Jewel UI")]
@@ -28,6 +31,8 @@ public class CustomerView : MonoBehaviour
 
     public event Action OnSpawnNextCustomer;
     public event Action<float> OnBuyButtonClicked;
+    private string debugChar;
+    private string debugMorale;
 
     public void Initialize()
     {
@@ -39,7 +44,7 @@ public class CustomerView : MonoBehaviour
         _nameText.text = name;
         _customerImage.sprite = portrait;
 
-        _moraleBar.progressValue = (float)Helpers.ClampValue(currentCustomer.Morale);
+        _moraleBar.progressValue = (float)Helpers.ClampProgressBarValue(currentCustomer.Morale);
 
         _jewelNameText.text = jewelName;
         _jewelImage.sprite = jewelSprite;
@@ -48,13 +53,23 @@ public class CustomerView : MonoBehaviour
         
         _offerArea.text = "";
         _buyButton.interactable = false;
+
+        DebugCustomerCharacter(currentCustomer.Data.CustomerCharacter.ToString(), currentCustomer.Mood.ToString());
+        DebugItemWorth(currentCustomer.CurrentJewelData.GetMinItemWorth().ToString(), currentCustomer.CurrentJewelData.GetMaxItemWorth().ToString());
     }
 
-    public void DebugCustomerCharacter(string character)
+    public void DebugCustomerCharacter(string character, string morale)
     {
-        throw new NotImplementedException();
+        debugChar = character;
+        debugMorale = morale;
+        _debugCustomerCharacterText.text = $"Char: {character}\nMorale: {morale}";
     }
 
+    public void DebugItemWorth(string itemMinWorth, string itemMaxWorth)
+    {
+        _debugJewelMinWorthText.text = $"Min: {itemMinWorth}";
+        _debugJewelMaxWorthText.text = $"Max: {itemMaxWorth}";
+    }
 
     public void UpdateMoney(float money)
     {
@@ -64,6 +79,7 @@ public class CustomerView : MonoBehaviour
     public void UpdateMorale(double morale)
     {
         _moraleBar.progressValue = (float)morale;
+        DebugCustomerCharacter(debugChar, morale.ToString());
     }
 
     public void SetButtonsEnabled(bool state)
