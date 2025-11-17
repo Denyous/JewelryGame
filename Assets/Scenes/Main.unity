@@ -903,7 +903,7 @@ GameObject:
   - component: {fileID: 600575818}
   - component: {fileID: 600575817}
   m_Layer: 5
-  m_Name: OpenStoreButton
+  m_Name: GetCustomerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -975,7 +975,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1944994607}
         m_TargetAssemblyTypeName: StoreUI, Assembly-CSharp
-        m_MethodName: OnStoreOpenClicked
+        m_MethodName: GetNextCustomerOnClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1530,7 +1530,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 907, y: 418}
+  m_AnchoredPosition: {x: 1119, y: 418}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1385542166
@@ -1618,7 +1618,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -75.957436, y: -10.462557, z: 68.2147, w: -16.478567}
+  m_margin: {x: -115.13439, y: -10.462557, z: 133.97627, w: -16.478567}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1980,8 +1980,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1874361509}
-  - {fileID: 1944994606}
   - {fileID: 2139055389}
+  - {fileID: 1944994606}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
