@@ -79,6 +79,8 @@ public class CustomerPresenter : MonoBehaviour
 
     private void CustomerLeaveHandler(CustomerMood mood, float offerValue)
     {
+       // Yeni müşteri çağırma sadece müşteri getir butonuna tıklandığında olacak.
+
         if (mood == CustomerMood.Happy)
         {
             MoneyManager.Instance.RemoveMoney(offerValue);
@@ -87,14 +89,20 @@ public class CustomerPresenter : MonoBehaviour
             _customerView.UpdateMoney(MoneyManager.Instance.PlayerMoney);
             Debug.Log("Tebrikler ürünü satın aldınız.");
             _customerModel.AddMoney(offerValue);
-            ResetCustomer();
-            SpawnNextCustomer();
+
+           // ResetCustomer();   
+           //SpawnNextCustomer();
+
+            _customerView.ReturnStorePanel();
         }
         else if (mood == CustomerMood.Mad)
         {
             Debug.Log("Customer Sinirli Bir Sekilde Dukkani Terk Etti.");
-            ResetCustomer();
-            SpawnNextCustomer();
+
+           // ResetCustomer();
+           //SpawnNextCustomer();
+
+            _customerView.ReturnStorePanel();
         }
     }
 

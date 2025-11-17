@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,13 +10,22 @@ public class StoreUI : UIPanel
 
     private void Start()
     {
+        
         _moneyText.text = MoneyManager.Instance.PlayerMoney.ToString() + "$";
         _reputationBar.value = ReputationManager.Instance._reputationPoints;
     }
 
-    public void OnStoreOpenClicked()
+    private void Update()
     {
+        _moneyText.text = MoneyManager.Instance.PlayerMoney.ToString() + "$";
+        _reputationBar.value = ReputationManager.Instance._reputationPoints;
+    }
+    public void GetNextCustomerOnClicked()
+    {
+        Debug.Log("Müşteri Geldi!");
         UIManager.Instance.HidePanel("StoreUI");
         CustomerManager.Instance.GetNextCustomer();
     }
+
+   
 }

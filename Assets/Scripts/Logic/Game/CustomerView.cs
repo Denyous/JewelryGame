@@ -105,10 +105,22 @@ public class CustomerView : MonoBehaviour
 
         _refuseButton.onClick.AddListener(() =>
         {
-            Debug.Log("Refuse pressed - yeni müşteri geliyor.");
-            OnSpawnNextCustomer?.Invoke();
+                     
+            ReturnStorePanel();
+           
         });
     }
+
+    
+    public void ReturnStorePanel()
+    {
+        //Bu klas müşteriyle etkileşime girdikten sonra oyuncuyu store yönlendirir böylece envanterini düzeltebilir vs...
+        //Kontrolü oyuncuya vermiş oluruz.
+        UIManager.Instance.ShowPanel("StoreUI");
+        UIManager.Instance.HidePanel("CustomerContainer");
+        Debug.Log("Müşteri Gitti!");
+    }
+
 
     private void OnBuyPressed()
     {
@@ -128,4 +140,6 @@ public class CustomerView : MonoBehaviour
             _buyButton.interactable = false;
         }
     }
+
+
 }
