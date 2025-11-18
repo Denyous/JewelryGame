@@ -1,16 +1,25 @@
+﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryView : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    [Header("UI Refferences")]
+
+    [SerializeField] private List<Image> _slotSprites;
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateInventoryView(JewelrySO jewelToAdd, int jewelIndex)
     {
-        
+
+        _slotSprites[jewelIndex].sprite = jewelToAdd.GetItemSprite();
+
     }
+
+
 }

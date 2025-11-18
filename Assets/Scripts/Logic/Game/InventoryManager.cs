@@ -1,10 +1,14 @@
 ﻿using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance { get; private set; }
-    [SerializeField] private List<JewelrySO> _items;
+    public InventoryView _inventoryView;
+    public const int SlotCount = 6;
+    private int _itemIndex = 0;
+    [SerializeField] private List<JewelrySO> _jewels;
 
     private void Awake()
     {
@@ -21,13 +25,28 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItemToInventory(JewelrySO item)
     {
-        _items.Add(item);
-        Debug.Log(item.GetItemName() + " envanterinize eklendi.");
+        if (_jewels.Count <= SlotCount)
+        {
+            _jewels.Add(item);
+            InventoryUpdate(item,_itemIndex);
+            Debug.Log(item.GetItemName() + " envanterinize eklendi.");
+            _itemIndex++;   
+        }
+        else
+        {
+            Debug.Log("Envanteriniz Doldu!");
+        }
     }
 
     public void RemoveItemFromInventory(JewelrySO item)
     {
-        _items.Remove(item);
+        _jewels.Remove(item);
         Debug.Log(item.GetItemName() + " envanterinizden çıkarıldı.");
+    }
+
+
+    public void InventoryUpdate(JewelrySO currentJewel,int jewelIndex)
+    {
+       _inventoryView.UpdateInventoryView(currentJewel, jewelIndex);
     }
 }
