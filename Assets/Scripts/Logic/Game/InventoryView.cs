@@ -19,6 +19,8 @@ public class InventoryView : MonoBehaviour
 
         _slotSprites[jewelIndex].sprite = jewelToAdd.GetItemSprite();
 
+        //GameObject listi oluşturup burda compenantlarına ayırıp değerleri verebilirim.
+
     }
 
 
