@@ -4,9 +4,11 @@ using UnityEngine.UI;
 
 public class StoreUI : UIPanel
 {
+    [Header("UI Variables")]
     [SerializeField] private Button _openStoreButton;
     [SerializeField] private Slider _reputationBar;
     [SerializeField] private TextMeshProUGUI _moneyText;
+    [SerializeField] private Button _inventoryButton;
 
     private void Start()
     {
@@ -26,6 +28,13 @@ public class StoreUI : UIPanel
         UIManager.Instance.HidePanel("StoreUI");
         CustomerManager.Instance.GetNextCustomer();
     }
+
+    public void InventoryButtonOnClicked()
+    {
+        Debug.Log("Kasa Açıldı");
+        UIManager.Instance.ShowPanel("Inventory");
+    }
+
 
    
 }
