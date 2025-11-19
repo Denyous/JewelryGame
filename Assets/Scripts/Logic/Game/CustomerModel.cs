@@ -78,13 +78,6 @@ public class CustomerModel
             return;
         }
 
-        if (offerValue < minItemWorth)
-        {
-            UpdateMorale(percent, isOfferBelowMinWorth: true);
-            HandleCounterOffer(percent, offerValue, expectedValue, minItemWorth);
-            return;
-        }
-
         if (percent <= 0)
         {
             SetMorale(0);
@@ -113,6 +106,13 @@ public class CustomerModel
             SetMorale(100);
             OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
             DailyReportManager.MoneySpend += offerValue;
+            return;
+        }
+
+        if (offerValue < minItemWorth)
+        {
+            UpdateMorale(percent, isOfferBelowMinWorth: true);
+            HandleCounterOffer(percent, offerValue, expectedValue, minItemWorth);
             return;
         }
 
