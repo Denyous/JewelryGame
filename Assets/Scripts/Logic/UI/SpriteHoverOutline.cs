@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(SpriteRenderer), typeof(Collider2D))]
-public class SpriteHoverEventSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class SpriteHoverOutline : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private Material mat;
 
