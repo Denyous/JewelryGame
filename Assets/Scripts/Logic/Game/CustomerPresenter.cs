@@ -84,14 +84,14 @@ public class CustomerPresenter : MonoBehaviour
         if (mood == CustomerMood.Happy)
         {
             MoneyManager.Instance.RemoveMoney(offerValue);
-            InventoryManager.Instance.AddItemToInventory(_customerModel.CurrentJewelData);
+            InventoryManager.Instance.AddJewel(_customerModel.CurrentJewelData);
             ReputationManager.Instance.AddReputation(30);
             _customerView.UpdateMoney(MoneyManager.Instance.PlayerMoney);
             Debug.Log("Tebrikler ürünü satın aldınız.");
             _customerModel.AddMoney(offerValue);
 
-           // ResetCustomer();   
-           //SpawnNextCustomer();
+           //ResetCustomer();   
+           
 
             _customerView.ReturnStorePanel();
         }
@@ -99,8 +99,8 @@ public class CustomerPresenter : MonoBehaviour
         {
             Debug.Log("Customer Sinirli Bir Sekilde Dukkani Terk Etti.");
 
-           // ResetCustomer();
-           //SpawnNextCustomer();
+            //ResetCustomer();
+            
 
             _customerView.ReturnStorePanel();
         }
