@@ -14,8 +14,18 @@ public class DailyReportManager : MonoBehaviour
         _instance = this;
     }
     
-    private static void CreateDailyReport()
+    public static void CreateDailyReport()
     {
-        _instance.DailyReportPanel.CreateDailyReport();
+        _instance.DailyReportPanel.SetDailyReportFields(ItemBuyed, MoneySpend);
+        UIManager.Instance.ShowPanel(Panel.DailyReportPanel);
+        ResetFields();
+    }
+
+    private static void ResetFields()
+    {
+        MoneySpend = 0;
+        ReputationGained = 0f;
+        ItemBuyed = 0;
+        ItemSelled = 0;
     }
 }
