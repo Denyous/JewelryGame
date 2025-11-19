@@ -54,6 +54,7 @@ public class CustomerPresenter : MonoBehaviour
         _customerView = _currentCustomerViewObject.GetComponent<CustomerView>();
         _customerView.Initialize();
         _customerView.OnBuyButtonClicked += BuyButtonClickHandler;
+        _customerView.OnRefuseButtonClicked += RefuseButtonClickHandler;
         _customerView.OnSpawnNextCustomer += SpawnNextCustomerHandler;
 
         _customerView.UpdateUI
@@ -90,7 +91,7 @@ public class CustomerPresenter : MonoBehaviour
             Debug.Log("Tebrikler ürünü satın aldınız.");
             _customerModel.AddMoney(offerValue);
 
-           //ResetCustomer();   
+           
            
 
             _customerView.ReturnStorePanel();
@@ -99,11 +100,13 @@ public class CustomerPresenter : MonoBehaviour
         {
             Debug.Log("Customer Sinirli Bir Sekilde Dukkani Terk Etti.");
 
-            //ResetCustomer();
+            
             
 
             _customerView.ReturnStorePanel();
         }
+
+        ResetCustomer();
     }
 
     private void ResetCustomer()
@@ -134,6 +137,11 @@ public class CustomerPresenter : MonoBehaviour
     private void BuyButtonClickHandler(float offerValue)
     {
         _customerModel.HandleOffer(offerValue, _customerModel.ExpectedItemPrice, _customerModel.CurrentJewelData.GetItemWorth(), _customerModel.CurrentJewelData.GetMinItemWorth());
+    }
+
+    private void RefuseButtonClickHandler()
+    {
+        ResetCustomer();
     }
 
     public void UpdateMoneyView(float money)

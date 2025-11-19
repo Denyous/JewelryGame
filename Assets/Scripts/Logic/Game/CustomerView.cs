@@ -31,6 +31,7 @@ public class CustomerView : MonoBehaviour
 
     public event Action OnSpawnNextCustomer;
     public event Action<float> OnBuyButtonClicked;
+    public event Action OnRefuseButtonClicked;
     private string debugChar;
     private string debugMorale;
 
@@ -105,7 +106,7 @@ public class CustomerView : MonoBehaviour
 
         _refuseButton.onClick.AddListener(() =>
         {
-             
+            OnRefuseButtonClicked.Invoke();
             ReturnStorePanel();
            
         });
@@ -114,7 +115,7 @@ public class CustomerView : MonoBehaviour
     
     public void ReturnStorePanel()
     {
-        //Bu klas müşteriyle etkileşime girdikten sonra oyuncuyu store yönlendirir böylece envanterini düzeltebilir vs...
+        //Bu klas müşteriyle etkileşime girdikten sonra oyuncuyu store yönlendirir böylece envanterini kontrol eder vs...
         //Kontrolü oyuncuya vermiş oluruz.
         UIManager.Instance.ShowPanel("StoreUI");
         UIManager.Instance.HidePanel("CustomerContainer");
