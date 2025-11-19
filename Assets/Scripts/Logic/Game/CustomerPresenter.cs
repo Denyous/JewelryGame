@@ -89,24 +89,22 @@ public class CustomerPresenter : MonoBehaviour
             _customerView.UpdateMoney(MoneyManager.Instance.PlayerMoney);
             Debug.Log("Tebrikler ürünü satın aldınız.");
             _customerModel.AddMoney(offerValue);
-
-           // ResetCustomer();   
-           //SpawnNextCustomer();
-
             _customerView.ReturnStorePanel();
+
+            ResetCustomer();
+
             DailyReportManager.ItemBuyed += 1;
         }
         else if (mood == CustomerMood.Mad)
         {
             Debug.Log("Customer Sinirli Bir Sekilde Dukkani Terk Etti.");
-
-           // ResetCustomer();
-           //SpawnNextCustomer();
-
             _customerView.ReturnStorePanel();
+
+            ResetCustomer();
         }
     }
 
+    //In Customer Leave Handler call this method after the methods of _customerView and _customerModel
     private void ResetCustomer()
     {
         _customerModel.Reset();
