@@ -12,7 +12,6 @@ public class StoreUI : UIPanel
 
     private void Start()
     {
-        
         _moneyText.text = MoneyManager.Instance.PlayerMoney.ToString() + "$";
         _reputationBar.value = ReputationManager.Instance._reputationPoints;
     }
@@ -22,19 +21,17 @@ public class StoreUI : UIPanel
         _moneyText.text = MoneyManager.Instance.PlayerMoney.ToString() + "$";
         _reputationBar.value = ReputationManager.Instance._reputationPoints;
     }
+
     public void GetNextCustomerOnClicked()
     {
         Debug.Log("Müşteri Geldi!");
-        UIManager.Instance.HidePanel("StoreUI");
+        UIManager.Instance.HidePanel(Panel.StoreUI);
         CustomerManager.Instance.GetNextCustomer();
     }
 
     public void InventoryButtonOnClicked()
     {
         Debug.Log("Kasa Açıldı");
-        UIManager.Instance.ShowPanel("Inventory");
+        UIManager.Instance.ShowPanel(Panel.InventoryPanel);
     }
-
-
-   
 }

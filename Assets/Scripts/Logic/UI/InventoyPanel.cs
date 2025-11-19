@@ -9,7 +9,7 @@ public class InventoyPanel : UIPanel
 
     public void CloseButtonOnClicked()
     {
-        UIManager.Instance.HidePanel("Inventory");
+        UIManager.Instance.HidePanel(Panel.InventoryPanel);
     }
    
 }

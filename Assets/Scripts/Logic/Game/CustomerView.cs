@@ -116,8 +116,8 @@ public class CustomerView : MonoBehaviour
     {
         //Bu klas müşteriyle etkileşime girdikten sonra oyuncuyu store yönlendirir böylece envanterini düzeltebilir vs...
         //Kontrolü oyuncuya vermiş oluruz.
-        UIManager.Instance.ShowPanel("StoreUI");
-        UIManager.Instance.HidePanel("CustomerContainer");
+        UIManager.Instance.ShowPanel(Panel.StoreUI);
+        UIManager.Instance.HidePanel(Panel.CustomerContainer);
         Debug.Log("Müşteri Gitti!");
     }
 

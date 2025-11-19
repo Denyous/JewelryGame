@@ -96,6 +96,7 @@ public class CustomerModel
         {
             SetMorale(100);
             OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
+            DailyReportManager.MoneySpend += offerValue;
             return;
         }
 
@@ -103,6 +104,7 @@ public class CustomerModel
         {
             SetMorale(100);
             OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
+            DailyReportManager.MoneySpend += offerValue;
             return;
         }
 
@@ -110,6 +112,7 @@ public class CustomerModel
         {
             SetMorale(100);
             OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
+            DailyReportManager.MoneySpend += offerValue;
             return;
         }
 

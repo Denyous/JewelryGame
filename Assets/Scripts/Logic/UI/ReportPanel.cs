@@ -1,18 +1,25 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class ReportPanel : UIPanel
 {
     [Header("UI References")]
 
-    [SerializeField] private Button _nextDayButton;
-    [SerializeField] private TextMeshPro _moneySpend;
+    [SerializeField] private TextMeshProUGUI _reputationGainedText;
+    [SerializeField] private TextMeshProUGUI _itemBuyedText;
+    [SerializeField] private TextMeshProUGUI _itemSelledText;
+    [SerializeField] private TextMeshProUGUI _moneySpendText;
+    [SerializeField] private TextMeshProUGUI _moneyEarnedText;
+    [SerializeField] private TextMeshProUGUI _profitText;
 
     public void NextButtonOnClicked()
     {
-        UIManager.Instance.ShowPanel("StoreUI");
-        UIManager.Instance.HidePanel("DailyReportPanel");
+        UIManager.Instance.ShowPanel(Panel.StoreUI);
+        UIManager.Instance.HidePanel(Panel.CustomerContainer);
+    }
+
+    public void CreateDailyReport()
+    {
+
     }
 }

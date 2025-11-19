@@ -39,7 +39,7 @@ public class CustomerPresenter : MonoBehaviour
 
         if (_currentCustomerIndex > CustomerModels.Count - 1)
         {
-            UIManager.Instance.ShowPanel("DailyReportPanel");
+            UIManager.Instance.ShowPanel(Panel.DailyReportPanel);
             _currentCustomerIndex = 0;
             return;
         }
@@ -94,6 +94,7 @@ public class CustomerPresenter : MonoBehaviour
            //SpawnNextCustomer();
 
             _customerView.ReturnStorePanel();
+            DailyReportManager.ItemBuyed += 1;
         }
         else if (mood == CustomerMood.Mad)
         {

@@ -22,13 +22,12 @@ public class CustomerManager : MonoBehaviour
     
     public void GetNextCustomer()
     {
-        UIManager.Instance.ShowPanel("CustomerContainer");
+        UIManager.Instance.ShowPanel(Panel.CustomerContainer);
         presenter.SpawnNextCustomer();
         //Bir Enum türü koyulur müşteriler için Buyer /Seller isminde. Hangisi random gelirse o türü presenter oyuncunun önüne atar.
         //if (buyer)
         // GetBuyerCustomer()
         //else
         // GetSellerCustomer()
-
     }
 }
