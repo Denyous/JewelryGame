@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ca42c3d4ec3914dbb5773cac9132e1, type: 3}
   m_Name: Jewel-4
   m_EditorClassIdentifier: Assembly-CSharp::JewelrySO
-  itemName: Pure Emerald Necklace
+  itemName: Emerald Necklace
   maxItemWorth: 1100
   shownItemWorth: 1000
   minItemHorth: 870

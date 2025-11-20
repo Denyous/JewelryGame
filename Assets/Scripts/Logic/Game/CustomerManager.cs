@@ -30,5 +30,7 @@ public class CustomerManager : MonoBehaviour
         //else
         // GetSellerCustomer()
 
+        
+
     }
 }

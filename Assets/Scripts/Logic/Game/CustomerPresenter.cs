@@ -19,10 +19,10 @@ public class CustomerPresenter : MonoBehaviour
     private GameObject _currentCustomerViewObject;
     private int _currentCustomerIndex = 0;
 
-    private JewelrySO GetRandomJewel()
-    {
-        return AllJewels[UnityEngine.Random.Range(0, AllJewels.Count)];
-    }
+    //private JewelrySO GetRandomJewel()
+    //{
+    //    return AllJewels[UnityEngine.Random.Range(0, AllJewels.Count)];
+    //}
 
     public void SpawnNextCustomer()
     {
@@ -45,7 +45,7 @@ public class CustomerPresenter : MonoBehaviour
         }
 
         _customerModel = CustomerModels[_currentCustomerIndex];
-        _customerModel.Initialize(GetRandomJewel());
+        _customerModel.Initialize();
         _customerModel.OnCounterOffer += CounterOfferHandler;
         _customerModel.OnCustomerLeave += CustomerLeaveHandler;
         _customerModel.OnCustomerMoraleChanged += CustomerMoraleChangedHandler;
@@ -86,6 +86,7 @@ public class CustomerPresenter : MonoBehaviour
         {
             MoneyManager.Instance.RemoveMoney(offerValue);
             InventoryManager.Instance.AddJewel(_customerModel.CurrentJewelData);
+            _customerModel.RemoveJewel(_customerModel.CurrentJewelData); // Müşterinin sattığı ürünü envanterinden siliyoruz.
             ReputationManager.Instance.AddReputation(30);
             _customerView.UpdateMoney(MoneyManager.Instance.PlayerMoney);
             Debug.Log("Tebrikler ürünü satın aldınız.");

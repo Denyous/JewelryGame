@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.Mathematics;
 using Unity.Mathematics.Geometry;
@@ -21,6 +22,7 @@ public class CustomerModel
     public CustomerMood Mood;
     public CustomerSO Data;
     public JewelrySO CurrentJewelData;
+    [SerializeField] private List<JewelrySO> _customerInventory;
     [field: SerializeField] public float Money { get; private set; }
 
     public int Morale { get; private set; }
@@ -35,15 +37,57 @@ public class CustomerModel
     public float minRandomMultiplier { get; private set; }
     public float maxRandomMultiplier { get; private set; }
 
-    public void Initialize(JewelrySO jewelData)
+    public void Initialize()
     {
-        CurrentJewelData = jewelData;
+        CurrentJewelData = GetJewel();
         ExpectedItemPrice = CurrentJewelData.GetItemWorth();
         Morale = MAX_MORALE;
         minRandomMultiplier = UnityEngine.Random.Range(0.8f, 1f);
         maxRandomMultiplier = UnityEngine.Random.Range(1f, 1.2f);
     }
+    #region Customer Inventory
 
+    private JewelrySO GetJewel()
+    {
+        if (_customerInventory.Count <= 1)
+        {
+            // Customerin elindeki item azalıyor bu durumda bizden alması lazım...
+        }
+        // Customer kendi envanterindeki jeweli getiriyor.
+        return _customerInventory[UnityEngine.Random.Range(0, _customerInventory.Count)];
+    }
+
+    public bool AddJewel(JewelrySO jewel)
+    {
+        // Müşteri bizden satın aldığı ürünü kendi envanterine ekleyecek.
+        _customerInventory.Add(jewel);
+
+        if (_customerInventory.Contains(jewel))
+        {
+            return true;
+            Debug.Log("Müşteri jeweli envanterine eklendi");
+        }
+        else
+        {
+            return false;
+            Debug.Log("Müşteri jewel envanterine ekleyemedi");
+        }
+        
+    }
+
+
+    public void RemoveJewel(JewelrySO jewel)
+    {
+        // Biz müşterinin getirdiği itemi alırsak envanterinden silinecek.
+        _customerInventory.Remove(jewel);
+    }
+
+    
+    public int GetInventoryCount()
+    {
+        return _customerInventory.Count;
+    }
+    #endregion
     public void Reset()
     {
         Morale = MAX_MORALE;
@@ -198,4 +242,7 @@ public class CustomerModel
 
         return (int)newOffer;
     }
+
+
+   
 }

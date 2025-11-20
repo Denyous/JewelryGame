@@ -3924,26 +3924,46 @@ MonoBehaviour:
   - Mood: 50
     Data: {fileID: 11400000, guid: efedb2e520d79f74786b72069ffa25fd, type: 2}
     CurrentJewelData: {fileID: 0}
+    _customerInventory:
+    - {fileID: 11400000, guid: cc8ec02e19d60f24aaa15764e1a6bb34, type: 2}
+    - {fileID: 11400000, guid: 963045d14d100a94680f831750136b06, type: 2}
     <Money>k__BackingField: 0
   - Mood: 50
     Data: {fileID: 11400000, guid: 852eb1d3594c4a646b2691e93f21f13b, type: 2}
     CurrentJewelData: {fileID: 0}
-    <Money>k__BackingField: 0
-  - Mood: 50
-    Data: {fileID: 11400000, guid: c4361a6b8974bb044950da55511aa847, type: 2}
-    CurrentJewelData: {fileID: 0}
-    <Money>k__BackingField: 0
-  - Mood: 50
-    Data: {fileID: 11400000, guid: e22fdf2267be1d145aae9a426e01c966, type: 2}
-    CurrentJewelData: {fileID: 0}
-    <Money>k__BackingField: 0
-  - Mood: 50
-    Data: {fileID: 11400000, guid: fcbcbbd2a33b3a641860d02feadfe8cb, type: 2}
-    CurrentJewelData: {fileID: 0}
+    _customerInventory:
+    - {fileID: 11400000, guid: cc8ec02e19d60f24aaa15764e1a6bb34, type: 2}
+    - {fileID: 11400000, guid: 963045d14d100a94680f831750136b06, type: 2}
     <Money>k__BackingField: 0
   - Mood: 50
     Data: {fileID: 11400000, guid: 823e5dd15abba024099e3286578a85a4, type: 2}
     CurrentJewelData: {fileID: 0}
+    _customerInventory:
+    - {fileID: 11400000, guid: db4b5986068627c4683fe7b94a0f56df, type: 2}
+    - {fileID: 11400000, guid: 046caf98cc5eb754a88d9b923f35e174, type: 2}
+    <Money>k__BackingField: 0
+  - Mood: 50
+    Data: {fileID: 11400000, guid: c4361a6b8974bb044950da55511aa847, type: 2}
+    CurrentJewelData: {fileID: 0}
+    _customerInventory:
+    - {fileID: 11400000, guid: 963045d14d100a94680f831750136b06, type: 2}
+    - {fileID: 11400000, guid: db4b5986068627c4683fe7b94a0f56df, type: 2}
+    - {fileID: 11400000, guid: 046caf98cc5eb754a88d9b923f35e174, type: 2}
+    <Money>k__BackingField: 0
+  - Mood: 50
+    Data: {fileID: 11400000, guid: e22fdf2267be1d145aae9a426e01c966, type: 2}
+    CurrentJewelData: {fileID: 0}
+    _customerInventory:
+    - {fileID: 11400000, guid: 046caf98cc5eb754a88d9b923f35e174, type: 2}
+    - {fileID: 11400000, guid: eafbc01366745a146a469b94f6d206a0, type: 2}
+    - {fileID: 11400000, guid: d6b6a58bf66f93e4eb45f9980eca5447, type: 2}
+    <Money>k__BackingField: 0
+  - Mood: 50
+    Data: {fileID: 11400000, guid: fcbcbbd2a33b3a641860d02feadfe8cb, type: 2}
+    CurrentJewelData: {fileID: 0}
+    _customerInventory:
+    - {fileID: 11400000, guid: eafbc01366745a146a469b94f6d206a0, type: 2}
+    - {fileID: 11400000, guid: d6b6a58bf66f93e4eb45f9980eca5447, type: 2}
     <Money>k__BackingField: 0
 --- !u!1 &1787755774
 GameObject:

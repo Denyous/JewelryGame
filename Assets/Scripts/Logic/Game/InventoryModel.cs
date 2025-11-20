@@ -10,7 +10,7 @@ public class InventoryModel
 
     public void Add(JewelrySO item)
     {
-        Debug.Log("ModelÇalıştı");
+        
         Items.Add(item);
         OnInventoryChanged?.Invoke();
     }
@@ -44,7 +44,7 @@ public class InventoryModel
 
         System.Random random = new System.Random();
 
-        return _customerCanBuy[random.Next(_customerCanBuy.Count)];
+        return _customerCanBuy[random.Next(_customerCanBuy.Count)]; //Alabileceği takıları listeye attıktan sonra aralarından bir tane takıyı random gönderiyorum.
 
 
     }

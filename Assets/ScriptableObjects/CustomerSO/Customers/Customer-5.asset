@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e7bdae09d995c46a72ae1e74e88a55, type: 3}
   m_Name: Customer-5
   m_EditorClassIdentifier: Assembly-CSharp::CustomerSO
-  <CustomerName>k__BackingField: Deniz
+  <CustomerName>k__BackingField: "O\u011Fuz"
   <Sprite>k__BackingField: {fileID: 6044879560069638596, guid: f03b1f017ce93b9428b4279d014ed09f, type: 3}
   <Settings>k__BackingField: {fileID: 11400000, guid: c1e2915573bf36749a6252c1093f6db0, type: 2}
