@@ -19,74 +19,81 @@ public enum CustomerMood
 [System.Serializable]
 public class CustomerModel
 {
+    public const int MAX_MORALE = 100;
+
     public CustomerMood Mood;
     public CustomerSO Data;
-    public JewelrySO CurrentJewelData;
-    [SerializeField] private List<JewelrySO> _customerInventory;
-    [field: SerializeField] public float Money { get; private set; }
-
-    public int Morale { get; private set; }
-
-    public const int MAX_MORALE = 100; 
+    public List<JewelrySO> Jewels;
+    public JewelrySO CurrentJewel;
 
     public event Action<float> OnCounterOffer;
     public event Action<double> OnCustomerMoraleChanged;
-    public event Action<CustomerMood, float> OnCustomerLeave;
+    public event Action<CustomerMood, float, bool> OnCustomerLeave;
 
+    [field: SerializeField] public float Money { get; private set; }
     public float ExpectedItemPrice { get; private set; }
-    public float minRandomMultiplier { get; private set; }
-    public float maxRandomMultiplier { get; private set; }
+    public float MinRandomMultiplier { get; private set; }
+    public float MaxRandomMultiplier { get; private set; }
+    public int Morale { get; private set; }
+    public bool IsSeller { get; private set; }
 
-    public void Initialize()
+    public void Initialize(List<JewelrySO> jewels)
     {
-        CurrentJewelData = GetJewel();
-        ExpectedItemPrice = CurrentJewelData.GetItemWorth();
+        this.Jewels = jewels;
         Morale = MAX_MORALE;
-        minRandomMultiplier = UnityEngine.Random.Range(0.8f, 1f);
-        maxRandomMultiplier = UnityEngine.Random.Range(1f, 1.2f);
-    }
-    #region Customer Inventory
-
-    private JewelrySO GetJewel()
-    {
-        if (_customerInventory.Count <= 1)
-        {
-            // Customerin elindeki item azalıyor bu durumda bizden alması lazım...
-        }
-        // Customer kendi envanterindeki jeweli getiriyor.
-        return _customerInventory[UnityEngine.Random.Range(0, _customerInventory.Count)];
+        MinRandomMultiplier = UnityEngine.Random.Range(0.8f, 1f);
+        MaxRandomMultiplier = UnityEngine.Random.Range(1f, 1.2f);
+        IsSeller = GetCustomerType();
+        CurrentJewel = SelectJewel(IsSeller, Jewels);
+        ExpectedItemPrice = CurrentJewel.GetItemWorth();
     }
 
-    // Müşteri bizden satın aldığı ürünü kendi envanterine ekleyecek.
-    public bool AddJewel(JewelrySO jewel)
+    private bool GetCustomerType()
     {
-        _customerInventory.Add(jewel);
+        bool playerCanAfford = PlayerCanAfford(Jewels);
+        bool isSeller = false;
 
-        if (_customerInventory.Contains(jewel))
+        if (playerCanAfford)
         {
-            return true;
-            Debug.Log("Müşteri jeweli envanterine eklendi");
+            isSeller = true;
         }
         else
         {
-            return false;
-            Debug.Log("Müşteri jewel envanterine ekleyemedi");
+            isSeller = false;
         }
+        return isSeller;
     }
 
-
-    public void RemoveJewel(JewelrySO jewel)
+    private bool PlayerCanAfford(List<JewelrySO> jewels)
     {
-        // Biz müşterinin getirdiği itemi alırsak envanterinden silinecek.
-        _customerInventory.Remove(jewel);
+        bool playerCanAfford = false;
+        foreach (var jewel in jewels)
+        {
+            if (jewel.GetItemWorth() < MoneyManager.Instance.PlayerMoney)
+            {
+                playerCanAfford = true;
+            }
+        }
+        return playerCanAfford;
     }
-
     
-    public int GetInventoryCount()
+    private JewelrySO SelectJewel(bool isSeller, List<JewelrySO> jewels)
     {
-        return _customerInventory.Count;
+        if (isSeller)
+        {
+            return jewels[UnityEngine.Random.Range(0, jewels.Count)];
+        }
+        else
+        {
+            jewels = InventoryManager.Instance.GetInventoryItems();
+            if (jewels.Count > 0)
+            {
+                return jewels[UnityEngine.Random.Range(0, jewels.Count)];
+            }
+        }
+        return jewels[UnityEngine.Random.Range(0, jewels.Count)];
     }
-    #endregion
+
     public void Reset()
     {
         Morale = MAX_MORALE;
@@ -110,71 +117,146 @@ public class CustomerModel
         }
     }
 
-    public void HandleOffer(float offerValue, float expectedValue, float itemWorth, float minItemWorth)
+    public void HandleOffer(float offerValue, float expectedValue, float itemWorth, float minItemWorth, float maxItemWorth)
     {
         float percent = Helpers.GetPercentage(offerValue, expectedValue);
 
-        if (Mood == CustomerMood.Mad)
+        if (IsSeller)
         {
-            SetMorale(0);
-            OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
-            return;
-        }
+            if (Mood == CustomerMood.Mad)
+            {
+                SetMorale(0);
+                OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue, IsSeller);
+                return;
+            }
 
-        if (offerValue < minItemWorth)
-        {
-            UpdateMorale(percent, isOfferBelowMinWorth: true);
+            if (percent <= 0)
+            {
+                SetMorale(0);
+                OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue, IsSeller);
+                return;
+            }
+
+            if (percent >= 80 && Data.CustomerCharacter == CustomerCharacter.Generous)
+            {
+                SetMorale(100);
+                OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue, IsSeller);
+                DailyReportManager.MoneySpend += offerValue;
+                return;
+            }
+
+            if (percent >= 85 && Data.CustomerCharacter == CustomerCharacter.Normal)
+            {
+                SetMorale(100);
+                OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue, IsSeller);
+                DailyReportManager.MoneySpend += offerValue;
+                return;
+            }
+
+            if (percent >= 95 && Data.CustomerCharacter == CustomerCharacter.Greedy)
+            {
+                SetMorale(100);
+                OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue, IsSeller);
+                DailyReportManager.MoneySpend += offerValue;
+                return;
+            }
+
+            if (offerValue < minItemWorth)
+            {
+                UpdateMorale(percent, IsSeller, isOfferBelowMinWorth: true);
+                HandleCounterOffer(percent, offerValue, expectedValue, minItemWorth);
+                return;
+            }
+
+            UpdateMorale(percent, IsSeller);
             HandleCounterOffer(percent, offerValue, expectedValue, minItemWorth);
-            return;
         }
-
-        if (percent <= 0)
+        else
         {
-            SetMorale(0);
-            OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
-            return;
-        }
+            if (Mood == CustomerMood.Mad)
+            {
+                SetMorale(0);
+                OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue, IsSeller);
+                return;
+            }
 
-        if (percent >= 80 && Data.CustomerCharacter == CustomerCharacter.Generous)
-        {
-            SetMorale(100);
-            OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
-            return;
-        }
+            if (percent <= 100)
+            {
+                SetMorale(100);
+                OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue, IsSeller);
+                DailyReportManager.MoneyEarned += offerValue;
+                return;
+            }
 
-        if (percent >= 85 && Data.CustomerCharacter == CustomerCharacter.Normal)
-        {
-            SetMorale(100);
-            OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
-            return;
-        }
+            if (percent >= 100 && percent <= 105 && Data.CustomerCharacter == CustomerCharacter.Greedy)
+            {
+                SetMorale(100);
+                OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue, IsSeller);
+                DailyReportManager.MoneyEarned += offerValue;
+                return;
+            }
 
-        if (percent >= 95 && Data.CustomerCharacter == CustomerCharacter.Greedy)
-        {
-            SetMorale(100);
-            OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue);
-            return;
-        }
+            if (percent >= 100 && percent <= 110 && Data.CustomerCharacter == CustomerCharacter.Normal)
+            {
+                SetMorale(100);
+                OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue, IsSeller);
+                DailyReportManager.MoneyEarned += offerValue;
+                return;
+            }
 
-        UpdateMorale(percent);
-        HandleCounterOffer(percent, offerValue, expectedValue, minItemWorth);
+            if (percent >= 100 && percent <= 115 && Data.CustomerCharacter == CustomerCharacter.Generous)
+            {
+                SetMorale(100);
+                OnCustomerLeave?.Invoke(GetMoodFromMorale(Morale), offerValue, IsSeller);
+                DailyReportManager.MoneyEarned += offerValue;
+                return;
+            }
+
+            if (offerValue > maxItemWorth)
+            {
+                UpdateMorale(percent, IsSeller, isOfferAboveMaxWorth: true);
+                HandleCounterOffer(percent, offerValue, expectedValue, maxItemWorth: maxItemWorth);
+                return;
+            }
+
+            UpdateMorale(percent, IsSeller);
+            HandleCounterOffer(percent, offerValue, expectedValue, maxItemWorth: maxItemWorth);
+        }
     }
 
-    private void UpdateMorale(float offerPercent, bool isOfferBelowMinWorth = false)
+    private void UpdateMorale(float offerPercent, bool isSeller, bool isOfferBelowMinWorth = false, bool isOfferAboveMaxWorth = false)
     {
-        float isOfferBelow = 1f;
-
-        if (isOfferBelowMinWorth)
+        if (isSeller)
         {
-            isOfferBelow = 2f;
+            float isOfferBelow = 1f;
+
+            if (isOfferBelowMinWorth)
+            {
+                isOfferBelow = 2f;
+            }
+
+            float remainingPercentage = 100 - offerPercent;
+            float updateMoralePercentage = remainingPercentage * (Data.MoraleMultiplier * isOfferBelow);
+
+            Morale = Morale - (int)updateMoralePercentage;
+            Mood = GetMoodFromMorale(Morale);
+            OnCustomerMoraleChanged?.Invoke(Helpers.ClampProgressBarValue(Morale));
+            return;
         }
 
-        float remainingPercentage = 100 - offerPercent;
-        float updateMoralePercentage = remainingPercentage * (Data.MoraleMultiplier * isOfferBelow);
+        float isOfferAbove = 1f;
 
-        Morale = Morale - (int)updateMoralePercentage;
+        if (isOfferAboveMaxWorth)
+        {
+            isOfferAbove = 2f;
+        }
+
+        float remainingPercentageBuyer = -(100 - (100 - offerPercent));
+        float updateMoralePercentageBuyer = remainingPercentageBuyer * (Data.MoraleMultiplier * isOfferAbove);
+        Morale = Morale - (int)updateMoralePercentageBuyer;
         Mood = GetMoodFromMorale(Morale);
         OnCustomerMoraleChanged?.Invoke(Helpers.ClampProgressBarValue(Morale));
+        return;
     }
 
     private void SetMorale(int value)
@@ -219,14 +301,14 @@ public class CustomerModel
         throw new Exception();
     }
 
-    private void HandleCounterOffer(float percent, float offerValue, float itemWorth, float minItemWorth)
+    private void HandleCounterOffer(float percent, float offerValue, float itemWorth, float minItemWorth = default, float maxItemWorth = default)
     {
-        ExpectedItemPrice = GetBargainOffer(percent, offerValue, itemWorth, minItemWorth);
+        ExpectedItemPrice = GetBargainOffer(percent, offerValue, itemWorth, minItemWorth: minItemWorth, maxItemWorth: maxItemWorth);
         
         OnCounterOffer?.Invoke(ExpectedItemPrice);
     }
 
-    private float GetBargainOffer(float percent, float offerValue, float totalValue, float minItemWorth)
+    private float GetBargainOffer(float percent, float offerValue, float totalValue, float minItemWorth = default, float maxItemWorth = default)
     {
         float value = (totalValue * percent) / 100;
 
@@ -234,9 +316,21 @@ public class CustomerModel
 
         float newOffer = offerValue + (remainingValue * Data.BargainMultiplier);
 
-        if (newOffer < minItemWorth * 0.8f * 0.9f)
+
+        if (minItemWorth != default)
         {
-            newOffer = Mathf.Clamp(newOffer, minItemWorth * minRandomMultiplier, minItemWorth * maxRandomMultiplier);
+            if (newOffer < minItemWorth * 0.8f * 0.9f)
+            {
+                newOffer = Mathf.Clamp(newOffer, minItemWorth * MinRandomMultiplier, minItemWorth * MaxRandomMultiplier);
+            }
+        }
+
+        if (maxItemWorth != default)
+        {
+            if (newOffer > maxItemWorth * 0.8f * 0.9f)
+            {
+                newOffer = Mathf.Clamp(newOffer, maxItemWorth * MinRandomMultiplier, maxItemWorth * MaxRandomMultiplier);
+            }
         }
 
         return (int)newOffer;

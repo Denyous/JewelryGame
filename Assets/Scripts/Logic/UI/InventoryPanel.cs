@@ -1,15 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InventoyPanel : UIPanel
+public class InventoryPanel : UIPanel
 {
     [Header("UI Variables")]
     [SerializeField] Button _closeButton;
 
-
     public void CloseButtonOnClicked()
     {
-        UIManager.Instance.HidePanel("Inventory");
+        UIManager.Instance.HidePanel(Panel.InventoryPanel);
     }
-   
 }

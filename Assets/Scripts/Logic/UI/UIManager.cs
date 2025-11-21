@@ -50,3 +50,11 @@ public class UIManager : MonoBehaviour
         return null;
     }
 }
+
+public static class Panel
+{
+    public static string DailyReportPanel = "DailyReport_Panel";
+    public static string StoreUI = "StoreUI_Panel";
+    public static string InventoryPanel = "Inventory_Panel";
+    public static string CustomerContainer = "CustomerContainer_Panel";
+}

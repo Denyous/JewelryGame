@@ -1,25 +1,28 @@
 ﻿using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class InventoryView : MonoBehaviour
 {
 
-    public List<InventorySlot> _slots;
+    [Header("UI References")]
+    [SerializeField] private List<Image> _slotSprites;
+    [SerializeField] private Sprite _emptySlotSprite;
 
-    public void UpdateUI(List<JewelrySO> currentItems)
+    void Start()
     {
-        // Tüm slotları önce temizle
-        foreach (var slot in _slots)
-        {
-            slot.ClearSlot();
-        }
 
-        // Envanterdeki itemleri slotlara yaz
-        for (int i = 0; i < currentItems.Count && i < _slots.Count; i++)
-        {
-            _slots[i].SetSlot(currentItems[i]);
-        }
+    }
+
+    public void AddToInventory(JewelrySO jewelToAdd, int jewelIndex)
+    {
+        _slotSprites[jewelIndex].sprite = jewelToAdd.GetItemSprite();
+
+        //GameObject listi oluşturup burda compenantlarına ayırıp değerleri verebilirim.
+    }
+
+    public void RemoveFromInventory(int jewelIndex)
+    {
+        _slotSprites[jewelIndex].sprite = _emptySlotSprite;
     }
 }

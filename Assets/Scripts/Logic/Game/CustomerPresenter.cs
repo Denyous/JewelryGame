@@ -19,14 +19,29 @@ public class CustomerPresenter : MonoBehaviour
     private GameObject _currentCustomerViewObject;
     private int _currentCustomerIndex = 0;
 
-    //private JewelrySO GetRandomJewel()
-    //{
-    //    return AllJewels[UnityEngine.Random.Range(0, AllJewels.Count)];
-    //}
+    private JewelrySO GetRandomJewel()
+    {
+        return AllJewels[UnityEngine.Random.Range(0, AllJewels.Count)];
+    }
+
+    private List<JewelrySO> GetRandomJewels(int count)
+    {
+        List<JewelrySO> randomJewels = new List<JewelrySO>();
+        List<int> usedIndices = new List<int>();
+        while (randomJewels.Count < count && randomJewels.Count < AllJewels.Count)
+        {
+            int randomIndex = UnityEngine.Random.Range(0, AllJewels.Count);
+            if (!usedIndices.Contains(randomIndex))
+            {
+                usedIndices.Add(randomIndex);
+                randomJewels.Add(AllJewels[randomIndex]);
+            }
+        }
+        return randomJewels;
+    }
 
     public void SpawnNextCustomer()
     {
-        // Önce mevcut müşteriyi sil
         if (_currentCustomerViewObject != null)
         {
             Destroy(_currentCustomerViewObject);
@@ -39,77 +54,89 @@ public class CustomerPresenter : MonoBehaviour
 
         if (_currentCustomerIndex > CustomerModels.Count - 1)
         {
-            UIManager.Instance.ShowPanel("DailyReportPanel");
+            DailyReportManager.CreateDailyReport();
             _currentCustomerIndex = 0;
             return;
         }
 
         _customerModel = CustomerModels[_currentCustomerIndex];
-        _customerModel.Initialize();
+        _customerModel.Initialize(GetRandomJewels(3));
         _customerModel.OnCounterOffer += CounterOfferHandler;
         _customerModel.OnCustomerLeave += CustomerLeaveHandler;
         _customerModel.OnCustomerMoraleChanged += CustomerMoraleChangedHandler;
 
         _currentCustomerViewObject = Instantiate(CustomerViewPrefab, ParentContainer);
         _customerView = _currentCustomerViewObject.GetComponent<CustomerView>();
-        _customerView.Initialize();
-        _customerView.OnBuyButtonClicked += BuyButtonClickHandler;
-        _customerView.OnRefuseButtonClicked += RefuseButtonClickHandler;
-        _customerView.OnSpawnNextCustomer += SpawnNextCustomerHandler;
-
-        _customerView.UpdateUI
+        _customerView.Initialize
         (
             _customerModel,
-            _customerModel.CurrentJewelData,
-            _customerModel.Data.CustomerName,
-            _customerModel.Data.Sprite,
-            _customerModel.Morale,
-            _customerModel.CurrentJewelData.GetItemName(),
-            _customerModel.CurrentJewelData.GetItemSprite(),
-            _customerModel.CurrentJewelData.GetItemWorth(),
+            _customerModel.CurrentJewel,
             MoneyManager.Instance.PlayerMoney.ToString()
         );
+
+        _customerView.OnOfferButtonClicked += OfferButtonClickHandler;
+        _customerView.OnSpawnNextCustomer += SpawnNextCustomerHandler;
 
         _currentCustomerIndex++;
     }
 
     private void CustomerMoraleChangedHandler(double morale)
     {
-        _customerView.UpdateMorale(morale);
+        _customerView.UpdateMoraleProgressBar(morale);
     }
 
-    private void CustomerLeaveHandler(CustomerMood mood, float offerValue)
+    // Yeni müşteri çağırma sadece müşteri getir butonuna tıklandığında olacak.
+    private void CustomerLeaveHandler(CustomerMood mood, float offerValue, bool isSeller)
     {
-       // Yeni müşteri çağırma sadece müşteri getir butonuna tıklandığında olacak.
+        if (isSeller)
+        {
+            if (mood == CustomerMood.Happy)
+            {
+                MoneyManager.Instance.RemoveMoney(offerValue);
+                InventoryManager.Instance.AddItemToInventory(_customerModel.CurrentJewel);
+                ReputationManager.Instance.AddReputation(30);
+                _customerView.UpdateMoneyText(MoneyManager.Instance.PlayerMoney);
+                Debug.Log("Tebrikler ürünü satın aldınız.");
+                _customerModel.AddMoney(offerValue);
+                _customerView.ReturnStorePanel();
+
+                ResetCustomer();
+
+                DailyReportManager.ItemBuyed += 1;
+                return;
+            }
+            else if (mood == CustomerMood.Mad)
+            {
+                Debug.Log("Customer Sinirli Bir Sekilde Dukkani Terk Etti.");
+                _customerView.ReturnStorePanel();
+
+                ResetCustomer();
+                return;
+            }
+            return;
+        }
 
         if (mood == CustomerMood.Happy)
         {
-            MoneyManager.Instance.RemoveMoney(offerValue);
-            InventoryManager.Instance.AddJewel(_customerModel.CurrentJewelData);
-            _customerModel.RemoveJewel(_customerModel.CurrentJewelData); // Müşterinin sattığı ürünü envanterinden siliyoruz.
+            MoneyManager.Instance.AddMoney(offerValue);
+            InventoryManager.Instance.RemoveItemFromInventory(_customerModel.CurrentJewel);
             ReputationManager.Instance.AddReputation(30);
-            _customerView.UpdateMoney(MoneyManager.Instance.PlayerMoney);
-            Debug.Log("Tebrikler ürünü satın aldınız.");
-            _customerModel.AddMoney(offerValue);
-
-           
-           
-
+            _customerView.UpdateMoneyText(MoneyManager.Instance.PlayerMoney);
+            Debug.Log("Tebrikler ürünü sattiniz.");
+            _customerModel.RemoveMoney(offerValue);
             _customerView.ReturnStorePanel();
+            ResetCustomer();
+            DailyReportManager.ItemSelled += 1;
         }
         else if (mood == CustomerMood.Mad)
         {
             Debug.Log("Customer Sinirli Bir Sekilde Dukkani Terk Etti.");
-
-            
-            
-
             _customerView.ReturnStorePanel();
+            ResetCustomer();
         }
-
-        ResetCustomer();
     }
 
+    //In Customer Leave Handler call this method after the methods of _customerView and _customerModel
     private void ResetCustomer()
     {
         _customerModel.Reset();
@@ -117,7 +144,7 @@ public class CustomerPresenter : MonoBehaviour
         _customerModel.OnCustomerLeave -= CustomerLeaveHandler;
         _customerModel.OnCustomerMoraleChanged -= CustomerMoraleChangedHandler;
 
-        _customerView.OnBuyButtonClicked -= BuyButtonClickHandler;
+        _customerView.OnOfferButtonClicked -= OfferButtonClickHandler;
         _customerView.OnSpawnNextCustomer -= SpawnNextCustomerHandler;
 
         Destroy(_currentCustomerViewObject);
@@ -135,18 +162,22 @@ public class CustomerPresenter : MonoBehaviour
         SpawnNextCustomer();
     }
 
-    private void BuyButtonClickHandler(float offerValue)
+    private void OfferButtonClickHandler(float offerValue)
     {
-        _customerModel.HandleOffer(offerValue, _customerModel.ExpectedItemPrice, _customerModel.CurrentJewelData.GetItemWorth(), _customerModel.CurrentJewelData.GetMinItemWorth());
-    }
+        if (_customerModel.IsSeller)
+        {
 
-    private void RefuseButtonClickHandler()
-    {
-        ResetCustomer();
+        }
+        else
+        {
+
+        }
+
+        _customerModel.HandleOffer(offerValue, _customerModel.ExpectedItemPrice, _customerModel.CurrentJewel.GetItemWorth(), _customerModel.CurrentJewel.GetMinItemWorth(), _customerModel.CurrentJewel.GetMaxItemWorth());
     }
 
     public void UpdateMoneyView(float money)
     {
-        _customerView.UpdateMoney(money);
+        _customerView.UpdateMoneyText(money);
     }
 }

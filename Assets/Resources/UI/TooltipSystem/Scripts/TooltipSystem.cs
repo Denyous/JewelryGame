@@ -18,6 +18,9 @@ public class TooltipSystem : MonoBehaviour
 
     public static void Hide()
     {
-        Instance.ToolTip.gameObject.SetActive(false);
+        if (Instance != null && Instance.ToolTip != null)
+        {
+            Instance.ToolTip.gameObject.SetActive(false);
+        }
     }
 }
