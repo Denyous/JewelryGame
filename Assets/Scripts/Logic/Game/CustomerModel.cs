@@ -57,9 +57,9 @@ public class CustomerModel
         return _customerInventory[UnityEngine.Random.Range(0, _customerInventory.Count)];
     }
 
+    // Müşteri bizden satın aldığı ürünü kendi envanterine ekleyecek.
     public bool AddJewel(JewelrySO jewel)
     {
-        // Müşteri bizden satın aldığı ürünü kendi envanterine ekleyecek.
         _customerInventory.Add(jewel);
 
         if (_customerInventory.Contains(jewel))
@@ -72,7 +72,6 @@ public class CustomerModel
             return false;
             Debug.Log("Müşteri jewel envanterine ekleyemedi");
         }
-        
     }
 
 
@@ -242,7 +241,4 @@ public class CustomerModel
 
         return (int)newOffer;
     }
-
-
-   
 }
