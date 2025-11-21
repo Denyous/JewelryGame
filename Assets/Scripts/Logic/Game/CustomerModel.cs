@@ -306,6 +306,8 @@ public class CustomerModel
         ExpectedItemPrice = GetBargainOffer(percent, offerValue, itemWorth, minItemWorth: minItemWorth, maxItemWorth: maxItemWorth);
         
         OnCounterOffer?.Invoke(ExpectedItemPrice);
+
+        AudioManager.PlayOneShot(SoundType.COUNTER_OFFER,0.4f);
     }
 
     private float GetBargainOffer(float percent, float offerValue, float totalValue, float minItemWorth = default, float maxItemWorth = default)
