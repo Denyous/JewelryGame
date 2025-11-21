@@ -3,15 +3,14 @@ using UnityEngine;
 
 public enum SoundType
 {
-    CUSTOMER_BELL,
-    CASH_INCREASE,
-    OPEN_INVENTORY,
-    CLOSE_INVENTORY,
-    CUSTOMER_REFUSE,
-    CUSTOMER,COUNTER_OFFER,
-    DAILIY_PANEL,
-    CLICK
-    
+    CustomerBell,
+    CashIncrease,
+    OpenInventory,
+    CloseInventory,
+    CustomerRefuse,
+    CounterOffer,
+    DailyPanel,
+    Click
 }
 
 
@@ -21,8 +20,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip[] _soundClips;
     private static AudioManager Instance;
     private AudioSource _sfxAudioSource;
-   
-
+    
     private void Awake()
     {
 
@@ -45,6 +43,4 @@ public class AudioManager : MonoBehaviour
     {
         Instance._sfxAudioSource.PlayOneShot(Instance._soundClips[(int)_clip],_volume);
     }
-
-    
 }

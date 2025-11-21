@@ -5,12 +5,10 @@ using UnityEngine;
 public class InventoryModel
 {
     public List<JewelrySO> Items = new List<JewelrySO>();
-
     public event Action OnInventoryChanged;
 
     public void Add(JewelrySO item)
     {
-        
         Items.Add(item);
         OnInventoryChanged?.Invoke();
     }
@@ -45,7 +43,5 @@ public class InventoryModel
         System.Random random = new System.Random();
 
         return _customerCanBuy[random.Next(_customerCanBuy.Count)]; //Alabileceği takıları listeye attıktan sonra aralarından bir tane takıyı random gönderiyorum.
-
-
     }
 }

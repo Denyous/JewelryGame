@@ -23,7 +23,7 @@ public class CustomerModel
 
     public CustomerMood Mood;
     public CustomerSO Data;
-    public List<JewelrySO> Jewels;
+    public List<JewelrySO> CustomerInventory;
     public JewelrySO CurrentJewel;
 
     public event Action<float> OnCounterOffer;
@@ -39,18 +39,18 @@ public class CustomerModel
 
     public void Initialize(List<JewelrySO> jewels)
     {
-        this.Jewels = jewels;
+        this.CustomerInventory = jewels;
         Morale = MAX_MORALE;
         MinRandomMultiplier = UnityEngine.Random.Range(0.8f, 1f);
         MaxRandomMultiplier = UnityEngine.Random.Range(1f, 1.2f);
         IsSeller = GetCustomerType();
-        CurrentJewel = SelectJewel(IsSeller, Jewels);
+        CurrentJewel = SelectJewel(IsSeller, CustomerInventory);
         ExpectedItemPrice = CurrentJewel.GetItemWorth();
     }
 
     private bool GetCustomerType()
     {
-        bool playerCanAfford = PlayerCanAfford(Jewels);
+        bool playerCanAfford = PlayerCanAfford(CustomerInventory);
         bool isSeller = false;
 
         if (playerCanAfford)
@@ -85,7 +85,7 @@ public class CustomerModel
         }
         else
         {
-            jewels = InventoryManager.Instance.GetInventoryItems();
+            jewels = InventoryManager.Instance.GetInventory();
             if (jewels.Count > 0)
             {
                 return jewels[UnityEngine.Random.Range(0, jewels.Count)];
@@ -307,7 +307,7 @@ public class CustomerModel
         
         OnCounterOffer?.Invoke(ExpectedItemPrice);
 
-        AudioManager.PlayOneShot(SoundType.COUNTER_OFFER,0.4f);
+        AudioManager.PlayOneShot(SoundType.CounterOffer,0.4f);
     }
 
     private float GetBargainOffer(float percent, float offerValue, float totalValue, float minItemWorth = default, float maxItemWorth = default)

@@ -6,9 +6,7 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance { get; private set; }
     public InventoryView _inventoryView;
-    public const int SlotCount = 6;
-    private int _itemIndex = 0;
-    [SerializeField] private List<JewelrySO> _jewels;
+    public InventoryModel _inventory = new InventoryModel();
 
     private void Awake()
     {
@@ -16,6 +14,7 @@ public class InventoryManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            _inventory.OnInventoryChanged += UpdateUI;
         }
         else
         {
@@ -23,31 +22,42 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void AddItemToInventory(JewelrySO item)
+    public void AddJewel(JewelrySO item)
     {
-        if (_jewels.Count < SlotCount)
-        {
-            _jewels.Add(item);
-            _inventoryView.AddToInventory(item, _itemIndex);
-            Debug.Log(item.GetItemName() + " envanterinize eklendi.");
-            _itemIndex++;   
-        }
-        else
-        {
-            Debug.Log("Envanteriniz Doldu!");
-        }
+
+        _inventory.Add(item);
     }
 
-    //First Update Inventory View then remove from the list because it will throw null exception otherwise
-    public void RemoveItemFromInventory(JewelrySO item)
+    public void RemoveJewel(JewelrySO item)
     {
-        _inventoryView.RemoveFromInventory(_jewels.IndexOf(item));
-        _jewels.Remove(item);
-        Debug.Log(item.GetItemName() + " envanterinizden çıkarıldı.");
+        _inventory.Remove(item);
     }
 
-    public List<JewelrySO> GetInventoryItems()
+    //Eğer envanterdeki item sayısı bellirli bir seviyeye ulaşırsa Store UI vitrinlerdeki spritelar değişecek.
+    //StoreUI sürekli Update bu değeri kontrol edebilir.
+    public int GetJewelCount()
     {
-        return _jewels;
+
+        return _inventory.GetJewelCount();
+    }
+
+    public List<JewelrySO> GetInventory()
+    {
+        return _inventory.Items;
+    }
+
+    //Envanterimizden item satın almak isteyen müşteriye kendi bakiyesinin miktarında ürün getirir.
+    //CustomerCurrentBalance değerini göndericem ve
+    //InventoryModel kendi içinde hangi itemlerin değeri müşteriye göre diyip listeden seçtiklerinden bir tanesini göndericek
+    // return _inventory.GetJewel(customerBalance);
+    public JewelrySO GetJewelToSell(CustomerModel _customer)
+    {
+
+        return null;
+    }
+
+    void UpdateUI()
+    {
+        _inventoryView.UpdateUI(_inventory.Items);
     }
 }
