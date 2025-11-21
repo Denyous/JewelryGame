@@ -107,6 +107,7 @@ public class CustomerView : MonoBehaviour
         _refuseButton.onClick.AddListener(() =>
         {
             OnRefuseButtonClicked.Invoke();
+            
             ReturnStorePanel();
            
         });

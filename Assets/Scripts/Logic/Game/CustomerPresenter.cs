@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class CustomerPresenter : MonoBehaviour
 {
@@ -19,11 +20,6 @@ public class CustomerPresenter : MonoBehaviour
     private GameObject _currentCustomerViewObject;
     private int _currentCustomerIndex = 0;
 
-    //private JewelrySO GetRandomJewel()
-    //{
-    //    return AllJewels[UnityEngine.Random.Range(0, AllJewels.Count)];
-    //}
-
     public void SpawnNextCustomer()
     {
         // Önce mevcut müşteriyi sil
@@ -40,6 +36,8 @@ public class CustomerPresenter : MonoBehaviour
         if (_currentCustomerIndex > CustomerModels.Count - 1)
         {
             UIManager.Instance.ShowPanel("DailyReportPanel");
+            AudioManager.PlayOneShot(SoundType.DAILIY_PANEL, 0.3f);
+            
             _currentCustomerIndex = 0;
             return;
         }
@@ -89,6 +87,7 @@ public class CustomerPresenter : MonoBehaviour
             _customerModel.RemoveJewel(_customerModel.CurrentJewelData); // Müşterinin sattığı ürünü envanterinden siliyoruz.
             ReputationManager.Instance.AddReputation(30);
             _customerView.UpdateMoney(MoneyManager.Instance.PlayerMoney);
+            AudioManager.PlayOneShot(SoundType.CASH_INCREASE,1);
             Debug.Log("Tebrikler ürünü satın aldınız.");
             _customerModel.AddMoney(offerValue);
 
@@ -143,6 +142,7 @@ public class CustomerPresenter : MonoBehaviour
     private void RefuseButtonClickHandler()
     {
         ResetCustomer();
+        AudioManager.PlayOneShot(SoundType.CUSTOMER_REFUSE);
     }
 
     public void UpdateMoneyView(float money)
