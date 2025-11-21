@@ -24,15 +24,19 @@ public class StoreUI : UIPanel
     }
     public void GetNextCustomerOnClicked()
     {
-        Debug.Log("Müşteri Geldi!");
+        
         UIManager.Instance.HidePanel("StoreUI");
+        AudioManager.PlayOneShot(SoundType.CUSTOMER_BELL);
         CustomerManager.Instance.GetNextCustomer();
+        Debug.Log("Müşteri Geldi!");
     }
 
     public void InventoryButtonOnClicked()
     {
-        Debug.Log("Kasa Açıldı");
+        
         UIManager.Instance.ShowPanel("Inventory");
+        AudioManager.PlayOneShot(SoundType.OPEN_INVENTORY);
+        Debug.Log("Kasa Açıldı");
     }
 
 

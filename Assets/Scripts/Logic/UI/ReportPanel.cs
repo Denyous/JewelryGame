@@ -14,6 +14,7 @@ public class ReportPanel : UIPanel
     {
         UIManager.Instance.ShowPanel("StoreUI");
         UIManager.Instance.HidePanel("DailyReportPanel");
+        AudioManager.PlayOneShot(SoundType.CLICK);
        
     }
 }
