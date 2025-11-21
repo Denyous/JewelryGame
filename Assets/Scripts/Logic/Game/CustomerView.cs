@@ -10,7 +10,7 @@ using Slider = UnityEngine.UI.Slider;
 public class CustomerView : MonoBehaviour
 {
     [Header("GeneralUI")]
-    [SerializeField] private Button _buyButton;
+    [SerializeField] private Button _offerButton;
     [SerializeField] private Button _refuseButton;
     [SerializeField] private TextMeshProUGUI _moneyText;
     [SerializeField] private TMP_InputField _offerArea;
@@ -30,32 +30,29 @@ public class CustomerView : MonoBehaviour
     [SerializeField] private TMP_Text _jewelPriceText;
 
     public event Action OnSpawnNextCustomer;
-    public event Action<float> OnBuyButtonClicked;
+    public event Action<float> OnOfferButtonClicked;
     private string debugChar;
     private string debugMorale;
 
-    public void Initialize()
+    public void Initialize(CustomerModel currentCustomer, JewelrySO currentJewel, string moneyText)
     {
         RegisterCallbacks();
-    }
 
-    public void UpdateUI(CustomerModel currentCustomer,JewelrySO currentJewel,string name, Sprite portrait, int moralBar ,string jewelName, Sprite jewelSprite, int jewelPrice, string moneyText)
-    {
-        _nameText.text = name;
-        _customerImage.sprite = portrait;
-
-        _moraleBar.progressValue = (float)Helpers.ClampProgressBarValue(currentCustomer.Morale);
-
-        _jewelNameText.text = jewelName;
-        _jewelImage.sprite = jewelSprite;
-        _jewelPriceText.text = "$" + jewelPrice;
-        _moneyText.text = moneyText + "$";
-        
+        UpdateCustomerUI(currentCustomer);
+        UpdateMoraleProgressBar((float)Helpers.ClampProgressBarValue(currentCustomer.Morale));
+        UpdateJewelUI(currentJewel);
+        UpdateMoneyText(MoneyManager.Instance.PlayerMoney);
         _offerArea.text = "";
-        _buyButton.interactable = false;
-
+        _offerButton.interactable = false;
         DebugCustomerCharacter(currentCustomer.Data.CustomerCharacter.ToString(), currentCustomer.Mood.ToString());
-        DebugItemWorth(currentCustomer.CurrentJewelData.GetMinItemWorth().ToString(), currentCustomer.CurrentJewelData.GetMaxItemWorth().ToString());
+        DebugItemWorth(currentCustomer.CurrentJewel.GetMinItemWorth().ToString(), currentCustomer.CurrentJewel.GetMaxItemWorth().ToString());
+
+        if (!currentCustomer.IsSeller)
+        {
+            _offerButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "Counter Offer";
+
+            UpdateConversationArea($"I'm looking to buy {currentJewel.GetItemName()}, sell it to me for {currentJewel.GetMinItemWorth()}?");
+        }
     }
 
     public void DebugCustomerCharacter(string character, string morale)
@@ -71,20 +68,33 @@ public class CustomerView : MonoBehaviour
         _debugJewelMaxWorthText.text = $"Max: {itemMaxWorth}";
     }
 
-    public void UpdateMoney(float money)
+    public void UpdateCustomerUI(CustomerModel currentCustomer)
+    {
+        _nameText.text = currentCustomer.Data.CustomerName;
+        _customerImage.sprite = currentCustomer.Data.Sprite;
+    }
+
+    public void UpdateMoneyText(float money)
     {
         _moneyText.text = money.ToString();
     }
 
-    public void UpdateMorale(double morale)
+    public void UpdateMoraleProgressBar(double morale)
     {
         _moraleBar.progressValue = (float)morale;
         DebugCustomerCharacter(debugChar, morale.ToString());
     }
 
+    public void UpdateJewelUI(JewelrySO currentJewel)
+    {
+        _jewelNameText.text = currentJewel.GetItemName();
+        _jewelImage.sprite = currentJewel.GetItemSprite();
+        _jewelPriceText.text = "$" + currentJewel.GetItemWorth();
+    }
+
     public void SetButtonsEnabled(bool state)
     {
-        _buyButton.interactable = state;
+        _offerButton.interactable = state;
         _refuseButton.interactable = state;
     }
 
@@ -93,13 +103,15 @@ public class CustomerView : MonoBehaviour
         _conversationArea.text = text;
     }
 
+
+
     public void RegisterCallbacks()
     {
-        _buyButton.interactable = false;
+        _offerButton.interactable = false;
         _offerArea.onValueChanged.AddListener(OnOfferChanged);
 
-        _buyButton.onClick.RemoveAllListeners();
-        _buyButton.onClick.AddListener(OnBuyPressed);
+        _offerButton.onClick.RemoveAllListeners();
+        _offerButton.onClick.AddListener(OnOfferButtonPressed);
 
         _refuseButton.onClick.RemoveAllListeners();
 
@@ -111,35 +123,31 @@ public class CustomerView : MonoBehaviour
         });
     }
 
-    
+    //Bu klas müşteriyle etkileşime girdikten sonra oyuncuyu store yönlendirir böylece envanterini düzeltebilir vs...
+    //Kontrolü oyuncuya vermiş oluruz.
     public void ReturnStorePanel()
     {
-        //Bu klas müşteriyle etkileşime girdikten sonra oyuncuyu store yönlendirir böylece envanterini düzeltebilir vs...
-        //Kontrolü oyuncuya vermiş oluruz.
         UIManager.Instance.ShowPanel(Panel.StoreUI);
         UIManager.Instance.HidePanel(Panel.CustomerContainer);
         Debug.Log("Müşteri Gitti!");
     }
 
-
-    private void OnBuyPressed()
+    private void OnOfferButtonPressed()
     {
         float offerValue = (float)Convert.ToDouble(_offerArea.text);
 
-        OnBuyButtonClicked?.Invoke(offerValue);
+        OnOfferButtonClicked?.Invoke(offerValue);
     }
 
     private void OnOfferChanged(string input)
     {
         if (int.TryParse(input, out int value) && value > 0)
         {
-            _buyButton.interactable = true;
+            _offerButton.interactable = true;
         }
         else
         {
-            _buyButton.interactable = false;
+            _offerButton.interactable = false;
         }
     }
-
-
 }

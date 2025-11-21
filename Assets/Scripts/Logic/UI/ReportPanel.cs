@@ -18,9 +18,11 @@ public class ReportPanel : UIPanel
         UIManager.Instance.HidePanel(Panel.DailyReportPanel);
     }
 
-    public void SetDailyReportFields(int itemBuyed, float moneySpend)
+    public void SetDailyReportFields(int itemBuyed, int itemSelled, float moneySpend, float moneyEarned)
     {
         _moneySpendText.text = $"{moneySpend.ToString()} $";
+        _moneyEarnedText.text = $"{moneyEarned.ToString()} $";
         _itemBuyedText.text = $"{itemBuyed}";
+        _itemSelledText.text = $"{itemSelled}";
     }
 }

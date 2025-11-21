@@ -25,10 +25,10 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItemToInventory(JewelrySO item)
     {
-        if (_jewels.Count <= SlotCount)
+        if (_jewels.Count < SlotCount)
         {
             _jewels.Add(item);
-            InventoryUpdate(item,_itemIndex);
+            _inventoryView.AddToInventory(item, _itemIndex);
             Debug.Log(item.GetItemName() + " envanterinize eklendi.");
             _itemIndex++;   
         }
@@ -38,15 +38,16 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    //First Update Inventory View then remove from the list because it will throw null exception otherwise
     public void RemoveItemFromInventory(JewelrySO item)
     {
+        _inventoryView.RemoveFromInventory(_jewels.IndexOf(item));
         _jewels.Remove(item);
         Debug.Log(item.GetItemName() + " envanterinizden çıkarıldı.");
     }
 
-
-    public void InventoryUpdate(JewelrySO currentJewel,int jewelIndex)
+    public List<JewelrySO> GetInventoryItems()
     {
-       _inventoryView.UpdateInventoryView(currentJewel, jewelIndex);
+        return _jewels;
     }
 }

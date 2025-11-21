@@ -5,6 +5,7 @@ public class DailyReportManager : MonoBehaviour
     private static DailyReportManager _instance;
     public ReportPanel DailyReportPanel;
     public static float MoneySpend = 0;
+    public static float MoneyEarned = 0;
     public static float ReputationGained = 0f;
     public static int ItemBuyed = 0;
     public static int ItemSelled = 0;
@@ -16,7 +17,7 @@ public class DailyReportManager : MonoBehaviour
     
     public static void CreateDailyReport()
     {
-        _instance.DailyReportPanel.SetDailyReportFields(ItemBuyed, MoneySpend);
+        _instance.DailyReportPanel.SetDailyReportFields(ItemBuyed, ItemSelled, MoneySpend, MoneyEarned);
         UIManager.Instance.ShowPanel(Panel.DailyReportPanel);
         ResetFields();
     }
@@ -24,6 +25,7 @@ public class DailyReportManager : MonoBehaviour
     private static void ResetFields()
     {
         MoneySpend = 0;
+        MoneyEarned = 0;
         ReputationGained = 0f;
         ItemBuyed = 0;
         ItemSelled = 0;

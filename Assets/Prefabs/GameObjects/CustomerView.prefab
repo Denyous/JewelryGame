@@ -1196,7 +1196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c867c2c3fddc84f4e8cc376ee6b15635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::View
-  _buyButton: {fileID: 2042152563991055596}
+  _offerButton: {fileID: 2042152563991055596}
   _refuseButton: {fileID: 5132121841610245185}
   _moneyText: {fileID: 4240400070852715348}
   _offerArea: {fileID: 8670974102403564106}

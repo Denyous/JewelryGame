@@ -1074,7 +1074,7 @@ GameObject:
   - component: {fileID: 349599639}
   - component: {fileID: 349599638}
   m_Layer: 5
-  m_Name: JewelSlot (4)
+  m_Name: JewelSlot_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1226,7 +1226,7 @@ GameObject:
   - component: {fileID: 400387375}
   - component: {fileID: 400387374}
   m_Layer: 5
-  m_Name: JewelIcon
+  m_Name: JewelIcon_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1458,7 +1458,7 @@ GameObject:
   - component: {fileID: 463567693}
   - component: {fileID: 463567692}
   m_Layer: 5
-  m_Name: JewelSlot
+  m_Name: JewelSlot_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1579,7 +1579,7 @@ GameObject:
   - component: {fileID: 498992880}
   - component: {fileID: 498992879}
   m_Layer: 5
-  m_Name: JewelIcon
+  m_Name: JewelIcon_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3142,7 +3142,7 @@ GameObject:
   - component: {fileID: 734417905}
   - component: {fileID: 734417904}
   m_Layer: 5
-  m_Name: JewelSlot (1)
+  m_Name: JewelSlot_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3218,7 +3218,7 @@ GameObject:
   - component: {fileID: 806404759}
   - component: {fileID: 806404758}
   m_Layer: 5
-  m_Name: JewelSlot (2)
+  m_Name: JewelSlot_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3358,7 +3358,7 @@ GameObject:
   - component: {fileID: 838925853}
   - component: {fileID: 838925852}
   m_Layer: 5
-  m_Name: JewelSlot (5)
+  m_Name: JewelSlot_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4517,7 +4517,7 @@ GameObject:
   - component: {fileID: 1291277202}
   - component: {fileID: 1291277201}
   m_Layer: 5
-  m_Name: JewelSlot (3)
+  m_Name: JewelSlot_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4908,6 +4908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1512709294}
   - component: {fileID: 1512709295}
+  - component: {fileID: 1512709296}
   m_Layer: 5
   m_Name: Inventory_Panel
   m_TagString: Untagged
@@ -4951,6 +4952,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoyPanel
   _closeButton: {fileID: 1688535912}
+--- !u!114 &1512709296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512709293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc7387807c5e61143b77c82a94e29956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryView
+  _slotSprites:
+  - {fileID: 1926607135}
+  - {fileID: 1566251235}
+  - {fileID: 400387374}
+  - {fileID: 2041746063}
+  - {fileID: 1795563261}
+  - {fileID: 498992879}
+  _emptySlotSprite: {fileID: 8108485761775306034, guid: 62bed8b4e7cd44e43bbb7edff157bf34, type: 3}
 --- !u!1 &1513442672
 GameObject:
   m_ObjectHideFlags: 0
@@ -5120,7 +5141,7 @@ GameObject:
   - component: {fileID: 1566251236}
   - component: {fileID: 1566251235}
   m_Layer: 5
-  m_Name: JewelIcon
+  m_Name: JewelIcon_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5655,7 +5676,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1738681013}
   - component: {fileID: 1738681012}
-  - component: {fileID: 1738681014}
   m_Layer: 0
   m_Name: PlayerInventory_Manager
   m_TagString: Untagged
@@ -5675,7 +5695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b1b796b8bff7ee44a47d643588d7e38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  _inventoryView: {fileID: 1738681014}
+  _inventoryView: {fileID: 1512709296}
   _jewels: []
 --- !u!4 &1738681013
 Transform:
@@ -5692,25 +5712,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1738681014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1738681011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc7387807c5e61143b77c82a94e29956, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryView
-  _slotSprites:
-  - {fileID: 1926607135}
-  - {fileID: 1566251235}
-  - {fileID: 400387374}
-  - {fileID: 2041746063}
-  - {fileID: 1795563261}
-  - {fileID: 498992879}
 --- !u!1 &1740726853
 GameObject:
   m_ObjectHideFlags: 0
@@ -6103,27 +6104,33 @@ MonoBehaviour:
   CustomerModels:
   - Mood: 50
     Data: {fileID: 11400000, guid: efedb2e520d79f74786b72069ffa25fd, type: 2}
-    CurrentJewelData: {fileID: 0}
+    Jewels: []
+    CurrentJewel: {fileID: 0}
     <Money>k__BackingField: 0
   - Mood: 50
     Data: {fileID: 11400000, guid: 852eb1d3594c4a646b2691e93f21f13b, type: 2}
-    CurrentJewelData: {fileID: 0}
+    Jewels: []
+    CurrentJewel: {fileID: 0}
     <Money>k__BackingField: 0
   - Mood: 50
     Data: {fileID: 11400000, guid: c4361a6b8974bb044950da55511aa847, type: 2}
-    CurrentJewelData: {fileID: 0}
+    Jewels: []
+    CurrentJewel: {fileID: 0}
     <Money>k__BackingField: 0
   - Mood: 50
     Data: {fileID: 11400000, guid: e22fdf2267be1d145aae9a426e01c966, type: 2}
-    CurrentJewelData: {fileID: 0}
+    Jewels: []
+    CurrentJewel: {fileID: 0}
     <Money>k__BackingField: 0
   - Mood: 50
     Data: {fileID: 11400000, guid: fcbcbbd2a33b3a641860d02feadfe8cb, type: 2}
-    CurrentJewelData: {fileID: 0}
+    Jewels: []
+    CurrentJewel: {fileID: 0}
     <Money>k__BackingField: 0
   - Mood: 50
     Data: {fileID: 11400000, guid: 823e5dd15abba024099e3286578a85a4, type: 2}
-    CurrentJewelData: {fileID: 0}
+    Jewels: []
+    CurrentJewel: {fileID: 0}
     <Money>k__BackingField: 0
 --- !u!1 &1787755774
 GameObject:
@@ -6168,7 +6175,7 @@ GameObject:
   - component: {fileID: 1795563262}
   - component: {fileID: 1795563261}
   m_Layer: 5
-  m_Name: JewelIcon
+  m_Name: JewelIcon_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6583,7 +6590,7 @@ GameObject:
   - component: {fileID: 1926607136}
   - component: {fileID: 1926607135}
   m_Layer: 5
-  m_Name: JewelIcon
+  m_Name: JewelIcon_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6906,7 +6913,7 @@ GameObject:
   - component: {fileID: 2041746064}
   - component: {fileID: 2041746063}
   m_Layer: 5
-  m_Name: JewelIcon
+  m_Name: JewelIcon_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
