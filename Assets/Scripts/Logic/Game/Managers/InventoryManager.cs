@@ -24,7 +24,6 @@ public class InventoryManager : MonoBehaviour
 
     public void AddJewel(JewelrySO item)
     {
-
         _inventory.Add(item);
     }
 
@@ -34,10 +33,8 @@ public class InventoryManager : MonoBehaviour
     }
 
     //Eğer envanterdeki item sayısı bellirli bir seviyeye ulaşırsa Store UI vitrinlerdeki spritelar değişecek.
-    //StoreUI sürekli Update bu değeri kontrol edebilir.
     public int GetJewelCount()
     {
-
         return _inventory.GetJewelCount();
     }
 
@@ -52,7 +49,6 @@ public class InventoryManager : MonoBehaviour
     // return _inventory.GetJewel(customerBalance);
     public JewelrySO GetJewelToSell(CustomerModel _customer)
     {
-
         return null;
     }
 

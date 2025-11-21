@@ -24,24 +24,24 @@ public class InventoryModel
         return Items.Count;
     }
 
-    public JewelrySO GetJewel(float customerBalance)
-    {
-        List<JewelrySO> _customerCanBuy = new List<JewelrySO>();
+    //public JewelrySO GetJewel(float customerBalance)
+    //{
+    //    List<JewelrySO> _customerCanBuy = new List<JewelrySO>();
 
-        foreach (JewelrySO item in Items)
-        {
-            if (item == null)
-            {
-                continue;
-            }
-            if (customerBalance >= item.GetMaxItemWorth()) // Burada karşılaştırma ürünün satın aldığımız offer fiyatı da olabilir ----> JewelOfferPrice
-            {
-                _customerCanBuy.Add(item);
-            }
-        }
+    //    foreach (JewelrySO item in Items)
+    //    {
+    //        if (item == null)
+    //        {
+    //            continue;
+    //        }
+    //        if (customerBalance >= item.GetMaxItemWorth()) 
+    //        {
+    //            _customerCanBuy.Add(item);
+    //        }
+    //    }
 
-        System.Random random = new System.Random();
+    //    System.Random random = new System.Random();
 
-        return _customerCanBuy[random.Next(_customerCanBuy.Count)]; //Alabileceği takıları listeye attıktan sonra aralarından bir tane takıyı random gönderiyorum.
-    }
+    //    return _customerCanBuy[random.Next(_customerCanBuy.Count)]; 
+    //}
 }

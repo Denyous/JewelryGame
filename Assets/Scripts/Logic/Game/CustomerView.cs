@@ -103,8 +103,6 @@ public class CustomerView : MonoBehaviour
         _conversationArea.text = text;
     }
 
-
-
     public void RegisterCallbacks()
     {
         _offerButton.interactable = false;
