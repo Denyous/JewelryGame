@@ -109,8 +109,8 @@ public class CustomerPresenter : MonoBehaviour
             {
                 Debug.Log("Customer Sinirli Bir Sekilde Dukkani Terk Etti.");
                 _customerView.ReturnStorePanel();
-
                 ResetCustomer();
+                AudioManager.PlayOneShot(SoundType.CustomerRefuse);
                 return;
             }
             return;
@@ -127,12 +127,14 @@ public class CustomerPresenter : MonoBehaviour
             _customerView.ReturnStorePanel();
             ResetCustomer();
             DailyReportManager.ItemSelled += 1;
+            AudioManager.PlayOneShot(SoundType.CashIncrease);
         }
         else if (mood == CustomerMood.Mad)
         {
             Debug.Log("Customer Sinirli Bir Sekilde Dukkani Terk Etti.");
             _customerView.ReturnStorePanel();
             ResetCustomer();
+            AudioManager.PlayOneShot(SoundType.CustomerRefuse);
         }
     }
 

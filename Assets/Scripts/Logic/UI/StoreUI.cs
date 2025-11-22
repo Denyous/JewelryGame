@@ -27,11 +27,16 @@ public class StoreUI : UIPanel
         Debug.Log("Müşteri Geldi!");
         UIManager.Instance.HidePanel(Panel.StoreUI);
         CustomerManager.Instance.GetNextCustomer();
+        AudioManager.PlayOneShot(SoundType.CustomerBell);
+        AudioManager.PlayOneShot(SoundType.Click);
+        AudioManager.PlayOneShot(SoundType.OpenInventory);
     }
 
     public void InventoryButtonOnClicked()
     {
         Debug.Log("Kasa Açıldı");
         UIManager.Instance.ShowPanel(Panel.InventoryPanel);
+        AudioManager.PlayOneShot(SoundType.OpenInventory);
+        AudioManager.PlayOneShot(SoundType.Click);
     }
 }

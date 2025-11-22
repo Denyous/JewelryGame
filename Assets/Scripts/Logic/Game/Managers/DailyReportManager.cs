@@ -19,6 +19,7 @@ public class DailyReportManager : MonoBehaviour
     {
         _instance.DailyReportPanel.SetDailyReportFields(ItemBuyed, ItemSelled, MoneySpend, MoneyEarned);
         UIManager.Instance.ShowPanel(Panel.DailyReportPanel);
+        AudioManager.PlayOneShot(SoundType.DailyPanel);
         ResetFields();
     }
 

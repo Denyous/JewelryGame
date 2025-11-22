@@ -9,5 +9,7 @@ public class InventoryPanel : UIPanel
     public void CloseButtonOnClicked()
     {
         UIManager.Instance.HidePanel(Panel.InventoryPanel);
+        AudioManager.PlayOneShot(SoundType.CloseInventory);
+        AudioManager.PlayOneShot(SoundType.Click);
     }
 }

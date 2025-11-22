@@ -115,9 +115,9 @@ public class CustomerView : MonoBehaviour
 
         _refuseButton.onClick.AddListener(() =>
         {
-                     
             ReturnStorePanel();
-           
+            AudioManager.PlayOneShot(SoundType.Click);
+            AudioManager.PlayOneShot(SoundType.CloseInventory);
         });
     }
 
@@ -135,6 +135,7 @@ public class CustomerView : MonoBehaviour
         float offerValue = (float)Convert.ToDouble(_offerArea.text);
 
         OnOfferButtonClicked?.Invoke(offerValue);
+        AudioManager.PlayOneShot(SoundType.Click);
     }
 
     private void OnOfferChanged(string input)

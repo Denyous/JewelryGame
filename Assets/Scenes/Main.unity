@@ -3192,7 +3192,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 49ecd41879069284f9f650e1130974a1, type: 3}
   - {fileID: 8300000, guid: f6696a3ae1075bc45afb70aa63d9cabe, type: 3}
   - {fileID: 8300000, guid: 712e544ef901be74ea240f8d160532f2, type: 3}
-  - {fileID: 8300000, guid: 8760eb74b86dc05409b35c12852e1dd2, type: 3}
   - {fileID: 8300000, guid: d2388472706456047ab44919bc7003cd, type: 3}
   - {fileID: 8300000, guid: 1f1b22fa873cf304ca5a6a1b302473cf, type: 3}
   - {fileID: 8300000, guid: 8760eb74b86dc05409b35c12852e1dd2, type: 3}
@@ -6975,7 +6974,7 @@ MonoBehaviour:
   _openStoreButton: {fileID: 600575817}
   _reputationBar: {fileID: 885561352}
   _moneyText: {fileID: 1385542166}
-  _inventoryButton: {fileID: 0}
+  _inventoryButton: {fileID: 1979738983}
 --- !u!1 &1962067964
 GameObject:
   m_ObjectHideFlags: 0

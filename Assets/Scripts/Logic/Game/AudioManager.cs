@@ -3,14 +3,14 @@ using UnityEngine;
 
 public enum SoundType
 {
-    CustomerBell,
-    CashIncrease,
-    OpenInventory,
-    CloseInventory,
-    CustomerRefuse,
-    CounterOffer,
-    DailyPanel,
-    Click
+    CustomerBell = 0,
+    CashIncrease = 1,
+    OpenInventory = 2,
+    CloseInventory = 3,
+    CustomerRefuse = 4,
+    CounterOffer = 5,
+    DailyPanel = 6,
+    Click = 7
 }
 
 
@@ -23,9 +23,7 @@ public class AudioManager : MonoBehaviour
     
     private void Awake()
     {
-
         _sfxAudioSource = GetComponent<AudioSource>();
-        
 
         if (Instance == null)
         {
