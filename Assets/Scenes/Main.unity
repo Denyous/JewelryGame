@@ -7224,11 +7224,17 @@ MonoBehaviour:
   _reputationBar: {fileID: 885561352}
   _moneyText: {fileID: 1385542166}
   _inventoryButton: {fileID: 1979738983}
-  _rightDrobe: {fileID: 0}
-  _leftDrobe: {fileID: 0}
-  _showCase: {fileID: 0}
-  _drobesSprites: []
-  _showCaseSprites: []
+  _rightDrobe: {fileID: 627312936}
+  _leftDrobe: {fileID: 1670959102}
+  _showCase: {fileID: 392794601}
+  _drobesSprites:
+  - {fileID: 21300000, guid: 976501b34a24ed4409004fe38a3c3af7, type: 3}
+  - {fileID: 21300000, guid: 55bc1be3e973d7f4c96857100f2e745b, type: 3}
+  - {fileID: 21300000, guid: 004280d1ca7c8b64b902040511ffdf72, type: 3}
+  _showCaseSprites:
+  - {fileID: 21300000, guid: b169c12e5b1af114ea9291143c16692d, type: 3}
+  - {fileID: 21300000, guid: f5ce567c0fa503245accefe9cdc505f7, type: 3}
+  - {fileID: 21300000, guid: 465991ef38fce8a41a6c7e92e350702c, type: 3}
 --- !u!1 &1962067964
 GameObject:
   m_ObjectHideFlags: 0
