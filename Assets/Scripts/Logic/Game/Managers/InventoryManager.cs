@@ -7,6 +7,7 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager Instance { get; private set; }
     public InventoryView _inventoryView;
     public InventoryModel _inventory = new InventoryModel();
+    private const int maxInventorySize = 6;
 
     private void Awake()
     {
@@ -24,12 +25,28 @@ public class InventoryManager : MonoBehaviour
 
     public void AddJewel(JewelrySO item)
     {
-        _inventory.Add(item);
+        
+        if (GetJewelCount() == maxInventorySize)
+        {
+            Debug.Log("Envanter dolu, daha fazla takı eklenemez.");
+        }
+        else
+        {
+            _inventory.Add(item);
+        }
     }
 
     public void RemoveJewel(JewelrySO item)
     {
-        _inventory.Remove(item);
+        if (GetJewelCount() == 0)
+        {
+            Debug.Log("Envanter boş");
+        }
+        else
+        {
+            _inventory.Remove(item);
+        }
+            
     }
 
     //Eğer envanterdeki item sayısı bellirli bir seviyeye ulaşırsa Store UI vitrinlerdeki spritelar değişecek.

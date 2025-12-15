@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: f5ce567c0fa503245accefe9cdc505f7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3382663788521535298
+    second: Bilezikler %50_0
+  - first:
+      213: -3945471747736188506
+    second: Bilezikler %50_1
+  - first:
+      213: 4384236296208381713
+    second: Bilezikler %50_2
+  - first:
+      213: -4672798510749070911
+    second: Bilezikler %50_3
+  - first:
+      213: -5482916508900020923
+    second: Bilezikler %50_4
+  - first:
+      213: 3105940572856277979
+    second: Bilezikler %50_5
+  - first:
+      213: 7902764405462879811
+    second: Bilezikler %50_6
+  - first:
+      213: -1123680803654986873
+    second: Bilezikler %50_7
+  - first:
+      213: -6849986690060651002
+    second: Bilezikler %50_8
+  - first:
+      213: -7666211400381592322
+    second: Bilezikler %50_9
+  - first:
+      213: 2976910946947505999
+    second: Bilezikler %50_10
+  - first:
+      213: 7848379550796849669
+    second: Bilezikler %50_11
+  - first:
+      213: 5988872747854991279
+    second: Bilezikler %50_12
+  - first:
+      213: 1425026405700696307
+    second: Bilezikler %50_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bilezikler %50_0
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 574
+        width: 711
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24737652bc2a1fe20800000000000000
+      internalID: 3382663788521535298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bilezikler %50_1
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 1075
+        width: 555
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a948d4795ede39c0800000000000000
+      internalID: -3945471747736188506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bilezikler %50_2
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 1075
+        width: 561
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 117ffd6ceafe7dc30800000000000000
+      internalID: 4384236296208381713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bilezikler %50_3
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 1075
+        width: 582
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c9c3d31382e62fb0800000000000000
+      internalID: -4672798510749070911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bilezikler %50_4
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 838
+        width: 615
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54da3e12c74c8e3b0800000000000000
+      internalID: -5482916508900020923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bilezikler %50_5
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 838
+        width: 588
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb529abe748a1b20800000000000000
+      internalID: 3105940572856277979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bilezikler %50_6
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 838
+        width: 588
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34e473b2b524cad60800000000000000
+      internalID: 7902764405462879811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bilezikler %50_7
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 571
+        width: 620
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78318393342e760f0800000000000000
+      internalID: -1123680803654986873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bilezikler %50_8
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 574
+        width: 620
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 606f7cee565ffe0a0800000000000000
+      internalID: -6849986690060651002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bilezikler %50_9
+      rect:
+        serializedVersion: 2
+        x: 1985
+        y: 574
+        width: 647
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efc843349552c9590800000000000000
+      internalID: -7666211400381592322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bilezikler %50_10
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 277
+        width: 689
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f17c0ebbc105920800000000000000
+      internalID: 2976910946947505999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bilezikler %50_11
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 277
+        width: 653
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 502afa37e9b0bec60800000000000000
+      internalID: 7848379550796849669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bilezikler %50_12
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 277
+        width: 657
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faf0ae4a800cc1350800000000000000
+      internalID: 5988872747854991279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bilezikler %50_13
+      rect:
+        serializedVersion: 2
+        x: 2017
+        y: 274
+        width: 690
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f8775347f5b6c310800000000000000
+      internalID: 1425026405700696307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bilezikler %50_0: 3382663788521535298
+      Bilezikler %50_1: -3945471747736188506
+      Bilezikler %50_10: 2976910946947505999
+      Bilezikler %50_11: 7848379550796849669
+      Bilezikler %50_12: 5988872747854991279
+      Bilezikler %50_13: 1425026405700696307
+      Bilezikler %50_2: 4384236296208381713
+      Bilezikler %50_3: -4672798510749070911
+      Bilezikler %50_4: -5482916508900020923
+      Bilezikler %50_5: 3105940572856277979
+      Bilezikler %50_6: 7902764405462879811
+      Bilezikler %50_7: -1123680803654986873
+      Bilezikler %50_8: -6849986690060651002
+      Bilezikler %50_9: -7666211400381592322
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

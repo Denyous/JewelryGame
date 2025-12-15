@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: b169c12e5b1af114ea9291143c16692d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2366552312166708396
+    second: "Bilezikler Bo\u015F_0"
+  - first:
+      213: 1932781752472987276
+    second: "Bilezikler Bo\u015F_1"
+  - first:
+      213: 322889839877405699
+    second: "Bilezikler Bo\u015F_2"
+  - first:
+      213: 2685400310000006420
+    second: "Bilezikler Bo\u015F_3"
+  - first:
+      213: -3590561484440875824
+    second: "Bilezikler Bo\u015F_4"
+  - first:
+      213: -3774164301812664170
+    second: "Bilezikler Bo\u015F_5"
+  - first:
+      213: -1966314017191618527
+    second: "Bilezikler Bo\u015F_6"
+  - first:
+      213: -6640338101221402841
+    second: "Bilezikler Bo\u015F_7"
+  - first:
+      213: 4992339103179871094
+    second: "Bilezikler Bo\u015F_8"
+  - first:
+      213: -4689302977641133613
+    second: "Bilezikler Bo\u015F_9"
+  - first:
+      213: 6754046604155962563
+    second: "Bilezikler Bo\u015F_10"
+  - first:
+      213: -2019496242892149957
+    second: "Bilezikler Bo\u015F_11"
+  - first:
+      213: -422526983194433349
+    second: "Bilezikler Bo\u015F_12"
+  - first:
+      213: -4134948584877012682
+    second: "Bilezikler Bo\u015F_13"
+  - first:
+      213: -667179093172641547
+    second: "Bilezikler Bo\u015F_14"
+  - first:
+      213: 7361463038306280187
+    second: "Bilezikler Bo\u015F_15"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Bilezikler Bo\u015F_0"
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 1076
+        width: 582
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45b8ceae531582fd0800000000000000
+      internalID: -2366552312166708396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler Bo\u015F_1"
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 1075
+        width: 555
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c86628873ce92da10800000000000000
+      internalID: 1932781752472987276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler Bo\u015F_2"
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 1076
+        width: 561
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30cb97f39922b7400800000000000000
+      internalID: 322889839877405699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler Bo\u015F_3"
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 1075
+        width: 582
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4153645aa55744520800000000000000
+      internalID: 2685400310000006420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler Bo\u015F_4"
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 838
+        width: 609
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dcc3bf7a53cb2ec0800000000000000
+      internalID: -3590561484440875824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler Bo\u015F_5"
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 838
+        width: 588
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 698fe7a50997f9bc0800000000000000
+      internalID: -3774164301812664170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler Bo\u015F_6"
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 838
+        width: 588
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1281c60c1df36b4e0800000000000000
+      internalID: -1966314017191618527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler Bo\u015F_7"
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 838
+        width: 615
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 727d430dda7c8d3a0800000000000000
+      internalID: -6640338101221402841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler Bo\u015F_8"
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 574
+        width: 647
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 673145bb6f9584540800000000000000
+      internalID: 4992339103179871094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler Bo\u015F_9"
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 574
+        width: 620
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d9c48d69cf3ceeb0800000000000000
+      internalID: -4689302977641133613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler Bo\u015F_10"
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 574
+        width: 620
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c4462d1a913bbd50800000000000000
+      internalID: 6754046604155962563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler Bo\u015F_11"
+      rect:
+        serializedVersion: 2
+        x: 1985
+        y: 574
+        width: 647
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3b6d29edde49f3e0800000000000000
+      internalID: -2019496242892149957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler Bo\u015F_12"
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 277
+        width: 689
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb8adaa82f1e22af0800000000000000
+      internalID: -422526983194433349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler Bo\u015F_13"
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 277
+        width: 656
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 639c6e18b26bd96c0800000000000000
+      internalID: -4134948584877012682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler Bo\u015F_14"
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 277
+        width: 652
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f0a0ed4624bdb6f0800000000000000
+      internalID: -667179093172641547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler Bo\u015F_15"
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 277
+        width: 689
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf2e96171ab292660800000000000000
+      internalID: 7361463038306280187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Bilezikler Bo\u015F_0": -2366552312166708396
+      "Bilezikler Bo\u015F_1": 1932781752472987276
+      "Bilezikler Bo\u015F_10": 6754046604155962563
+      "Bilezikler Bo\u015F_11": -2019496242892149957
+      "Bilezikler Bo\u015F_12": -422526983194433349
+      "Bilezikler Bo\u015F_13": -4134948584877012682
+      "Bilezikler Bo\u015F_14": -667179093172641547
+      "Bilezikler Bo\u015F_15": 7361463038306280187
+      "Bilezikler Bo\u015F_2": 322889839877405699
+      "Bilezikler Bo\u015F_3": 2685400310000006420
+      "Bilezikler Bo\u015F_4": -3590561484440875824
+      "Bilezikler Bo\u015F_5": -3774164301812664170
+      "Bilezikler Bo\u015F_6": -1966314017191618527
+      "Bilezikler Bo\u015F_7": -6640338101221402841
+      "Bilezikler Bo\u015F_8": 4992339103179871094
+      "Bilezikler Bo\u015F_9": -4689302977641133613
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

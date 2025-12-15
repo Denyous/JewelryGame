@@ -8,7 +8,7 @@ public class CustomerPresenter : MonoBehaviour
     [Header("Prefab ve Veri Referansları")]
     public GameObject CustomerViewPrefab;
     public Transform ParentContainer;
-
+    public static Action OnItemBuyandSell;
     public List<JewelrySO> AllJewels;
 
     public List<CustomerModel> CustomerModels;
@@ -94,12 +94,13 @@ public class CustomerPresenter : MonoBehaviour
             {
                 MoneyManager.Instance.RemoveMoney(offerValue);
                 InventoryManager.Instance.AddJewel(_customerModel.CurrentJewel);
+                OnItemBuyandSell?.Invoke();
                 ReputationManager.Instance.AddReputation(30);
                 _customerView.UpdateMoneyText(MoneyManager.Instance.PlayerMoney);
                 Debug.Log("Tebrikler ürünü satın aldınız.");
                 _customerModel.AddMoney(offerValue);
                 _customerView.ReturnStorePanel();
-
+                OnItemBuyandSell.Invoke();
                 ResetCustomer();
                 
                 DailyReportManager.ItemBuyed += 1;
