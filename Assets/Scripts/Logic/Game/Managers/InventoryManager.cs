@@ -43,10 +43,7 @@ public class InventoryManager : MonoBehaviour
         return _inventory.Items;
     }
 
-    //Envanterimizden item satın almak isteyen müşteriye kendi bakiyesinin miktarında ürün getirir.
-    //CustomerCurrentBalance değerini göndericem ve
-    //InventoryModel kendi içinde hangi itemlerin değeri müşteriye göre diyip listeden seçtiklerinden bir tanesini göndericek
-    // return _inventory.GetJewel(customerBalance);
+    
     public JewelrySO GetJewelToSell(CustomerModel _customer)
     {
         return null;
