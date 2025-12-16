@@ -138,7 +138,7 @@ public class CustomerPresenter : MonoBehaviour
             ResetCustomer();
             AudioManager.PlayOneShot(SoundType.CustomerRefuse);
         }
-        _customerView.ConversationArea(false);
+        
     }
 
     //In Customer Leave Handler call this method after the methods of _customerView and _customerModel
