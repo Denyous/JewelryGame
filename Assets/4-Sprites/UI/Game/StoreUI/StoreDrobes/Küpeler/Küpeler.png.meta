@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: e7088c4a877f6244eac17a35ea31e247
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1474770613112853860
+    second: "K\xFCpeler_0"
+  - first:
+      213: -6129220021050239210
+    second: "K\xFCpeler_1"
+  - first:
+      213: 8557684306502993439
+    second: "K\xFCpeler_2"
+  - first:
+      213: -6486627484590451658
+    second: "K\xFCpeler_3"
+  - first:
+      213: -8810295657795305664
+    second: "K\xFCpeler_4"
+  - first:
+      213: 4080334054789360123
+    second: "K\xFCpeler_5"
+  - first:
+      213: -1236750896905031875
+    second: "K\xFCpeler_6"
+  - first:
+      213: 1490046744782754861
+    second: "K\xFCpeler_7"
+  - first:
+      213: 2613757622624945761
+    second: "K\xFCpeler_8"
+  - first:
+      213: -9071066773361730946
+    second: "K\xFCpeler_9"
+  - first:
+      213: 7708800218267546426
+    second: "K\xFCpeler_10"
+  - first:
+      213: 8906862085903547467
+    second: "K\xFCpeler_11"
+  - first:
+      213: 4985644858758126229
+    second: "K\xFCpeler_12"
+  - first:
+      213: 9182159995673861574
+    second: "K\xFCpeler_13"
+  - first:
+      213: -4181882352371306380
+    second: "K\xFCpeler_14"
+  - first:
+      213: 6078021996603238280
+    second: "K\xFCpeler_15"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "K\xFCpeler_0"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 253
+        width: 110
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 465d6c71f00777410800000000000000
+      internalID: 1474770613112853860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler_1"
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 182
+        width: 110
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61796176dd2a0faa0800000000000000
+      internalID: -6129220021050239210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler_2"
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 253
+        width: 110
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f16cb05498003c670800000000000000
+      internalID: 8557684306502993439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler_3"
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 182
+        width: 110
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63453be9baedaf5a0800000000000000
+      internalID: -6486627484590451658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler_4"
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 253
+        width: 110
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04fb1f637ca8bb580800000000000000
+      internalID: -8810295657795305664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler_5"
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 182
+        width: 110
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf926ac443240a830800000000000000
+      internalID: 4080334054789360123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler_6"
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 253
+        width: 110
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f6452ac9d26dee0800000000000000
+      internalID: -1236750896905031875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler_7"
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 182
+        width: 110
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d24d089ae95bda410800000000000000
+      internalID: 1490046744782754861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler_8"
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 105
+        width: 110
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1668781a5bee54420800000000000000
+      internalID: 2613757622624945761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler_9"
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 105
+        width: 110
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7adce784d81d1280800000000000000
+      internalID: -9071066773361730946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler_10"
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 106
+        width: 110
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a337a4e94f82bfa60800000000000000
+      internalID: 7708800218267546426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler_11"
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 35
+        width: 110
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4cfca560e78b9b70800000000000000
+      internalID: 8906862085903547467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler_12"
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 106
+        width: 110
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59ad78e7591903540800000000000000
+      internalID: 4985644858758126229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler_13"
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 35
+        width: 110
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd51fcedd59d6f70800000000000000
+      internalID: 9182159995673861574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler_14"
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 34
+        width: 110
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 470fe663828f6f5c0800000000000000
+      internalID: -4181882352371306380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler_15"
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 34
+        width: 110
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 887eb8c9dc8795450800000000000000
+      internalID: 6078021996603238280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "K\xFCpeler_0": 1474770613112853860
+      "K\xFCpeler_1": -6129220021050239210
+      "K\xFCpeler_10": 7708800218267546426
+      "K\xFCpeler_11": 8906862085903547467
+      "K\xFCpeler_12": 4985644858758126229
+      "K\xFCpeler_13": 9182159995673861574
+      "K\xFCpeler_14": -4181882352371306380
+      "K\xFCpeler_15": 6078021996603238280
+      "K\xFCpeler_2": 8557684306502993439
+      "K\xFCpeler_3": -6486627484590451658
+      "K\xFCpeler_4": -8810295657795305664
+      "K\xFCpeler_5": 4080334054789360123
+      "K\xFCpeler_6": -1236750896905031875
+      "K\xFCpeler_7": 1490046744782754861
+      "K\xFCpeler_8": 2613757622624945761
+      "K\xFCpeler_9": -9071066773361730946
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

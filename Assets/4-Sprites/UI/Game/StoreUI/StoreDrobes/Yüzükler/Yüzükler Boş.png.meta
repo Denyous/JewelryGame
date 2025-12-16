@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: f449a4c643557bf44b0371adfc6f3858
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1007393650345695739
+    second: "K\xFCpeler Bo\u015F _0"
+  - first:
+      213: -2381453782947220198
+    second: "K\xFCpeler Bo\u015F _1"
+  - first:
+      213: 384927093105618306
+    second: "K\xFCpeler Bo\u015F _2"
+  - first:
+      213: -33217284952534796
+    second: "K\xFCpeler Bo\u015F _3"
+  - first:
+      213: 7713274751382388359
+    second: "K\xFCpeler Bo\u015F _4"
+  - first:
+      213: 7789199645298592870
+    second: "K\xFCpeler Bo\u015F _5"
+  - first:
+      213: 6260760654771398871
+    second: "K\xFCpeler Bo\u015F _6"
+  - first:
+      213: -9018335449399568484
+    second: "K\xFCpeler Bo\u015F _7"
+  - first:
+      213: 4042373255905845260
+    second: "K\xFCpeler Bo\u015F _8"
+  - first:
+      213: -5534575390541544833
+    second: "K\xFCpeler Bo\u015F _9"
+  - first:
+      213: -1987764886272351439
+    second: "K\xFCpeler Bo\u015F _10"
+  - first:
+      213: 8763471984303375698
+    second: "K\xFCpeler Bo\u015F _11"
+  - first:
+      213: -1195383699745831958
+    second: "K\xFCpeler Bo\u015F _12"
+  - first:
+      213: 3317179177987839637
+    second: "K\xFCpeler Bo\u015F _13"
+  - first:
+      213: -5520297425244099694
+    second: "K\xFCpeler Bo\u015F _14"
+  - first:
+      213: 7479613592831135286
+    second: "K\xFCpeler Bo\u015F _15"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "K\xFCpeler Bo\u015F _0"
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 1057
+        width: 561
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 506292affc40502f0800000000000000
+      internalID: -1007393650345695739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler Bo\u015F _1"
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 1060
+        width: 566
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a15bb62e66063fed0800000000000000
+      internalID: -2381453782947220198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler Bo\u015F _2"
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 1060
+        width: 561
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28debf8d629875500800000000000000
+      internalID: 384927093105618306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler Bo\u015F _3"
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 1063
+        width: 567
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f0500a2e0df98ff0800000000000000
+      internalID: -33217284952534796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler Bo\u015F _4"
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 739
+        width: 566
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ef22b058e0b0b60800000000000000
+      internalID: 7713274751382388359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler Bo\u015F _5"
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 742
+        width: 567
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c0f96fecbc81c60800000000000000
+      internalID: 7789199645298592870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler Bo\u015F _6"
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 742
+        width: 571
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d8246305a0b2e650800000000000000
+      internalID: 6260760654771398871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler Bo\u015F _7"
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 748
+        width: 566
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c97d931a0bf68d280800000000000000
+      internalID: -9018335449399568484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler Bo\u015F _8"
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 427
+        width: 567
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c00aecf0f05691830800000000000000
+      internalID: 4042373255905845260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler Bo\u015F _9"
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 430
+        width: 566
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f720728710d3133b0800000000000000
+      internalID: -5534575390541544833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler Bo\u015F _10"
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 425
+        width: 566
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 133edb81e5a0a64e0800000000000000
+      internalID: -1987764886272351439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler Bo\u015F _11"
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 430
+        width: 567
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2558d7fb65b1e9970800000000000000
+      internalID: 8763471984303375698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler Bo\u015F _12"
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 112
+        width: 566
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae38b56cbd4296fe0800000000000000
+      internalID: -1195383699745831958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler Bo\u015F _13"
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 115
+        width: 566
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 596994023ecf80e20800000000000000
+      internalID: 3317179177987839637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler Bo\u015F _14"
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 112
+        width: 566
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b62d15db6f363b0800000000000000
+      internalID: -5520297425244099694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xFCpeler Bo\u015F _15"
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 115
+        width: 566
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63e02e91fececc760800000000000000
+      internalID: 7479613592831135286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "K\xFCpeler Bo\u015F _0": -1007393650345695739
+      "K\xFCpeler Bo\u015F _1": -2381453782947220198
+      "K\xFCpeler Bo\u015F _10": -1987764886272351439
+      "K\xFCpeler Bo\u015F _11": 8763471984303375698
+      "K\xFCpeler Bo\u015F _12": -1195383699745831958
+      "K\xFCpeler Bo\u015F _13": 3317179177987839637
+      "K\xFCpeler Bo\u015F _14": -5520297425244099694
+      "K\xFCpeler Bo\u015F _15": 7479613592831135286
+      "K\xFCpeler Bo\u015F _2": 384927093105618306
+      "K\xFCpeler Bo\u015F _3": -33217284952534796
+      "K\xFCpeler Bo\u015F _4": 7713274751382388359
+      "K\xFCpeler Bo\u015F _5": 7789199645298592870
+      "K\xFCpeler Bo\u015F _6": 6260760654771398871
+      "K\xFCpeler Bo\u015F _7": -9018335449399568484
+      "K\xFCpeler Bo\u015F _8": 4042373255905845260
+      "K\xFCpeler Bo\u015F _9": -5534575390541544833
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

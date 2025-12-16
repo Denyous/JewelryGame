@@ -12,7 +12,7 @@ public class Tooltip : MonoBehaviour
     public LayoutElement LayoutElement;
     public int CharacterWrapLimit;
 
-    public RectTransform RectTransform;
+    private RectTransform RectTransform;
 
     private void Awake()
     {
