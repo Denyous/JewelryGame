@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: b60c7f2c809866447b4d9e03284e115e
+guid: abea98d0609826841b4babdd09e8e187
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8426040038960700943
-    second: Diyalog balonu_0
+      213: -2103503049752107710
+    second: "Bilezikler y\xFCzde 0_0"
+  - first:
+      213: -4765642946640146024
+    second: "Bilezikler y\xFCzde 0_1"
+  - first:
+      213: 8700675681349953414
+    second: "Bilezikler y\xFCzde 0_2"
+  - first:
+      213: 6713010049058397845
+    second: "Bilezikler y\xFCzde 0_3"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +135,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Diyalog balonu_0
+      name: "Bilezikler y\xFCzde 0_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1280
-        height: 720
+        x: 5
+        y: 66
+        width: 310
+        height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +150,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f167864a31b01b80800000000000000
-      internalID: -8426040038960700943
+      spriteID: 245239ffe1bdec2e0800000000000000
+      internalID: -2103503049752107710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler y\xFCzde 0_1"
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 196
+        width: 278
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8911b2f4df80dddb0800000000000000
+      internalID: -4765642946640146024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler y\xFCzde 0_2"
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 196
+        width: 279
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6876ebc1f620fb870800000000000000
+      internalID: 8700675681349953414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bilezikler y\xFCzde 0_3"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 66
+        width: 311
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59ed0c39217692d50800000000000000
+      internalID: 6713010049058397845
       vertices: []
       indices: 
       edges: []
@@ -161,7 +236,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Diyalog balonu_0: -8426040038960700943
+      "Bilezikler y\xFCzde 0_0": -2103503049752107710
+      "Bilezikler y\xFCzde 0_1": -4765642946640146024
+      "Bilezikler y\xFCzde 0_2": 8700675681349953414
+      "Bilezikler y\xFCzde 0_3": 6713010049058397845
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

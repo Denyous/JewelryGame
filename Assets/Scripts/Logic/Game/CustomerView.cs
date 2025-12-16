@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Unity.VisualStudio.Editor;
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,9 @@ public class CustomerView : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _moneyText;
     [SerializeField] private TMP_InputField _offerArea;
     [SerializeField] private TextMeshProUGUI _conversationArea;
+    [SerializeField] private GameObject _conversationPanel;
+
+
 
     [Header("Customer UI")]
     [SerializeField] private TMP_Text _nameText;
@@ -100,8 +104,15 @@ public class CustomerView : MonoBehaviour
 
     public void UpdateConversationArea(string text)
     {
+        ConversationArea(true);
         _conversationArea.text = text;
     }
+
+  public void ConversationArea(bool state)
+    {
+        _conversationPanel.SetActive(state);
+    }
+
 
     public void RegisterCallbacks()
     {
@@ -121,8 +132,7 @@ public class CustomerView : MonoBehaviour
         });
     }
 
-    //Bu klas müşteriyle etkileşime girdikten sonra oyuncuyu store yönlendirir böylece envanterini düzeltebilir vs...
-    //Kontrolü oyuncuya vermiş oluruz.
+    
     public void ReturnStorePanel()
     {
         UIManager.Instance.ShowPanel(Panel.StoreUI);
