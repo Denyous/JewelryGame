@@ -78,7 +78,7 @@ public class CustomerView : MonoBehaviour
 
     public void UpdateMoneyText(float money)
     {
-        _moneyText.text = money.ToString();
+        _moneyText.text = $"{money}$";
     }
 
     public void UpdateMoraleProgressBar(double morale)

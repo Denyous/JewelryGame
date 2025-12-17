@@ -1,0 +1,832 @@
+fileFormatVersion: 2
+guid: b3c6ad23d6b8ea94a88c00f66bb8d5e5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1604603762096336663
+    second: Dolu_0
+  - first:
+      213: -2313537809891403788
+    second: Dolu_1
+  - first:
+      213: -4177814139458332424
+    second: Dolu_2
+  - first:
+      213: -323297067007687887
+    second: Dolu_3
+  - first:
+      213: -3263759681224621203
+    second: Dolu_4
+  - first:
+      213: 6666234573029671403
+    second: Dolu_5
+  - first:
+      213: 7706641593859892844
+    second: Dolu_6
+  - first:
+      213: -1904528110335851604
+    second: Dolu_7
+  - first:
+      213: 8612692889426309390
+    second: Dolu_8
+  - first:
+      213: 2021935580295249724
+    second: Dolu_9
+  - first:
+      213: 7932009586800243757
+    second: Dolu_10
+  - first:
+      213: 1284096731437992370
+    second: Dolu_11
+  - first:
+      213: 4228923031049794578
+    second: Dolu_12
+  - first:
+      213: -197016012792463839
+    second: Dolu_13
+  - first:
+      213: 5592811008735864338
+    second: Dolu_14
+  - first:
+      213: 4350052889679233956
+    second: Dolu_15
+  - first:
+      213: 2077161168839255895
+    second: Dolu_16
+  - first:
+      213: 5222938055840634313
+    second: Dolu_17
+  - first:
+      213: -2980445859201772032
+    second: Dolu_18
+  - first:
+      213: -2229297213994219628
+    second: Dolu_19
+  - first:
+      213: -1970904654176648067
+    second: Dolu_20
+  - first:
+      213: -791668333271353482
+    second: Dolu_21
+  - first:
+      213: 5735185368335394551
+    second: Dolu_22
+  - first:
+      213: 4184814553919500775
+    second: Dolu_23
+  - first:
+      213: -3736694155831747418
+    second: Dolu_24
+  - first:
+      213: 4946728242881361588
+    second: Dolu_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 10, y: 119, z: 7, w: 94}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dolu_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 126
+        width: 70
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e01ef2416d4bb9e0800000000000000
+      internalID: -1604603762096336663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 127
+        width: 90
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f7dcfa9e99a4efd0800000000000000
+      internalID: -2313537809891403788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 124
+        width: 111
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f85bf7dc2c6506c0800000000000000
+      internalID: -4177814139458332424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 126
+        width: 112
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 133c41cc70b638bf0800000000000000
+      internalID: -323297067007687887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_4
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 126
+        width: 108
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d634d50bcdbc4b2d0800000000000000
+      internalID: -3263759681224621203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_5
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 126
+        width: 103
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be18cd26609338c50800000000000000
+      internalID: 6666234573029671403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_6
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 129
+        width: 96
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c66e445b2bd73fa60800000000000000
+      internalID: 7706641593859892844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_7
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 127
+        width: 100
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca38fa636c1c195e0800000000000000
+      internalID: -1904528110335851604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_8
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 125
+        width: 100
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e01b9c90d8e668770800000000000000
+      internalID: 8612692889426309390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_9
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 126
+        width: 96
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3fb83692bb5f0c10800000000000000
+      internalID: 2021935580295249724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_10
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 126
+        width: 95
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d24b83091b8241e60800000000000000
+      internalID: 7932009586800243757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_11
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 127
+        width: 91
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b90a9e7c2702d110800000000000000
+      internalID: 1284096731437992370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_12
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 126
+        width: 88
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 214f038471720ba30800000000000000
+      internalID: 4228923031049794578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_13
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 127
+        width: 85
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ef07eeafe044df0800000000000000
+      internalID: -197016012792463839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_14
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 127
+        width: 86
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 216689ffaf7ad9d40800000000000000
+      internalID: 5592811008735864338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_15
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 126
+        width: 84
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a30e7b3e0e7e5c30800000000000000
+      internalID: 4350052889679233956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_16
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 127
+        width: 85
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75726e9e31f83dc10800000000000000
+      internalID: 2077161168839255895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_17
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 125
+        width: 91
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c5104e4d7a9b7840800000000000000
+      internalID: 5222938055840634313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_18
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 125
+        width: 86
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0069ef9384453a6d0800000000000000
+      internalID: -2980445859201772032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_19
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 125
+        width: 83
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4974b15cef1ff01e0800000000000000
+      internalID: -2229297213994219628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_20
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 127
+        width: 82
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7403a9c8a0f5a4e0800000000000000
+      internalID: -1970904654176648067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_21
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 125
+        width: 82
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6777f6768dd6305f0800000000000000
+      internalID: -791668333271353482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_22
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 127
+        width: 84
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f626a8c4b8779f40800000000000000
+      internalID: 5735185368335394551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_23
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 138
+        width: 77
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e1b1492aa2731a30800000000000000
+      internalID: 4184814553919500775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_24
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 153
+        width: 66
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6acde5f8678942cc0800000000000000
+      internalID: -3736694155831747418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dolu_25
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 178
+        width: 50
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b6f555c02f46a440800000000000000
+      internalID: 4946728242881361588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Dolu_0: -1604603762096336663
+      Dolu_1: -2313537809891403788
+      Dolu_10: 7932009586800243757
+      Dolu_11: 1284096731437992370
+      Dolu_12: 4228923031049794578
+      Dolu_13: -197016012792463839
+      Dolu_14: 5592811008735864338
+      Dolu_15: 4350052889679233956
+      Dolu_16: 2077161168839255895
+      Dolu_17: 5222938055840634313
+      Dolu_18: -2980445859201772032
+      Dolu_19: -2229297213994219628
+      Dolu_2: -4177814139458332424
+      Dolu_20: -1970904654176648067
+      Dolu_21: -791668333271353482
+      Dolu_22: 5735185368335394551
+      Dolu_23: 4184814553919500775
+      Dolu_24: -3736694155831747418
+      Dolu_25: 4946728242881361588
+      Dolu_3: -323297067007687887
+      Dolu_4: -3263759681224621203
+      Dolu_5: 6666234573029671403
+      Dolu_6: 7706641593859892844
+      Dolu_7: -1904528110335851604
+      Dolu_8: 8612692889426309390
+      Dolu_9: 2021935580295249724
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

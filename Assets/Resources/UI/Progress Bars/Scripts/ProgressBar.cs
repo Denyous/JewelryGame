@@ -39,6 +39,13 @@ public class ProgressBar : MonoBehaviour
         obj.transform.SetParent(Selection.activeGameObject.transform, false);
     }
 
+    [MenuItem("GameObject/UI/Linear Progress Bars/Rounded White With Stripes")]
+    public static void AddLinearProgressBarWhiteWithStripes()
+    {
+        GameObject obj = Instantiate(Resources.Load<GameObject>("UI/Progress Bars/Linear Progress Bar Rounded White With Stripes"));
+        obj.transform.SetParent(Selection.activeGameObject.transform, false);
+    }
+
     [MenuItem("GameObject/UI/Radial Progress Bars/Iconed")]
     public static void AddRadialProgressBarIconedWithoutBorder()
     {
