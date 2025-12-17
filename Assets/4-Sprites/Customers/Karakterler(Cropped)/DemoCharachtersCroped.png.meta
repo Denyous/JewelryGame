@@ -1,0 +1,582 @@
+fileFormatVersion: 2
+guid: 3d6c72f1e1e690642b72d1f345535c3f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7929155476005750776
+    second: DemoCharachtersCroped_0
+  - first:
+      213: -1737476687181629741
+    second: DemoCharachtersCroped_1
+  - first:
+      213: -3980984457113625849
+    second: DemoCharachtersCroped_2
+  - first:
+      213: -1944205296603802627
+    second: DemoCharachtersCroped_3
+  - first:
+      213: -4652555154110031346
+    second: DemoCharachtersCroped_4
+  - first:
+      213: 3783720030819007912
+    second: DemoCharachtersCroped_5
+  - first:
+      213: -2090208749381212941
+    second: DemoCharachtersCroped_6
+  - first:
+      213: -8584371321533328349
+    second: DemoCharachtersCroped_7
+  - first:
+      213: 8198106239954106872
+    second: DemoCharachtersCroped_8
+  - first:
+      213: 7444526015813801377
+    second: DemoCharachtersCroped_9
+  - first:
+      213: 6421011062556213287
+    second: DemoCharachtersCroped_10
+  - first:
+      213: -3508675889325617984
+    second: DemoCharachtersCroped_11
+  - first:
+      213: 7433375745436588400
+    second: DemoCharachtersCroped_12
+  - first:
+      213: -4219461169616738576
+    second: DemoCharachtersCroped_13
+  - first:
+      213: -5150155775960923777
+    second: DemoCharachtersCroped_14
+  - first:
+      213: -3223991638200087692
+    second: DemoCharachtersCroped_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DemoCharachtersCroped_0
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1021
+        width: 394
+        height: 370
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80875d3ea1bf5f190800000000000000
+      internalID: -7929155476005750776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemoCharachtersCroped_1
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 1021
+        width: 394
+        height: 370
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d63407982e33e7e0800000000000000
+      internalID: -1737476687181629741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemoCharachtersCroped_2
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 1021
+        width: 395
+        height: 370
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b14697ab3b0c8c0800000000000000
+      internalID: -3980984457113625849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemoCharachtersCroped_3
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1027
+        width: 395
+        height: 368
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df35f75659bc405e0800000000000000
+      internalID: -1944205296603802627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemoCharachtersCroped_4
+      rect:
+        serializedVersion: 2
+        x: 2222
+        y: 1023
+        width: 399
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0adb55dcbdce6fb0800000000000000
+      internalID: -4652555154110031346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemoCharachtersCroped_5
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 589
+        width: 307
+        height: 385
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ad3f7e2259728430800000000000000
+      internalID: 3783720030819007912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemoCharachtersCroped_6
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 589
+        width: 309
+        height: 385
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f428b287361ef2e0800000000000000
+      internalID: -2090208749381212941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemoCharachtersCroped_7
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 589
+        width: 308
+        height: 385
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32494f7d3cf2ed880800000000000000
+      internalID: -8584371321533328349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemoCharachtersCroped_8
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 577
+        width: 1215
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f9b067903685c170800000000000000
+      internalID: 8198106239954106872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemoCharachtersCroped_9
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 148
+        width: 330
+        height: 385
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a55cb5f7f4405760800000000000000
+      internalID: 7444526015813801377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemoCharachtersCroped_10
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 148
+        width: 335
+        height: 385
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720448a9a830c1950800000000000000
+      internalID: 6421011062556213287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemoCharachtersCroped_11
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 148
+        width: 330
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ccc4c05eddae4fc0800000000000000
+      internalID: -3508675889325617984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemoCharachtersCroped_12
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 85
+        width: 351
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07990c45bd7a82760800000000000000
+      internalID: 7433375745436588400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemoCharachtersCroped_13
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 85
+        width: 346
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f6a0710c667175c0800000000000000
+      internalID: -4219461169616738576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemoCharachtersCroped_14
+      rect:
+        serializedVersion: 2
+        x: 2227
+        y: 82
+        width: 351
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f714ce3cb98f688b0800000000000000
+      internalID: -5150155775960923777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemoCharachtersCroped_15
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 61
+        width: 93
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47b014ebfa41243d0800000000000000
+      internalID: -3223991638200087692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemoCharachtersCroped_16
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 1017
+        width: 378
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d8550aaf34a7742b0dab78a137aaa3
+      internalID: 248549951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 84eef13fbea7dd94994c8ae4545dc9e0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DemoCharachtersCroped_0: -7929155476005750776
+      DemoCharachtersCroped_1: -1737476687181629741
+      DemoCharachtersCroped_10: 6421011062556213287
+      DemoCharachtersCroped_11: -3508675889325617984
+      DemoCharachtersCroped_12: 7433375745436588400
+      DemoCharachtersCroped_13: -4219461169616738576
+      DemoCharachtersCroped_14: -5150155775960923777
+      DemoCharachtersCroped_15: -3223991638200087692
+      DemoCharachtersCroped_16: 248549951
+      DemoCharachtersCroped_2: -3980984457113625849
+      DemoCharachtersCroped_3: -1944205296603802627
+      DemoCharachtersCroped_4: -4652555154110031346
+      DemoCharachtersCroped_5: 3783720030819007912
+      DemoCharachtersCroped_6: -2090208749381212941
+      DemoCharachtersCroped_7: -8584371321533328349
+      DemoCharachtersCroped_8: 8198106239954106872
+      DemoCharachtersCroped_9: 7444526015813801377
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

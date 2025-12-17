@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e7bdae09d995c46a72ae1e74e88a55, type: 3}
+  m_Name: Customer_Birol
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerSO
+  <CustomerName>k__BackingField: Birol
+  <SadSprite>k__BackingField: {fileID: -1737476687181629741, guid: 3d6c72f1e1e690642b72d1f345535c3f, type: 3}
+  <AngrySprite>k__BackingField: {fileID: -3980984457113625849, guid: 3d6c72f1e1e690642b72d1f345535c3f, type: 3}
+  <NeutralSprite>k__BackingField: {fileID: -7929155476005750776, guid: 3d6c72f1e1e690642b72d1f345535c3f, type: 3}
+  <Settings>k__BackingField: {fileID: 11400000, guid: c1e2915573bf36749a6252c1093f6db0, type: 2}
