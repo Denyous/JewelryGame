@@ -6488,6 +6488,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: eafbc01366745a146a469b94f6d206a0, type: 2}
   - {fileID: 11400000, guid: d6b6a58bf66f93e4eb45f9980eca5447, type: 2}
   - {fileID: 11400000, guid: d54ec953da0300144b4216ce04bd9a6c, type: 2}
+  - {fileID: 11400000, guid: 75919aa11d8e0b74b9f0cd98e01552d7, type: 2}
+  - {fileID: 11400000, guid: fdacc20148724304f93102f1fe282806, type: 2}
+  - {fileID: 11400000, guid: 9f3caa2862e63884c86eb8116bee0561, type: 2}
+  - {fileID: 11400000, guid: df5257c6b7688dd4e9750c07d7995fe7, type: 2}
+  - {fileID: 11400000, guid: 1c32a855fd53f7343b20e0d3dbeaa5e9, type: 2}
+  - {fileID: 11400000, guid: 2a2a9ac0e2671d345b66bc5078b5e6cf, type: 2}
+  - {fileID: 11400000, guid: 3dd5dcc123f3a5b4ca62acbbd78a3893, type: 2}
+  - {fileID: 11400000, guid: f589e32e4622e5a4eb0d2a9bef9d2122, type: 2}
+  - {fileID: 11400000, guid: d2b5607c6d5105940ae65080efe4aa07, type: 2}
+  - {fileID: 11400000, guid: f256f3e42bd8706478bd407a543dde46, type: 2}
+  - {fileID: 11400000, guid: 692d55df326963f4b8c99072d9a66f62, type: 2}
   CustomerModels:
   - Mood: 50
     Data: {fileID: 11400000, guid: 4470fe810d78ae44f916534ae0ff5a1b, type: 2}
