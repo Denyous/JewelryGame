@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 35c6a90e404b8f745b66cb3546389acd
+guid: c91bf61f5218cd549b5762f1036a5c38
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3913817620773531504
-    second: "Do\u011Fal ta\u015Fl\u0131 bilezik_0"
+      213: 885972295109445254
+    second: "G\xFCm\xFC\u015F_Bilezik_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -122,30 +122,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Do\u011Fal ta\u015Fl\u0131 bilezik_0"
+      name: "G\xFCm\xFC\u015F_Bilezik_0"
       rect:
         serializedVersion: 2
-        x: 116
-        y: 61
-        width: 410
-        height: 230
+        x: 754
+        y: 487
+        width: 1249
+        height: 601
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09011263c935fa9c0800000000000000
-      internalID: -3913817620773531504
+      spriteID: 68606dabb1b9b4c00800000000000000
+      internalID: 885972295109445254
       vertices: []
       indices: 
       edges: []
@@ -164,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Do\u011Fal ta\u015Fl\u0131 bilezik_0": -3913817620773531504
+      "G\xFCm\xFC\u015F_Bilezik_0": 885972295109445254
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

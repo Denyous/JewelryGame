@@ -6487,7 +6487,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 046caf98cc5eb754a88d9b923f35e174, type: 2}
   - {fileID: 11400000, guid: eafbc01366745a146a469b94f6d206a0, type: 2}
   - {fileID: 11400000, guid: d6b6a58bf66f93e4eb45f9980eca5447, type: 2}
-  - {fileID: 11400000, guid: 306a636dfe2b37840a308370c71c0085, type: 2}
+  - {fileID: 11400000, guid: d54ec953da0300144b4216ce04bd9a6c, type: 2}
   CustomerModels:
   - Mood: 50
     Data: {fileID: 11400000, guid: 4470fe810d78ae44f916534ae0ff5a1b, type: 2}

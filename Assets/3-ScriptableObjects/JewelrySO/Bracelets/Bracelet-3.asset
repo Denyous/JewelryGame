@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17ca42c3d4ec3914dbb5773cac9132e1, type: 3}
-  m_Name: Jewel-7
+  m_Name: Bracelet-3
   m_EditorClassIdentifier: Assembly-CSharp::JewelrySO
-  itemName: Bronz Ring
-  maxItemWorth: 250
-  shownItemWorth: 200
-  minItemHorth: 180
-  itemSprite: {fileID: -1740300564099149782, guid: 4a3e6b3b2df85fb4ca7fc16e2d8b9e9c, type: 3}
+  itemName: Golden Bracelet
+  maxItemWorth: 440
+  shownItemWorth: 400
+  minItemHorth: 380
+  itemSprite: {fileID: 21300000, guid: 74d1ee0e60e25ce408ec2ed2919587e7, type: 3}
