@@ -45,12 +45,14 @@ public class StoreUI : UIPanel
     public void GetNextCustomerOnClicked()
     {
         Debug.Log("Müşteri Geldi!");
-        UIManager.Instance.HidePanel(Panel.StoreUI);
         CustomerManager.Instance.GetNextCustomer();
         AudioManager.PlayOneShot(SoundType.CustomerBell);
         AudioManager.PlayOneShot(SoundType.Click);
         AudioManager.PlayOneShot(SoundType.OpenInventory);
+        UIManager.Instance.ShowPanel("CustomerStoreView");
     }
+
+
 
     public void InventoryButtonOnClicked()
     {

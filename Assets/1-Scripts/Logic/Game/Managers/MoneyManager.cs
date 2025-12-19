@@ -7,7 +7,7 @@ public class MoneyManager : MonoBehaviour
 
     private void Awake()
     {
-        PlayerMoney = 15000f;
+        PlayerMoney = 4000f;
 
         if (Instance == null)
         {

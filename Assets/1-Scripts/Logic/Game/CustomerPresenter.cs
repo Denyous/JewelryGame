@@ -13,8 +13,8 @@ public class CustomerPresenter : MonoBehaviour
 
     public List<CustomerModel> CustomerModels;
 
-    private CustomerModel _customerModel;
-    private CustomerView _customerView;
+    public CustomerModel _customerModel;
+    public CustomerView _customerView;
 
     private GameObject _currentCustomerViewObject;
     private int _currentCustomerIndex = 0;
@@ -99,6 +99,7 @@ public class CustomerPresenter : MonoBehaviour
                 ReputationManager.Instance.AddReputation(50);
                 _customerView.UpdateMoneyText(MoneyManager.Instance.PlayerMoney);
                 Debug.Log("Tebrikler ürünü satın aldınız.");
+                AudioManager.PlayOneShot(SoundType.CashIncrease);
                 _customerModel.AddMoney(offerValue);
                 _customerView.ReturnStorePanel();
                 OnItemBuyandSell.Invoke();
@@ -126,11 +127,12 @@ public class CustomerPresenter : MonoBehaviour
             ReputationManager.Instance.AddReputation(50);
             _customerView.UpdateMoneyText(MoneyManager.Instance.PlayerMoney);
             Debug.Log("Tebrikler ürünü sattiniz.");
+            AudioManager.PlayOneShot(SoundType.CashIncrease);
             _customerModel.RemoveMoney(offerValue);
             _customerView.ReturnStorePanel();
             ResetCustomer();
             DailyReportManager.ItemSelled += 1;
-            AudioManager.PlayOneShot(SoundType.CashIncrease);
+            
         }
         else if (mood == CustomerMood.Mad)
         {

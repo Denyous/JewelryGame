@@ -134,6 +134,7 @@ public class CustomerView : MonoBehaviour
     {
         UIManager.Instance.ShowPanel(Panel.StoreUI);
         UIManager.Instance.HidePanel(Panel.CustomerContainer);
+        UIManager.Instance.HidePanel("CustomerStoreView");
         Debug.Log("Müşteri Gitti!");
     }
 

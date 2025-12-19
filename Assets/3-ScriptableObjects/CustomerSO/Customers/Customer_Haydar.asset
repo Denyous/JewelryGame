@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Customer_Haydar
   m_EditorClassIdentifier: Assembly-CSharp::CustomerSO
   <CustomerName>k__BackingField: Haydar
+  <StoreSprite>k__BackingField: {fileID: 5799702246250623404, guid: 880faca31b25c8848a86de7a270e6d20, type: 3}
   <SadSprite>k__BackingField: {fileID: 2985392221649605883, guid: b6147d8f7dd55124ba392bf62d214c47, type: 3}
   <AngrySprite>k__BackingField: {fileID: -8470625060751259412, guid: b6147d8f7dd55124ba392bf62d214c47, type: 3}
   <NeutralSprite>k__BackingField: {fileID: -1624353844977830810, guid: b6147d8f7dd55124ba392bf62d214c47, type: 3}
