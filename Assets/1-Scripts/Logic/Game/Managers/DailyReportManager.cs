@@ -18,6 +18,7 @@ public class DailyReportManager : MonoBehaviour
     public static void CreateDailyReport()
     {
         _instance.DailyReportPanel.SetDailyReportFields(ItemBuyed, ItemSelled, MoneySpend, MoneyEarned);
+        UIManager.Instance.HidePanel("CustomerStoreView");
         UIManager.Instance.ShowPanel(Panel.DailyReportPanel);
         AudioManager.PlayOneShot(SoundType.DailyPanel);
         ResetFields();

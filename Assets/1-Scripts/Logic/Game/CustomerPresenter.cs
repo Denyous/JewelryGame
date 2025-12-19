@@ -54,6 +54,7 @@ public class CustomerPresenter : MonoBehaviour
 
         if (_currentCustomerIndex > CustomerModels.Count - 1)
         {
+            UIManager.Instance.HidePanel("CustomerStoreView");
             DailyReportManager.CreateDailyReport();
             _currentCustomerIndex = 0;
             return;

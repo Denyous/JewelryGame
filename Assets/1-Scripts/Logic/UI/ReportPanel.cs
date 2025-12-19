@@ -15,6 +15,7 @@ public class ReportPanel : UIPanel
     public void NextButtonOnClicked()
     {
         UIManager.Instance.ShowPanel(Panel.StoreUI);
+        UIManager.Instance.HidePanel("CustomerStoreView");
         UIManager.Instance.HidePanel(Panel.DailyReportPanel);
     }
 
