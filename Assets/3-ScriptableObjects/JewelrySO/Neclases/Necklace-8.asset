@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::JewelrySO
   itemName: Silver Handmade Necklace
   maxItemWorth: 1250
-  shownItemWorth: 0
-  minItemHorth: 0
+  shownItemWorth: 1100
+  minItemHorth: 950
   itemSprite: {fileID: 3784134907779111445, guid: dea0b299b32aaa34c8a84529a5c88990, type: 3}
