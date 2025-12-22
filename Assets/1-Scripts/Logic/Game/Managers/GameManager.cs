@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
         if (CurrentDay == 6)
         {
-
+            //Demo has finished panel occurs at screen!
         }
 
         UpdateDayText();
