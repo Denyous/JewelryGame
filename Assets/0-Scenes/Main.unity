@@ -2227,7 +2227,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 290, y: -18}
+  m_AnchoredPosition: {x: 353, y: -18}
   m_SizeDelta: {x: 0.1, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519420028
@@ -4913,7 +4913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 60.99997, y: 57.369995}
+  m_AnchoredPosition: {x: 60.99997, y: 66}
   m_SizeDelta: {x: -63.28, y: -39.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1033716458
@@ -4936,7 +4936,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Do you want to make an offer this item?
+  m_text: Do you want to make an offer for this item?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5001,7 +5001,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -163.9218, w: 32.784393}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6168,6 +6168,7 @@ MonoBehaviour:
   _customerPresenter: {fileID: 0}
   _customerImage: {fileID: 1232381039}
   _jewelImage: {fileID: 1895038672}
+  _dialogText: {fileID: 1033716458}
 --- !u!1 &1443007786
 GameObject:
   m_ObjectHideFlags: 0
@@ -6396,8 +6397,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 70.29, y: -11.922}
-  m_SizeDelta: {x: 565.26, y: 405.22}
+  m_AnchoredPosition: {x: 145.69, y: -11.922}
+  m_SizeDelta: {x: 716.07, y: 405.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1486248114
 MonoBehaviour:
