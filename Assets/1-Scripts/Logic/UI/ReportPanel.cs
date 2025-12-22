@@ -17,6 +17,7 @@ public class ReportPanel : UIPanel
         UIManager.Instance.ShowPanel(Panel.StoreUI);
         UIManager.Instance.HidePanel("CustomerStoreView");
         UIManager.Instance.HidePanel(Panel.DailyReportPanel);
+        GameManager.Instance.StartNewDay();
     }
 
     public void SetDailyReportFields(int itemBuyed, int itemSelled, float moneySpend, float moneyEarned)
