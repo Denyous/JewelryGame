@@ -8,6 +8,7 @@ public class InventoryManager : MonoBehaviour
     public InventoryView _inventoryView;
     public InventoryModel _inventory = new InventoryModel();
     private const int maxInventorySize = 6;
+    public GameObject _inventoryGuider;
 
     private void Awake()
     {
@@ -28,7 +29,7 @@ public class InventoryManager : MonoBehaviour
         
         if (GetJewelCount() == maxInventorySize)
         {
-            Debug.Log("Envanter dolu, daha fazla takı eklenemez.");
+          _inventoryGuider.SetActive(true);
         }
         else
         {
@@ -69,5 +70,11 @@ public class InventoryManager : MonoBehaviour
     void UpdateUI()
     {
         _inventoryView.UpdateUI(_inventory.Items);
+    }
+
+
+    public void OnOkeyInventoryButton()
+    {
+        _inventoryGuider.SetActive(false);
     }
 }
