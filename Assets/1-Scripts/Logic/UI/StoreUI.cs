@@ -17,10 +17,10 @@ public class StoreUI : UIPanel
 
     [SerializeField] public Image _rightDrobe;
     [SerializeField] public Image _leftDrobe;
-    [SerializeField] public Image _showCase;
+   
 
     [SerializeField] public List<Sprite> _drobesSprites;
-    [SerializeField] public List<Sprite> _showCaseSprites;
+   
 
     private void OnEnable()
     {
@@ -72,7 +72,7 @@ public class StoreUI : UIPanel
             Debug.Log("Drobes ve Vitrin Sprite Değişmedi % 0");
             _rightDrobe.sprite = _drobesSprites[0];
             _leftDrobe.sprite = _drobesSprites[0];
-            _showCase.sprite = _showCaseSprites[0];
+            
         }
 
         if (InventoryManager.Instance.GetJewelCount() == 3)
@@ -80,7 +80,7 @@ public class StoreUI : UIPanel
             Debug.Log("Drobes ve Vitrin Sprite Değişti %50");
             _rightDrobe.sprite = _drobesSprites[1];
             _leftDrobe.sprite = _drobesSprites[1];
-            _showCase.sprite = _showCaseSprites[1];
+            
         }
 
         if (InventoryManager.Instance.GetJewelCount() == 6)
@@ -88,7 +88,7 @@ public class StoreUI : UIPanel
             Debug.Log("Drobes ve Vitrin Sprite Değişti %100");
             _rightDrobe.sprite = _drobesSprites[2];
             _leftDrobe.sprite = _drobesSprites[2];
-            _showCase.sprite = _showCaseSprites[2];
+           
         }
     }
 }
