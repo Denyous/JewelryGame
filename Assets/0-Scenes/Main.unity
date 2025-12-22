@@ -8153,11 +8153,6 @@ MonoBehaviour:
     CurrentJewel: {fileID: 0}
     <Money>k__BackingField: 2000
   - Mood: 50
-    Data: {fileID: 11400000, guid: 3baf1179314c89d43a543193fd4d280f, type: 2}
-    CustomerInventory: []
-    CurrentJewel: {fileID: 0}
-    <Money>k__BackingField: 2000
-  - Mood: 50
     Data: {fileID: 11400000, guid: 7cfb58981ec0e3e478a1a919636e9f74, type: 2}
     CustomerInventory: []
     CurrentJewel: {fileID: 0}
@@ -8169,11 +8164,6 @@ MonoBehaviour:
     <Money>k__BackingField: 2000
   - Mood: 50
     Data: {fileID: 11400000, guid: 96954a6a7702e5a47bfd5c499620e2a5, type: 2}
-    CustomerInventory: []
-    CurrentJewel: {fileID: 0}
-    <Money>k__BackingField: 2000
-  - Mood: 50
-    Data: {fileID: 11400000, guid: 44cde1ffaddd33b4190f891b6a435d5d, type: 2}
     CustomerInventory: []
     CurrentJewel: {fileID: 0}
     <Money>k__BackingField: 2000
