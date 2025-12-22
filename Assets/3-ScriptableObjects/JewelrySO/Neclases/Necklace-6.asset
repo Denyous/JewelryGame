@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17ca42c3d4ec3914dbb5773cac9132e1, type: 3}
-  m_Name: Jewel-2
+  m_Name: Necklace-6
   m_EditorClassIdentifier: Assembly-CSharp::JewelrySO
-  itemName: Bronz Necklace
-  maxItemWorth: 600
-  shownItemWorth: 500
-  minItemHorth: 450
-  itemSprite: {fileID: -9214464572269388483, guid: 6e148ceafa084dc41837f54d4180632e, type: 3}
+  itemName: Pure Obsidian Necklace
+  maxItemWorth: 1750
+  shownItemWorth: 1600
+  minItemHorth: 1450
+  itemSprite: {fileID: -8222796178985752850, guid: d1c9b7805a7a54b47b11d1e87fab6d79, type: 3}

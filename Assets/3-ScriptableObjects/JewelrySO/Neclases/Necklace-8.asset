@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17ca42c3d4ec3914dbb5773cac9132e1, type: 3}
-  m_Name: Jewel-1
+  m_Name: Necklace-8
   m_EditorClassIdentifier: Assembly-CSharp::JewelrySO
-  itemName: Cristal Necklace
-  maxItemWorth: 350
-  shownItemWorth: 300
-  minItemHorth: 270
-  itemSprite: {fileID: 5148196098145659489, guid: 5318297f5bf4cd741bacef8be6e5cac4, type: 3}
+  itemName: Silver Handmade Necklace
+  maxItemWorth: 1250
+  shownItemWorth: 0
+  minItemHorth: 0
+  itemSprite: {fileID: 3784134907779111445, guid: dea0b299b32aaa34c8a84529a5c88990, type: 3}
