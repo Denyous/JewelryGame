@@ -70,16 +70,15 @@ public class CustomerModel
     private bool PlayerCanAfford(List<JewelrySO> jewels)
     {
         bool playerCanAfford = false;
-        foreach (var jewel in jewels)
+
+        if (InventoryManager.Instance.GetJewelCount() <= 3)
         {
-            if (jewel.GetItemWorth() < MoneyManager.Instance.PlayerMoney)
-            {
-                playerCanAfford = true;
-            }
+            playerCanAfford = true;
+
         }
         return playerCanAfford;
     }
-    
+
     private JewelrySO SelectJewel(bool isSeller, List<JewelrySO> jewels)
     {
         if (isSeller)
@@ -313,7 +312,7 @@ public class CustomerModel
     private void HandleCounterOffer(float percent, float offerValue, float itemWorth, float minItemWorth = default, float maxItemWorth = default)
     {
         ExpectedItemPrice = GetBargainOffer(percent, offerValue, itemWorth, minItemWorth: minItemWorth, maxItemWorth: maxItemWorth);
-        
+
         OnCounterOffer?.Invoke(ExpectedItemPrice);
 
         AudioManager.PlayOneShot(SoundType.CounterOffer, 0.4f);

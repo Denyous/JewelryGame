@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class CustomerStoreViewHandler : UIPanel
@@ -7,6 +8,7 @@ public class CustomerStoreViewHandler : UIPanel
     [SerializeField] private CustomerPresenter _customerPresenter;
     [SerializeField] private Image _customerImage;
     [SerializeField] private Image _jewelImage;
+    [SerializeField] private TextMeshProUGUI _dialogText;
 
     void Start()
     {
@@ -21,6 +23,7 @@ public class CustomerStoreViewHandler : UIPanel
         {
             _customerImage.sprite = _customerPresenter._customerModel.Data.StoreSprite;
             _jewelImage.sprite = _customerPresenter._customerModel.CurrentJewel.GetItemSprite();
+            _dialogText.text = "Do you want to make an offer for this item? " +_customerPresenter._customerModel.CurrentJewel.GetItemWorth().ToString() + "$ is my offer.";
             UIManager.Instance.ShowPanel("CustomerStoreView");
         }
         else

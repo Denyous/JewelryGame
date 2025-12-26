@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17ca42c3d4ec3914dbb5773cac9132e1, type: 3}
+  m_Name: Necklace-7
+  m_EditorClassIdentifier: Assembly-CSharp::JewelrySO
+  itemName: Quartz Handmade Necklace
+  maxItemWorth: 940
+  shownItemWorth: 720
+  minItemHorth: 630
+  itemSprite: {fileID: -5329317110659606141, guid: dea0b299b32aaa34c8a84529a5c88990, type: 3}

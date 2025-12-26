@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17ca42c3d4ec3914dbb5773cac9132e1, type: 3}
-  m_Name: Jewel-5
+  m_Name: Necklace-5
   m_EditorClassIdentifier: Assembly-CSharp::JewelrySO
   itemName: Pure Diamond Necklace
-  maxItemWorth: 1500
+  maxItemWorth: 1550
   shownItemWorth: 1400
-  minItemHorth: 1290
+  minItemHorth: 1300
   itemSprite: {fileID: 3993557014488086260, guid: 7818fb4b362c05c48a6efe755e265ab9, type: 3}

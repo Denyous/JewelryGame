@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17ca42c3d4ec3914dbb5773cac9132e1, type: 3}
+  m_Name: Necklace-2
+  m_EditorClassIdentifier: Assembly-CSharp::JewelrySO
+  itemName: Bronz Necklace
+  maxItemWorth: 600
+  shownItemWorth: 500
+  minItemHorth: 450
+  itemSprite: {fileID: -4055056717264416792, guid: a445d2689d9e317458038644a0444c05, type: 3}
