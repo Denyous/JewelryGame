@@ -1,9 +1,6 @@
-﻿using Microsoft.Unity.VisualStudio.Editor;
-using System;
+﻿using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
 using Image = UnityEngine.UI.Image;
 using Slider = UnityEngine.UI.Slider;
