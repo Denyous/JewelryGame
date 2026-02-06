@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [SerializeField] private TextMeshProUGUI _dayText;
+    [SerializeField] private GameObject _demoFinishedPanel;
     public int CurrentDay { get; private set; } = 1;
     private void Awake()
     {
@@ -32,12 +33,18 @@ public class GameManager : MonoBehaviour
     {
         CurrentDay++;
 
-        if (CurrentDay == 6)
+        if (CurrentDay == 4)
         {
-            //Demo has finished panel occurs at screen!
+            Time.timeScale = 0f;
+            _demoFinishedPanel.SetActive(true);
         }
 
         UpdateDayText();
+    }
+
+    public void OkOnClicked()
+    {
+        Application.Quit();
     }
 
 
