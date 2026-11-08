@@ -44,14 +44,6 @@ The project includes several gameplay systems and software architecture concepts
 - C# Events & Delegates
 - Git & GitHub
 
-##  Screenshots
-
-Gameplay screenshots will be added here.
-
-##  Gameplay Video
-
-Gameplay footage will be added here.
-
 ##  Development Status
 
 Jewelry Store is a game development project focused on shop management, customer interactions, and economic simulation mechanics.
